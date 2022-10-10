@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.8.4",
     "web-vitals": "^2.1.4",
@@ -27,13 +28,13 @@
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm start\"",
     "start": "react-scripts start",
-    "lint": "eslint ., eslint --ext .ts,.tsx src --fix",    
+    "lint": "eslint ., eslint --ext .ts,.tsx src --fix",
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -w server/db.json -p 3001"    
+    "server": "json-server -w server/db.json -p 3001"
   },
   "eslintConfig": {
     "extends": [
