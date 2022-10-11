@@ -12,54 +12,82 @@ interface formProps {
   id?: string;
   name?: string;
   text?: string;
+  email?: string;
+  password?: string;
 }
 
 export const Registration: React.FC<formProps> = () => {
-//   const dispatch = useAppDispatch();
-//   const projectId: string = uuidv4();
-//   const { isFetching } = useAppSelector((state) => state.comments);
+  //   const dispatch = useAppDispatch();
+  //   const projectId: string = uuidv4();
+  //   const { isFetching } = useAppSelector((state) => state.comments);
 
   const validationSchema = useMemo(() => {
     return Yup.object({
       name: Yup.string().min(2).max(100).required('Required'),
-      text: Yup.string().min(5).max(500).required('Required')
+      text: Yup.string().min(5).max(500).required('Required'),
+      email: Yup.string().email()
     });
   }, []);
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      text: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
       id: ''
     },
     onSubmit: (values, { resetForm }) => {
-    //   dispatch(addCommentsThunk({ name: values.name, text: values.text, id: projectId }));
+      //   dispatch(addCommentsThunk({ name: values.name, text: values.text, id: projectId }));
       resetForm();
     },
     validationSchema
   });
   return (
-    <form onSubmit={formik.handleSubmit} className="commentsForm__container">
+    <form onSubmit={formik.handleSubmit} className="registrationForm__container">
       <div className="formik-form">
         {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
         <input
-          id="name"
-          name="name"
+          id="firstname"
+          name="firstname"
           onChange={formik.handleChange}
-          value={formik.values.name}
+          value={formik.values.firstname}
           className="formik-input"
-          placeholder="Your name..."
+          placeholder="Your firstname..."
         />
-        <p className="formik-errors-message">{formik.errors.name}</p>
+        <p className="formik-errors-message">{formik.errors.firstname}</p>
 
-        <textarea
-          id="text"
-          name="text"
+        <input
+          id="lastname"
+          name="lastname"
           onChange={formik.handleChange}
-          value={formik.values.text}
-          placeholder="Your comment..."
+          value={formik.values.lastname}
+          className="formik-input"
+          placeholder="Your lastname..."
         />
-        <p className="formik-errors-message">{formik.errors.text}</p>
+        <p className="formik-errors-message">{formik.errors.lastname}</p>
+
+        <input
+          id="email"
+          name="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          className="formik-input"
+          placeholder="Your email..."
+        />
+        <p className="formik-errors-message">{formik.errors.email}</p>
+
+        <input
+          id="name"
+          name="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+          className="formik-input"
+          placeholder="Your password..."
+        />
+        <p className="formik-errors-message">{formik.errors.password}</p>
+
+        <p className="formik-errors-message">{formik.errors.password}</p>
         <button type="submit" className="main__button">
           Add comment
         </button>

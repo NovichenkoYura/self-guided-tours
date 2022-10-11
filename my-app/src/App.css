@@ -63,3 +63,53 @@ main a:hover {
   color: var(--color-active);
   cursor: default;
 }
+
+.registrationForm__container{
+    display: flex;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 450px;
+      height: 320px;
+      padding: 25px 25px 0px 25px;
+      padding-bottom: 0px;
+      background-color: rgb(177, 174, 174);
+      margin: 25px auto 0 auto;
+      font-size: inherit;
+      font-family: inherit;
+}
+
+input {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button {
+  background-color: #bab9bf;
+  border: none;
+  border-radius: 5px;
+  /* margin-top: 20px;
+  margin-bottom: auto; */
+margin: 0 auto;
+  display: block;
+
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+  color: #212121;
+}
+
+button:hover,
+button:focus {
+  background-color: #2196f3;
+  color: white;
+}
