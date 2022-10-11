@@ -11,6 +11,7 @@ import { Messages } from './pages/Messages';
 import { Saved } from './pages/Saved';
 import { Settings } from './pages/Settings';
 import { NotFoundpage } from './pages/NotFoundpage';
+import { Registration } from './pages/Registration';
 
 import { Layout } from './components/Layout';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="messages" element={<Messages />} />
           <Route path="saved" element={<Saved />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="registration" element={<Registration />} />
           <Route path="*" element={<NotFoundpage />} />
         </Route>
       </Routes>

@@ -30,6 +30,9 @@ const Layout = () => {
         <NavLink to="/notfound" className={setActive}>
           NotFoundpage
         </NavLink>
+        <NavLink to="/registration" className={setActive}>
+          Registartion
+        </NavLink>
       </header>
 
       <main className="container">
