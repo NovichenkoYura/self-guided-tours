@@ -4,28 +4,29 @@ import React, { useMemo, useEffect } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-// import { addCommentsThunk } from './store/commentSlice';
-// import { useAppDispatch, useAppSelector } from './app/hooks';
+import { addUsersThunk } from '../store/usersSlice';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import preloader from './img/preloader.gif';
 
 interface formProps {
   id?: string;
-  name?: string;
-  text?: string;
+  firstname?: string;
+  lastname?: string;
   email?: string;
   password?: string;
 }
 
 export const Registration: React.FC<formProps> = () => {
-  //   const dispatch = useAppDispatch();
-  //   const projectId: string = uuidv4();
-  //   const { isFetching } = useAppSelector((state) => state.comments);
+  const dispatch = useAppDispatch();
+  const projectId: string = uuidv4();
+  const { isFetching } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
     return Yup.object({
-      name: Yup.string().min(2).max(100).required('Required'),
-      text: Yup.string().min(5).max(500).required('Required'),
-      email: Yup.string().email()
+      firstname: Yup.string().min(2).max(100).required('Required'),
+      lastname: Yup.string().min(5).max(500).required('Required'),
+      email: Yup.string().email(),
+      password: Yup.string().min(5).max(500).required('Required')
     });
   }, []);
 
@@ -38,7 +39,15 @@ export const Registration: React.FC<formProps> = () => {
       id: ''
     },
     onSubmit: (values, { resetForm }) => {
-      //   dispatch(addCommentsThunk({ name: values.name, text: values.text, id: projectId }));
+      dispatch(
+        addUsersThunk({
+          firstname: values.firstname,
+          lastname: values.lastname,
+          id: projectId,
+          email: values.email,
+          password: values.password
+        })
+      );
       resetForm();
     },
     validationSchema
@@ -89,7 +98,7 @@ export const Registration: React.FC<formProps> = () => {
 
         <p className="formik-errors-message">{formik.errors.password}</p>
         <button type="submit" className="main__button">
-          Add comment
+          Add user
         </button>
       </div>
     </form>
