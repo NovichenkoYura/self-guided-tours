@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { addUsersThunk } from '../store/usersSlice';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import preloader from './img/preloader.gif';
+import preloader from '../img/preloader.gif';
 
 interface formProps {
   id?: string;
@@ -25,7 +25,7 @@ export const Registration: React.FC<formProps> = () => {
     return Yup.object({
       firstname: Yup.string().min(2).max(100).required('Required'),
       lastname: Yup.string().min(5).max(500).required('Required'),
-      email: Yup.string().email(),
+      email: Yup.string().email().required('Required'),
       password: Yup.string().min(5).max(500).required('Required')
     });
   }, []);
@@ -55,7 +55,7 @@ export const Registration: React.FC<formProps> = () => {
   return (
     <form onSubmit={formik.handleSubmit} className="registrationForm__container">
       <div className="formik-form">
-        {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
+        {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input
           id="firstname"
           name="firstname"
