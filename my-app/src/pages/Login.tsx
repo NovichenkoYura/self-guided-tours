@@ -13,7 +13,7 @@ interface formProps {
   password?: string;
 }
 
-export const Registration: React.FC<formProps> = () => {
+export const Login: React.FC<formProps> = () => {
   const dispatch = useAppDispatch();
   const { isFetching } = useAppSelector((state) => state.users);
 
@@ -26,18 +26,12 @@ export const Registration: React.FC<formProps> = () => {
 
   const formik = useFormik({
     initialValues: {
-      firstname: '',
-      lastname: '',
       email: '',
-      password: '',
-      id: ''
+      password: ''
     },
     onSubmit: (values, { resetForm }) => {
       dispatch(
         addUsersThunk({
-          firstname: values.firstname,
-          lastname: values.lastname,
-          id: projectId,
           email: values.email,
           password: values.password
         })
@@ -50,25 +44,6 @@ export const Registration: React.FC<formProps> = () => {
     <form onSubmit={formik.handleSubmit} className="registrationForm__container">
       <div className="formik-form">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
-        <input
-          id="firstname"
-          name="firstname"
-          onChange={formik.handleChange}
-          value={formik.values.firstname}
-          className="formik-input"
-          placeholder="Your firstname..."
-        />
-        <p className="formik-errors-message">{formik.errors.firstname}</p>
-
-        <input
-          id="lastname"
-          name="lastname"
-          onChange={formik.handleChange}
-          value={formik.values.lastname}
-          className="formik-input"
-          placeholder="Your lastname..."
-        />
-        <p className="formik-errors-message">{formik.errors.lastname}</p>
 
         <input
           id="email"

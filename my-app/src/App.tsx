@@ -8,11 +8,12 @@ import { Subscribers } from './pages/Subscribers';
 import { Subscriptions } from './pages/Subscriptions';
 import { Messages } from './pages/Messages';
 import { Saved } from './pages/Saved';
-import { Settings } from './pages/Settings';
+import { BecomeAnOwner } from './pages/BecomeAnOwner';
 import { NotFoundpage } from './pages/NotFoundpage';
 import { Registration } from './pages/Registration';
 
 import { Layout } from './components/Layout';
+import { Login } from './pages/Login';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route path="subscription/*" element={<Subscriptions />} />
           <Route path="messages" element={<Messages />} />
           <Route path="saved" element={<Saved />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="becomeanowner" element={<BecomeAnOwner />} />
           <Route path="registration" element={<Registration />} />
           <Route path="log in" element={<Login />} />
           <Route path="*" element={<NotFoundpage />} />

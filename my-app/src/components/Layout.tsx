@@ -24,11 +24,11 @@ const Layout = () => {
         <NavLink to="/saved" className={setActive}>
           Saved
         </NavLink>
-        <NavLink to="/settings" className={setActive}>
-          Settings
-        </NavLink>
         <NavLink to="/notfound" className={setActive}>
           NotFoundpage
+        </NavLink>
+        <NavLink to="/becomeanowner" className={setActive}>
+          Become an owner
         </NavLink>
         <NavLink to="/registration" className={setActive}>
           Sign up
