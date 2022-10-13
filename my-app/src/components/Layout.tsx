@@ -36,6 +36,7 @@ const Layout = () => {
         <NavLink to="/log in" className={setActive}>
           Log in
         </NavLink>
+        
       </header>
 
       <main className="container">
