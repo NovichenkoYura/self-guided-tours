@@ -31,7 +31,10 @@ const Layout = () => {
           NotFoundpage
         </NavLink>
         <NavLink to="/registration" className={setActive}>
-          Registration
+          Sign up
+        </NavLink>
+        <NavLink to="/log in" className={setActive}>
+          Log in
         </NavLink>
       </header>
 

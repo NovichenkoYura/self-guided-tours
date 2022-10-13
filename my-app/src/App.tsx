@@ -27,6 +27,7 @@ function App() {
           <Route path="saved" element={<Saved />} />
           <Route path="settings" element={<Settings />} />
           <Route path="registration" element={<Registration />} />
+          <Route path="log in" element={<Login />} />
           <Route path="*" element={<NotFoundpage />} />
         </Route>
       </Routes>
