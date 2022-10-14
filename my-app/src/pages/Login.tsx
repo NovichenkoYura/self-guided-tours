@@ -4,7 +4,7 @@ import React, { useMemo, useEffect } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { addUsersThunk } from '../store/usersSlice';
+import { getUsersThunk, loginThunk } from '../store/usersSlice';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import preloader from '../img/preloader.gif';
 
@@ -31,7 +31,7 @@ export const Login: React.FC<formProps> = () => {
     },
     onSubmit: (values, { resetForm }) => {
       dispatch(
-        addUsersThunk({
+        loginThunk({
           email: values.email,
           password: values.password
         })
@@ -67,7 +67,7 @@ export const Login: React.FC<formProps> = () => {
 
         <p className="formik-errors-message">{formik.errors.password}</p>
         <button type="submit" className="main__button">
-          Add user
+          Log in
         </button>
       </div>
     </form>

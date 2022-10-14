@@ -7,6 +7,24 @@
       "email": "y.novichenko@mantis.com.ua",
       "password": "2F7R8NKS",
       "id": 1
+    },
+    {
+      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b9",
+      "firstname": "rrrrrrrrrrrrrrrrr",
+      "lastname": "aaaaaaaaaaaaaaaaaaaaa",
+      "email": "ysssssssssssss.novichenko@mantis.com.ua",
+      "password": "pppppppppp",
+      "id": 2
+    },
+    {
+      "email": "craftyura@gmail.com",
+      "password": "2F7R8NKS",
+      "id": 3
+    },
+    {
+      "email": "yurasuperman@gmail.com",
+      "password": "9YGC2T7C",
+      "id": 4
     }
   ]
 }

@@ -12,17 +12,21 @@ interface User {
 interface UsersState {
   list: User[];
   isFetching: boolean;
-  currentPage: number;
-  perPage: number;
-  totalQtyComments: number;
+  token?: string;
+  firstname?: string;
+  lastname?: string;
+  email?: string;
+  password?: string;
 }
 
 const initialState: UsersState = {
   list: [],
   isFetching: false,
-  currentPage: 1,
-  perPage: 3,
-  totalQtyComments: 0
+  firstname: '',
+  lastname: '',
+  email: '',
+  password: '',
+  token: ''
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
@@ -33,12 +37,25 @@ export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
 });
 
 export const addUsersThunk = createAsyncThunk(
-  'user/Users',
+  'users/addUsers',
   async ({ token, firstname, lastname, email, password }: User) => {
     const user = {
       token: token,
       firstname: firstname,
       lastname: lastname,
+      email: email,
+      password: password
+    };
+    const response = await axios.post('http://localhost:3001/users', user);
+    const data = await response.data;
+    return data;
+  }
+);
+
+export const loginThunk = createAsyncThunk(
+  'users/loginUsers',
+  async ({ email, password }: User) => {
+    const user = {
       email: email,
       password: password
     };
@@ -66,7 +83,13 @@ const usersSlice = createSlice({
     builder.addCase(addUsersThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.list.push(action.payload);
       state.isFetching = false;
-      state.totalQtyComments = state.totalQtyComments + 1;
+    });
+    builder.addCase(loginThunk.pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      state.token = action.payload.token;
+      state.isFetching = false;
     });
   },
 
