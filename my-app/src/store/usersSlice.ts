@@ -2,7 +2,7 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 interface User {
-  id?: string;
+  token?: string;
   firstname?: string;
   lastname?: string;
   email?: string;
@@ -19,7 +19,7 @@ interface UsersState {
 
 const initialState: UsersState = {
   list: [],
-  isFetching: true,
+  isFetching: false,
   currentPage: 1,
   perPage: 3,
   totalQtyComments: 0
@@ -34,9 +34,9 @@ export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
 
 export const addUsersThunk = createAsyncThunk(
   'user/Users',
-  async ({ id, firstname, lastname, email, password }: User) => {
+  async ({ token, firstname, lastname, email, password }: User) => {
     const user = {
-      id: id,
+      token: token,
       firstname: firstname,
       lastname: lastname,
       email: email,

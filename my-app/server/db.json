@@ -1,9 +1,12 @@
 {
   "users": [
     {
-      "id": "756c3af1-cea4-470e-a503-c2ea3fe24b2b",
-      "name": "111111111",
-      "text": "111111111111"
+      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b8",
+      "firstname": "кккккккккккккк",
+      "lastname": "ррррррррррррррррррр",
+      "email": "y.novichenko@mantis.com.ua",
+      "password": "2F7R8NKS",
+      "id": 1
     }
   ]
 }

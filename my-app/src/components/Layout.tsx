@@ -1,8 +1,16 @@
+//@ts-nocheck
+
 import { NavLink, Outlet } from 'react-router-dom';
+import { useState } from 'react';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
-const Layout = () => {
+interface layoutProps {
+  active?: boolean;
+}
+
+const Layout: React.FC<layoutProps> = () => {
+  const [modalActive, setModalActive] = useState(true);
   return (
     <>
       <header>
@@ -30,7 +38,12 @@ const Layout = () => {
         <NavLink to="/becomeanowner" className={setActive}>
           Become an owner
         </NavLink>
-        <NavLink to="/registration" className={setActive}>
+        <NavLink
+          to="/registration"
+          className={setActive}
+          active={modalActive}
+          setActive={setModalActive}
+          onClick={() => setModalActive(true)}>
           Sign up
         </NavLink>
         <NavLink to="/log in" className={setActive}>

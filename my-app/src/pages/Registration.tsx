@@ -1,24 +1,28 @@
+//@ts-nocheck
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import React, { useMemo, useEffect } from 'react';
+import React, { useMemo } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
 import { addUsersThunk } from '../store/usersSlice';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
+
 import preloader from '../img/preloader.gif';
 
 interface formProps {
-  id?: string;
+  token?: string;
   firstname?: string;
   lastname?: string;
   email?: string;
   password?: string;
+  active?: boolean;
+  setActive?: boolean;
 }
 
-export const Registration: React.FC<formProps> = () => {
+export const Registration: React.FC<formProps> = ({ active, setActive }) => {
   const dispatch = useAppDispatch();
-  const projectId: string = uuidv4();
+  const token: string = uuidv4();
   const { isFetching } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
@@ -36,14 +40,14 @@ export const Registration: React.FC<formProps> = () => {
       lastname: '',
       email: '',
       password: '',
-      id: ''
+      token: ''
     },
     onSubmit: (values, { resetForm }) => {
       dispatch(
         addUsersThunk({
           firstname: values.firstname,
           lastname: values.lastname,
-          id: projectId,
+          token: token,
           email: values.email,
           password: values.password
         })
@@ -53,8 +57,11 @@ export const Registration: React.FC<formProps> = () => {
     validationSchema
   });
   return (
-    <form onSubmit={formik.handleSubmit} className="registrationForm__container">
-      <div className="formik-form">
+    <form
+      onSubmit={formik.handleSubmit}
+      className={active ? 'registrationForm__container modal active' : 'modal'}
+      onClick={() => setActive(false)}>
+      <div className="formik-form modal__content" onClick={(e) => e.stopPropagation}>
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input
           id="firstname"
