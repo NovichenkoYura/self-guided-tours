@@ -97,11 +97,9 @@ const usersSlice = createSlice({
   },
 
   reducers: {
-    setCurrentPage(state, action: PayloadAction<number>) {
-      state.currentPage = action.payload;
-    }
+    
   }
 });
 
-export const { setCurrentPage } = usersSlice.actions;
+export const {  } = usersSlice.actions;
 export default usersSlice.reducer;

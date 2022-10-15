@@ -15,11 +15,10 @@ interface formProps {
   lastname?: string;
   email?: string;
   password?: string;
-  active: boolean;
-  setActive: boolean;
+ 
 }
 
-export const Registration: React.FC<formProps> = ({ active, setActive }) => {
+export const Registration: React.FC<formProps> = () => {
   const dispatch = useAppDispatch();
   const token: string = uuidv4();
   const { isFetching } = useAppSelector((state) => state.users);
@@ -58,9 +57,8 @@ export const Registration: React.FC<formProps> = ({ active, setActive }) => {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className={active ? 'registrationForm__container modal active' : 'modal'}
-      onClick={() => setActive(false)}>
-      <div className="formik-form modal__content" onClick={(e) => e.stopPropagation}>
+      className={'registrationForm__container modal'}>
+      <div className="formik-form modal__content">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input
           id="firstname"
