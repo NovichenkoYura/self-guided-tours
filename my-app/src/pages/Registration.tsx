@@ -57,8 +57,8 @@ export const Registration: React.FC<formProps> = () => {
   return (
     <form
       onSubmit={formik.handleSubmit}
-      className={'registrationForm__container modal'}>
-      <div className="formik-form modal__content">
+      className='registrationForm__container '>
+      <div className="formik-form ">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input
           id="firstname"
