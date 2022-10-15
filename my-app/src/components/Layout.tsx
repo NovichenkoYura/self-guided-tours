@@ -3,8 +3,7 @@ import { useState } from 'react';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
-
-const Layout= () => {
+const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>

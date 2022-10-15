@@ -15,7 +15,6 @@ interface formProps {
   lastname?: string;
   email?: string;
   password?: string;
- 
 }
 
 export const Registration: React.FC<formProps> = () => {
@@ -55,9 +54,7 @@ export const Registration: React.FC<formProps> = () => {
     validationSchema
   });
   return (
-    <form
-      onSubmit={formik.handleSubmit}
-      className='registrationForm__container '>
+    <form onSubmit={formik.handleSubmit} className="registrationForm__container ">
       <div className="formik-form ">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input

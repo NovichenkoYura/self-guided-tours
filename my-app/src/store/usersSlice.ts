@@ -55,15 +55,12 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
-    // console.log('email', 'password', email, password);
-    const user = {
-      email: email,
-      password: password
-    };
     const response = await axios.get('http://localhost:3001/users');
-    console.log('res', response);
     const data = await response.data;
-    console.log('data', data);
+    data.forEach((profile) => {
+      if (profile.email === email && profile.password === password)
+        console.log(profile.email, profile.password, profile.token);
+    });
     return data;
   }
 );
@@ -96,10 +93,8 @@ const usersSlice = createSlice({
     });
   },
 
-  reducers: {
-    
-  }
+  reducers: {}
 });
 
-export const {  } = usersSlice.actions;
+export const {} = usersSlice.actions;
 export default usersSlice.reducer;
