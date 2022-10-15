@@ -55,12 +55,15 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
+    // console.log('email', 'password', email, password);
     const user = {
       email: email,
       password: password
     };
-    const response = await axios.post('http://localhost:3001/users', user);
+    const response = await axios.get('http://localhost:3001/users');
+    console.log('res', response);
     const data = await response.data;
+    console.log('data', data);
     return data;
   }
 );

@@ -15,8 +15,8 @@ interface formProps {
   lastname?: string;
   email?: string;
   password?: string;
-  active?: boolean;
-  setActive?: boolean;
+  active: boolean;
+  setActive: boolean;
 }
 
 export const Registration: React.FC<formProps> = ({ active, setActive }) => {

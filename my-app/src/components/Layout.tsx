@@ -4,11 +4,12 @@ import { useState } from 'react';
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
 interface layoutProps {
-  active?: boolean;
+  active: boolean;
 }
 
 const Layout: React.FC<layoutProps> = () => {
   const [modalActive, setModalActive] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>
       <header>
@@ -47,6 +48,8 @@ const Layout: React.FC<layoutProps> = () => {
         <NavLink to="/log in" className={setActive}>
           Log in
         </NavLink>
+        <button onClick={() => setShowDropdown(!showDropdown)}>Show dropdown</button>
+        {showDropdown && <span>DropDown</span>}
       </header>
 
       <main className="container">
