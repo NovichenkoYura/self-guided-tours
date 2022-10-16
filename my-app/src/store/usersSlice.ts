@@ -57,9 +57,10 @@ export const loginThunk = createAsyncThunk(
   async ({ email, password }: User) => {
     const response = await axios.get('http://localhost:3001/users');
     const data = await response.data;
-    data.forEach((profile) => {
+    data.forEach((profile: any) => {
       if (profile.email === email && profile.password === password)
-        console.log(profile.email, profile.password, profile.token);
+        // console.log(profile.email, profile.password, profile.token);
+        return profile.email, profile.password, profile.token;
     });
     return data;
   }
@@ -89,6 +90,8 @@ const usersSlice = createSlice({
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.token = action.payload.token;
+      state.firstname = action.payload.firstname;
+      console.log(action.payload);
       state.isFetching = false;
     });
   },
