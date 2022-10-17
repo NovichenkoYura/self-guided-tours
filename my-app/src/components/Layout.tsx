@@ -39,7 +39,16 @@ const Layout = () => {
           Log in
         </NavLink>
         <button onClick={() => setShowDropdown(!showDropdown)}>Show dropdown</button>
-        {showDropdown && <span>DropDown</span>}
+        {showDropdown && (
+          <>
+            <NavLink to="/log in" className={setActive}>
+              Log in
+            </NavLink>
+            <NavLink to="/registration" className={setActive}>
+              Sign up
+            </NavLink>
+          </>
+        )}
       </header>
 
       <main className="container">
