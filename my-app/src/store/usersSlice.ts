@@ -55,14 +55,20 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
+    console.log(email, password);
     const response = await axios.get('http://localhost:3001/users');
     const data = await response.data;
+    const dataUser: User = {};
     data.forEach((profile: any) => {
-      if (profile.email === email && profile.password === password)
-        // console.log(profile.email, profile.password, profile.token);
-        return profile.email, profile.password, profile.token;
+      if (profile.email === email && profile.password === password) {
+        dataUser.email = profile.email;
+        dataUser.password = profile.password;
+        dataUser.token = profile.token;
+        dataUser.firstname = profile.firstname;
+        dataUser.lastname = profile.lastname;
+      }
     });
-    return data;
+    return dataUser;
   }
 );
 
@@ -89,9 +95,12 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      console.log(action.payload);
       state.token = action.payload.token;
       state.firstname = action.payload.firstname;
-      console.log(action.payload);
+      state.lastname = action.payload.lastname;
+      state.password = action.payload.password;
+      state.email = action.payload.email;
       state.isFetching = false;
     });
   },
@@ -99,5 +108,5 @@ const usersSlice = createSlice({
   reducers: {}
 });
 
-export const {} = usersSlice.actions;
+// export const {} = usersSlice.actions;
 export default usersSlice.reducer;
