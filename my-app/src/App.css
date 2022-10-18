@@ -141,29 +141,52 @@ button:focus {
   display: flex;
   flex-direction: column;
   height: 50px;
-  width: 80px;
+  width: 100px;
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: 30px;
+  margin-right: 80px;
   margin-top: 20px;
   border: 1px solid #ddd;
   border-radius: 25px;
   cursor: pointer;
+
 }
 
 .dropdown__window{
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 120px;
   width: 180px;  
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: 30px;
-  margin-top: 85px;
+  margin-right: 80px;
+  margin-top: 100px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+  0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  padding: 15px 15px;  
+ 
   
+}
 
+.dropdown__item{
+  height: 40px;  
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  color: #2C2C32;
+  text-decoration: none;
+
+}
+
+.dropdown__item:hover,
+.dropdown__item:focus{
+  background-color: #f1f0f3;
+  font-weight: 700;
+  
+  
 }

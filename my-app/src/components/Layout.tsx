@@ -41,8 +41,12 @@ const Layout = () => {
         <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link"></div>
         {showDropdown && (
           <div className="dropdown__window">
-            <NavLink to="/log in">Log in</NavLink>
-            <NavLink to="/registration">Sign up</NavLink>
+            <NavLink to="/log in" className="dropdown__item">
+              Log in
+            </NavLink>
+            <NavLink to="/registration" className="dropdown__item">
+              Sign up
+            </NavLink>
           </div>
         )}
       </header>
@@ -51,7 +55,7 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="container">2022</footer>
+      <footer className="container"></footer>
     </>
   );
 };
