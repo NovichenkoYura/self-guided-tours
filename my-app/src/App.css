@@ -137,3 +137,33 @@ button:focus {
   background-color: white;  
 } */
 
+.dropdown__link{
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.dropdown__window{
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 180px;  
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 30px;
+  margin-top: 85px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  
+
+}

@@ -32,22 +32,18 @@ const Layout = () => {
         <NavLink to="/becomeanowner" className={setActive}>
           Become an owner
         </NavLink>
-        <NavLink to="/registration" className={setActive}>
+        {/* <NavLink to="/registration" className={setActive}>
           Sign up
         </NavLink>
         <NavLink to="/log in" className={setActive}>
           Log in
-        </NavLink>
-        <button onClick={() => setShowDropdown(!showDropdown)}>Show dropdown</button>
+        </NavLink> */}
+        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link"></div>
         {showDropdown && (
-          <>
-            <NavLink to="/log in" className={setActive}>
-              Log in
-            </NavLink>
-            <NavLink to="/registration" className={setActive}>
-              Sign up
-            </NavLink>
-          </>
+          <div className="dropdown__window">
+            <NavLink to="/log in">Log in</NavLink>
+            <NavLink to="/registration">Sign up</NavLink>
+          </div>
         )}
       </header>
 
