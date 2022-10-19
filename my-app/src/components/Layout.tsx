@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
+import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -38,7 +39,11 @@ const Layout = () => {
         <NavLink to="/log in" className={setActive}>
           Log in
         </NavLink> */}
-        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link"></div>
+        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
+          <div className="dropdown__relative">
+            <LoginPerson className="login__person" width="35" height="35" />
+          </div>
+        </div>
         {showDropdown && (
           <div className="dropdown__window">
             <NavLink to="/log in" className="dropdown__item">
