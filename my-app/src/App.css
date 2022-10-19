@@ -139,7 +139,9 @@ button:focus {
 
 .dropdown__link{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   height: 50px;
   width: 100px;
   position: absolute;
@@ -150,6 +152,7 @@ button:focus {
   border: 2.4px solid white;
   border-radius: 25px;
   cursor: pointer;
+  padding: 5px;
 }
 
 .dropdown__window{
@@ -192,9 +195,14 @@ button:focus {
   fill: white;  
 }
 
-.dropdown__relative{
-  position: relative;
+.loginsvg__person{
+  /* position: relative;
   top: 5px;
-  left: 20px;
+  left: 20px; */
+}
 
+.loginsvg__lines{
+  /* position: relative;
+  top: 5px;
+  left: 5px; */
 }

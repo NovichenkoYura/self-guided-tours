@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
+import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -40,7 +41,10 @@ const Layout = () => {
           Log in
         </NavLink> */}
         <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
-          <div className="dropdown__relative">
+          <div className="loginsvg__lines">
+            <LoginLines className="login__person" width="20" height="20" />
+          </div>
+          <div className="loginsvg__person">
             <LoginPerson className="login__person" width="35" height="35" />
           </div>
         </div>
