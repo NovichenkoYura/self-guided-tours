@@ -179,7 +179,8 @@ button:focus {
   height: 40px;  
   width: 100%;
   align-items: center;
-  text-align: left;
+  text-align:start;
+  vertical-align: bottom;
   color: #2C2C32;
   text-decoration: none;
 
@@ -193,16 +194,4 @@ button:focus {
 
 .login__person * {
   fill: white;  
-}
-
-.loginsvg__person{
-  /* position: relative;
-  top: 5px;
-  left: 20px; */
-}
-
-.loginsvg__lines{
-  /* position: relative;
-  top: 5px;
-  left: 5px; */
 }
