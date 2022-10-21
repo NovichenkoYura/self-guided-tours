@@ -29,8 +29,19 @@ const initialState: UsersState = {
   token: ''
 };
 
+const token = initialState.token;
+console.log(token);
+
+export const instance = axios.create({
+  headers: token
+    ? {
+        Authorization: `Bearer ${token}`
+      }
+    : undefined
+});
+
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
-  const response = await axios.get('http://localhost:3001/users');
+  const response = await instance.get('http://localhost:3001/users');
 
   const data = await response.data;
   return data;
@@ -46,7 +57,7 @@ export const addUsersThunk = createAsyncThunk(
       email: email,
       password: password
     };
-    const response = await axios.post('http://localhost:3001/users', user);
+    const response = await instance.post('http://localhost:3001/users', user);
     const data = await response.data;
     return data;
   }
@@ -55,8 +66,7 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
-    console.log(email, password);
-    const response = await axios.get('http://localhost:3001/users');
+    const response = await instance.get('http://localhost:3001/users');
     const data = await response.data;
     const dataUser: User = {};
     data.forEach((profile: any) => {
@@ -95,7 +105,6 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
-      console.log(action.payload);
       state.token = action.payload.token;
       state.firstname = action.payload.firstname;
       state.lastname = action.payload.lastname;
