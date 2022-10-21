@@ -29,8 +29,9 @@ const initialState: UsersState = {
   token: ''
 };
 
-const token = initialState.token;
-console.log(token);
+const token = localStorage.getItem('token');
+alert(document.cookie);
+// console.log(getCookie(token));
 
 export const instance = axios.create({
   headers: token
@@ -111,6 +112,9 @@ const usersSlice = createSlice({
       state.password = action.payload.password;
       state.email = action.payload.email;
       state.isFetching = false;
+      document.cookie = 'token = action.payload.token';
+      localStorage.token = action.payload.token;
+      // localStorage.setItem('token', action.payload.token);
     });
   },
 
