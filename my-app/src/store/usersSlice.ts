@@ -30,8 +30,6 @@ const initialState: UsersState = {
 };
 
 const token = localStorage.getItem('token');
-alert(document.cookie);
-// console.log(getCookie(token));
 
 export const instance = axios.create({
   headers: token
@@ -67,7 +65,7 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
-    const response = await instance.get('http://localhost:3001/users');
+    const response = await instance.get('http://localhost:3001/usersttttttttttttttttt');
     const data = await response.data;
     const dataUser: User = {};
     data.forEach((profile: any) => {
@@ -107,14 +105,16 @@ const usersSlice = createSlice({
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.token = action.payload.token;
+      console.log(action.payload.token);
       state.firstname = action.payload.firstname;
       state.lastname = action.payload.lastname;
       state.password = action.payload.password;
       state.email = action.payload.email;
       state.isFetching = false;
-      document.cookie = 'token = action.payload.token';
-      localStorage.token = action.payload.token;
-      // localStorage.setItem('token', action.payload.token);
+      localStorage.setItem('token', String(action.payload.token));
+    });
+    builder.addCase(loginThunk.rejected, () => {
+      console.log('mistake');
     });
   },
 
