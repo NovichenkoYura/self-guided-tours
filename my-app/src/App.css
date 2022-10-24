@@ -206,13 +206,30 @@ button:focus {
 
 .headerOrder__item{
   list-style-type: none;
+  cursor: pointer;
 }
 
-.headerOrder_svgwishlist * {
+.headerOrder_svgwishlist{
+  fill: white;    
+  transition: color, transform 500ms ease;
+}
+
+.headerOrder_svgwishlist:hover,
+.headerOrder_svgwishlist:focus{
+background-color: #bab9bf;
+border-radius: 5px;
+transform: scale(1.2);
+
+}
+
+.headerOrder_svgbasket {
   fill: white;  
 }
 
-.headerOrder_svgbasket * {
-  fill: white;  
+.headerOrder_svgbasket:hover,
+.headerOrder_svgbasket:focus{
+background-color: #bab9bf;
+border-radius: 5px;
+transform: scale(1.2);
 }
 
