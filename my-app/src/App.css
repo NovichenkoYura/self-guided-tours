@@ -193,9 +193,14 @@ button:focus {
 .headerOrder__container{
   display: flex;
   justify-content:space-between;
-  border: 1px solid #ddd;
-  width: 80px;
+  /* border: 1px solid #ddd; */
+  width: 70px;
   padding: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 40px;
+  margin-top: 30px;
 
 }
 
@@ -203,7 +208,7 @@ button:focus {
   list-style-type: none;
 }
 
-.headerOrder_svgchosen * {
+.headerOrder_svgwishlist * {
   fill: white;  
 }
 

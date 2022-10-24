@@ -14,6 +14,8 @@ import { Registration } from './pages/Registration';
 
 import { Layout } from './components/Layout';
 import { Login } from './pages/Login';
+import { Wishlist } from './pages/Wishlist';
+import { Basket } from './pages/Basket';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="becomeanowner" element={<BecomeAnOwner />} />
           <Route path="registration" element={<Registration />} />
           <Route path="log in" element={<Login />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="basket" element={<Basket />} />
           <Route path="*" element={<NotFoundpage />} />
         </Route>
       </Routes>
