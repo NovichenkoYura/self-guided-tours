@@ -94,8 +94,6 @@ button {
   background-color: #bab9bf;
   border: none;
   border-radius: 5px;
-  /* margin-top: 20px;
-  margin-bottom: auto; */
 margin: 0 auto;
   display: block;
   padding: 6px 22px;
@@ -146,7 +144,7 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
-  margin-right: 80px;
+  margin-right: 140px;
   margin-top: 20px;
   border: 2.4px solid white;
   border-radius: 25px;
@@ -191,3 +189,25 @@ button:focus {
 .login__person * {
   fill: white;  
 }
+
+.headerOrder__container{
+  display: flex;
+  justify-content:space-between;
+  border: 1px solid #ddd;
+  width: 80px;
+  padding: 0px;
+
+}
+
+.headerOrder__item{
+  list-style-type: none;
+}
+
+.headerOrder_svgchosen * {
+  fill: white;  
+}
+
+.headerOrder_svgbasket * {
+  fill: white;  
+}
+

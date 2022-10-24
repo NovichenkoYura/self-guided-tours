@@ -2,6 +2,8 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 import { ReactComponent as LoginLines } from '../img/loginLines.svg';
+import { ReactComponent as Chosen } from '../img/hurt.svg';
+import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -34,12 +36,6 @@ const Layout = () => {
         <NavLink to="/becomeanowner" className={setActive}>
           Become an owner
         </NavLink>
-        {/* <NavLink to="/registration" className={setActive}>
-          Sign up
-        </NavLink>
-        <NavLink to="/log in" className={setActive}>
-          Log in
-        </NavLink> */}
         <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
           <div className="loginsvg__lines">
             <LoginLines className="login__person" width="20" height="20" />
@@ -58,6 +54,14 @@ const Layout = () => {
             </NavLink>
           </div>
         )}
+        <ul className="headerOrder__container">
+          <li className="headerOrder__item">
+            <Chosen className="headerOrder_svgchosen" width="25" height="25" />
+          </li>
+          <li className="headerOrder__item">
+            <Basket className="headerOrder_svgbasket" width="25" height="25" />
+          </li>
+        </ul>
       </header>
 
       <main className="container">
