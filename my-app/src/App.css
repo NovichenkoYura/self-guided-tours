@@ -236,17 +236,19 @@ transform: scale(1.2);
 }
 
 /* Card */
-.movies__item {
+.tours__item {
+  width: 100%;
+  list-style-type: none;
+  border: 1px solid gray;
 
-    width: calc((100% - 3 * 32px) / 3);
 
 }
 
-.movies__link {
+.tours__link {
   text-decoration: none;
 }
 
-.movie__image {
+.toursItem__image {
   /* background-image: url(../images/filmtape.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
@@ -254,17 +256,14 @@ transform: scale(1.2);
   object-fit: cover;
   border-radius: 5px;
   height: 574px;
+
+  
 }
 
-
-
-.movie__text-part {
-  padding-top: 10px;
-  padding-bottom: 20px;
+.tour__text-part{
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  border: 1px solid #eeeeee;
+  justify-content: left;
 }
 
 .movie__title {
@@ -286,4 +285,25 @@ transform: scale(1.2);
   text-decoration: none;
   color: #ff6b08;
 
+}
+
+/* movie list */
+
+.movie-list-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include tab {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.movie-collection {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: -16px;
+  }
 }

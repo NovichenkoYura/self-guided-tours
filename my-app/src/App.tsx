@@ -3,7 +3,7 @@ import './App.css';
 
 import { Routes, Route, Link } from 'react-router-dom';
 import { Main } from './pages/Main';
-import { Toures } from './pages/Toures';
+import { Tours } from './pages/Tours';
 import { Subscribers } from './pages/Subscribers';
 import { Subscriptions } from './pages/Subscriptions';
 import { Messages } from './pages/Messages';
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="toures" element={<Toures />} />
+          <Route path="tours" element={<Tours />} />
           <Route path="subscribers" element={<Subscribers />} />
           <Route path="subscription/*" element={<Subscriptions />} />
           <Route path="messages" element={<Messages />} />
