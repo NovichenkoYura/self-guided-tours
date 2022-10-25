@@ -9,6 +9,10 @@ interface User {
   password?: string;
 }
 
+interface Orders {
+  price: number;
+}
+
 interface UsersState {
   list: User[];
   isFetching: boolean;
@@ -17,6 +21,7 @@ interface UsersState {
   lastname?: string;
   email?: string;
   password?: string;
+  orders: Orders[];
 }
 
 const initialState: UsersState = {
@@ -26,7 +31,8 @@ const initialState: UsersState = {
   lastname: '',
   email: '',
   password: '',
-  token: ''
+  token: '',
+  orders: []
 };
 
 const token = localStorage.getItem('token');

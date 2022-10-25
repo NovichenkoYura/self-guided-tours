@@ -15,8 +15,8 @@ const Layout = () => {
         <NavLink to="/" className={setActive}>
           Main
         </NavLink>
-        <NavLink to="/explore" className={setActive}>
-          Explore
+        <NavLink to="/toures" className={setActive}>
+          Toures
         </NavLink>
         <NavLink to="/subscribers" className={setActive}>
           Subscribers
