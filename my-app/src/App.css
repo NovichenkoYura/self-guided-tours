@@ -224,6 +224,8 @@ transform: scale(1.2);
 
 .headerOrder_svgbasket {
   fill: white;  
+  transition: color, transform 500ms ease;
+
 }
 
 .headerOrder_svgbasket:hover,
