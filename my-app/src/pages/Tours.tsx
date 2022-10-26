@@ -1,3 +1,6 @@
+import hamon_meal from '../img/hamon_meal.jpg';
+import hamon_pig from '../img/hamon_pig.jpg';
+
 const Tours = () => {
   return (
     <>
@@ -5,7 +8,9 @@ const Tours = () => {
       <ul>
         <li className="tours__item">
           <a href="" className="tours__link">
-            <img src="../img/hamon_meal.jpg" className="toursItem__image" alt="Meal" />
+            <img src={hamon_meal} className="toursItem__image" alt="Meal" />
+            <img src={hamon_pig} className="toursItem__image" alt="Pig" />
+
             <div className="tour__text-part">
               <h2 className="tour__title">Spain: Gastro tour</h2>
               <p className="tour__generaldecsription">

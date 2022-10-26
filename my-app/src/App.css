@@ -142,8 +142,8 @@ button:focus {
   height: 50px;
   width: 100px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   margin-right: 140px;
   margin-top: 20px;
   border: 2.4px solid white;
@@ -159,18 +159,19 @@ button:focus {
   height: 120px;
   width: 180px;  
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 65px;
   margin-right: 80px;
   margin-top: 100px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
   0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-  padding: 15px 15px;    
+  /* padding: 15px 15px;     */
 }
 
 .dropdown__item{
+  padding: 6px 0 6px 15px;
   height: 40px;  
   width: 100%;
   align-items: center;
