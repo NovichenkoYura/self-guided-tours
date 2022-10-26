@@ -8,8 +8,10 @@ const Tours = () => {
       <ul>
         <li className="tours__item">
           <a href="" className="tours__link">
-            <img src={hamon_meal} className="toursItem__image" alt="Meal" />
-            <img src={hamon_pig} className="toursItem__image" alt="Pig" />
+            <div className="toursItemImage__container">
+              <img src={hamon_meal} className="toursItem__image" alt="Meal" />
+              <img src={hamon_pig} className="toursItem__image" alt="Pig" />
+            </div>
 
             <div className="tour__text-part">
               <h2 className="tour__title">Spain: Gastro tour</h2>

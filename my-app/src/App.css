@@ -249,14 +249,19 @@ transform: scale(1.2);
   text-decoration: none;
 }
 
+.toursItemImage__container{
+  display: flex;
+  flex-direction: column;
+}
+
 .toursItem__image {
-  /* background-image: url(../images/filmtape.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 120px;
   object-fit: cover;
   border-radius: 5px;
-  height: 574px;
+  height: 120px;
+  z-index: 1;
 
   
 }
