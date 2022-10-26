@@ -241,8 +241,13 @@ transform: scale(1.2);
   width: 100%;
   list-style-type: none;
   border: 1px solid gray;
+ 
 
+}
 
+.wrap{
+  display: flex;
+  flex-direction: row;
 }
 
 .tours__link {
