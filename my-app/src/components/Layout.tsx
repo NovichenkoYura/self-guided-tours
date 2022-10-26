@@ -31,7 +31,7 @@ const Layout = () => {
         <NavLink to={locations.saved.path} className={setActive}>
           Saved
         </NavLink>
-        <NavLink to="/notfound" className={setActive}>
+        <NavLink to={locations.notfoundpage.path} className={setActive}>
           NotFoundpage
         </NavLink>
         <NavLink to={locations.becomeanowner.path} className={setActive}>
@@ -47,7 +47,7 @@ const Layout = () => {
         </div>
         {showDropdown && (
           <div className="dropdown__window">
-            <NavLink to="/log in" className="dropdown__item">
+            <NavLink to={locations.login.path} className="dropdown__item">
               Log in
             </NavLink>
             <NavLink to={locations.registration.path} className="dropdown__item">
@@ -62,7 +62,7 @@ const Layout = () => {
             </NavLink>
           </li>
           <li className="headerOrder__item">
-            <NavLink to="/basket/">
+            <NavLink to={locations.basket.path}>
               <Basket className="headerOrder_svgbasket" width="25" height="25" />{' '}
             </NavLink>
           </li>

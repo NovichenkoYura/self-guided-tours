@@ -32,10 +32,10 @@ function App() {
           <Route path={locations.saved.path} element={locations.saved.component} />
           <Route path={locations.becomeanowner.path} element={locations.becomeanowner.component} />
           <Route path={locations.registration.path} element={locations.registration.component} />
-          <Route path="log in" element={<Login />} />
-          <Route path="wishlist" element={<Wishlist />} />
-          <Route path="basket" element={<Basket />} />
-          <Route path="*" element={<NotFoundpage />} />
+          <Route path={locations.login.path} element={locations.login.component} />
+          <Route path={locations.wishlist.path} element={locations.wishlist.component} />
+          <Route path={locations.basket.path} element={locations.basket.component} />
+          <Route path={locations.notfoundpage.path} element={locations.notfoundpage.component} />
         </Route>
       </Routes>
     </>
