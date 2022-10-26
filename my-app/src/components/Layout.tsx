@@ -4,6 +4,7 @@ import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 import { ReactComponent as Chosen } from '../img/hurt.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
+import { locations } from '../constants/locations';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -15,25 +16,25 @@ const Layout = () => {
         <NavLink to="/" className={setActive}>
           Main
         </NavLink>
-        <NavLink to="/tours" className={setActive}>
+        <NavLink to={locations.tours.path} className={setActive}>
           Tours
         </NavLink>
-        <NavLink to="/subscribers" className={setActive}>
+        <NavLink to={locations.subscribers.path} className={setActive}>
           Subscribers
         </NavLink>
-        <NavLink to="/subscription/" className={setActive}>
+        <NavLink to={locations.subscription.path} className={setActive}>
           Subscriptions
         </NavLink>
-        <NavLink to="/messages" className={setActive}>
+        <NavLink to={locations.messages.path} className={setActive}>
           Messages
         </NavLink>
-        <NavLink to="/saved" className={setActive}>
+        <NavLink to={locations.saved.path} className={setActive}>
           Saved
         </NavLink>
         <NavLink to="/notfound" className={setActive}>
           NotFoundpage
         </NavLink>
-        <NavLink to="/becomeanowner" className={setActive}>
+        <NavLink to={locations.becomeanowner.path} className={setActive}>
           Become an owner
         </NavLink>
         <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
@@ -49,7 +50,7 @@ const Layout = () => {
             <NavLink to="/log in" className="dropdown__item">
               Log in
             </NavLink>
-            <NavLink to="/registration" className="dropdown__item">
+            <NavLink to={locations.registration.path} className="dropdown__item">
               Sign up
             </NavLink>
           </div>

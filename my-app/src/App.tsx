@@ -3,7 +3,9 @@ import './App.css';
 
 import { Routes, Route, Link } from 'react-router-dom';
 import { Main } from './pages/Main';
-import { Tours } from './pages/Tours';
+
+import { locations } from '../src/constants/locations';
+
 import { Subscribers } from './pages/Subscribers';
 import { Subscriptions } from './pages/Subscriptions';
 import { Messages } from './pages/Messages';
@@ -23,13 +25,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="tours" element={<Tours />} />
-          <Route path="subscribers" element={<Subscribers />} />
-          <Route path="subscription/*" element={<Subscriptions />} />
-          <Route path="messages" element={<Messages />} />
-          <Route path="saved" element={<Saved />} />
-          <Route path="becomeanowner" element={<BecomeAnOwner />} />
-          <Route path="registration" element={<Registration />} />
+          <Route path={locations.tours.path} element={locations.tours.component} />
+          <Route path={locations.subscribers.path} element={locations.subscribers.component} />
+          <Route path={locations.subscription.path} element={locations.subscription.component} />
+          <Route path={locations.messages.path} element={locations.messages.component} />
+          <Route path={locations.saved.path} element={locations.saved.component} />
+          <Route path={locations.becomeanowner.path} element={locations.becomeanowner.component} />
+          <Route path={locations.registration.path} element={locations.registration.component} />
           <Route path="log in" element={<Login />} />
           <Route path="wishlist" element={<Wishlist />} />
           <Route path="basket" element={<Basket />} />
