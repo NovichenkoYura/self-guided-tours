@@ -226,7 +226,7 @@ transform: scale(1.2);
 
 .headerOrder_svgbasket {
   fill: white;  
-  transition: color, transform 500ms ease;
+  transition: color, transform 300ms ease;
 
 }
 
@@ -241,7 +241,8 @@ transform: scale(1.2);
 .tours__item {
   width: 100%;
   list-style-type: none;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
+  position: relative;
 }
 
 .wrap{
@@ -277,6 +278,20 @@ transform: scale(1.2);
   justify-content: left;
 }
 
+/* Card btns */
+
+.tourCard__svgbasket{
+  fill: white;
+  transition: color, transform 300ms ease;
+}
+
+.tourCard__svgwishlist{
+  fill: #ff6b08;
+  transition: color, transform 300ms ease;
+  margin-left: 15px;
+  
+}
+
 .movie__title {
   font-family: Roboto;
   font-weight: 500;
@@ -287,34 +302,26 @@ transform: scale(1.2);
   color: #000000;
 
 }
-.movie__genre {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.33;
-  text-align: left;
-  text-decoration: none;
-  color: #ff6b08;
+
+.tours__btns{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.cardTours__btn{
+  background-color: #ff6b08;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100px;
+  height: 38px;
+  padding: 6px 10px;
+  margin: 0px 5px;
 
 }
 
-/* movie list */
-
-.movie-list-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  @include tab {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-.movie-collection {
-  @include tab {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin: -16px;
-  }
-}

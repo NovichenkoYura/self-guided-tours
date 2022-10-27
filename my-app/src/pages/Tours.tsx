@@ -27,23 +27,16 @@ const Tours = () => {
                   nulla! Velit iste dolorum, vel, pariatur nemo quia et quasi eaque voluptatibus
                   natus ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur
                   soluta dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
-                  accusantium sed eveniet rem mollitia, provident consectetur? Ducimus quibusdam
-                  vero libero! Exercitationem ex quod dolor eveniet vero! A aperiam repellendus,
-                  pariatur ullam
                 </p>
               </div>
-              <div className="tours__btns">
-                <button>
-                  Add
-                  <Basket className="headerOrder_svgbasket" width="25" height="25" />
-                </button>
-                <button>More...</button>
-                <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
-                <div className="headerOrder__item">
-                  <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
-                </div>
-                <div></div>
-              </div>
+            </div>
+            <div className="tours__btns">
+              <button className="cardTours__btn">
+                Add to
+                <Basket className="tourCard__svgbasket" width="25" height="25" />
+              </button>
+              <button className="cardTours__btn">More...</button>
+              <Chosen className="tourCard__svgwishlist" width="25" height="25" />
             </div>
           </a>
         </li>
