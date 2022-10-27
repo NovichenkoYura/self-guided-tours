@@ -55,13 +55,13 @@ const Layout = () => {
         )}
         <ul className="headerOrder__container">
           <li className="headerOrder__item">
-            <NavLink to="/wishlist/">
+            <NavLink to={locations.wishlist.path}>
               <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
             </NavLink>
           </li>
           <li className="headerOrder__item">
             <NavLink to={locations.basket.path}>
-              <Basket className="headerOrder_svgbasket" width="25" height="25" />{' '}
+              <Basket className="headerOrder_svgbasket" width="25" height="25" />
             </NavLink>
           </li>
         </ul>

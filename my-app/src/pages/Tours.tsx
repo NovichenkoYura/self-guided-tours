@@ -1,6 +1,9 @@
 import hamon_meal from '../img/hamon_meal.jpg';
 import hamon_pig from '../img/hamon_pig.jpg';
 
+import { ReactComponent as Chosen } from '../img/hurt.svg';
+import { ReactComponent as Basket } from '../img/shoppingCart.svg';
+
 const Tours = () => {
   return (
     <>
@@ -28,6 +31,18 @@ const Tours = () => {
                   vero libero! Exercitationem ex quod dolor eveniet vero! A aperiam repellendus,
                   pariatur ullam
                 </p>
+              </div>
+              <div className="tours__btns">
+                <button>
+                  Add
+                  <Basket className="headerOrder_svgbasket" width="25" height="25" />
+                </button>
+                <button>More...</button>
+                <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
+                <div className="headerOrder__item">
+                  <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
+                </div>
+                <div></div>
               </div>
             </div>
           </a>

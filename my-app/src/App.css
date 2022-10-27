@@ -212,7 +212,8 @@ button:focus {
 
 .headerOrder_svgwishlist{
   fill: white;    
-  transition: color, transform 500ms ease;
+  transition: color, transform 300ms ease;
+  z-index: 1;
 }
 
 .headerOrder_svgwishlist:hover,
@@ -241,8 +242,6 @@ transform: scale(1.2);
   width: 100%;
   list-style-type: none;
   border: 1px solid gray;
- 
-
 }
 
 .wrap{
@@ -267,6 +266,7 @@ transform: scale(1.2);
   border-radius: 5px;
   height: 120px;
   z-index: 1;
+  margin-top: 10px;
 
   
 }
