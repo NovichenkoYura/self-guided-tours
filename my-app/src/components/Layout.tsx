@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <>
       <header>
-        <NavLink to="/" className={setActive}>
+        <NavLink to={locations.main.path} className={setActive}>
           Main
         </NavLink>
         <NavLink to={locations.tours.path} className={setActive}>
@@ -31,9 +31,7 @@ const Layout = () => {
         <NavLink to={locations.saved.path} className={setActive}>
           Saved
         </NavLink>
-        <NavLink to={locations.notfoundpage.path} className={setActive}>
-          NotFoundpage
-        </NavLink>
+
         <NavLink to={locations.becomeanowner.path} className={setActive}>
           Become an owner
         </NavLink>

@@ -24,7 +24,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
+          <Route path={locations.main.path} element={locations.main.component} />
           <Route path={locations.tours.path} element={locations.tours.component} />
           <Route path={locations.subscribers.path} element={locations.subscribers.component} />
           <Route path={locations.subscription.path} element={locations.subscription.component} />
@@ -35,7 +35,6 @@ function App() {
           <Route path={locations.login.path} element={locations.login.component} />
           <Route path={locations.wishlist.path} element={locations.wishlist.component} />
           <Route path={locations.basket.path} element={locations.basket.component} />
-          <Route path={locations.notfoundpage.path} element={locations.notfoundpage.component} />
         </Route>
       </Routes>
     </>

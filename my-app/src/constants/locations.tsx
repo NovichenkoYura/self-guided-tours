@@ -1,8 +1,8 @@
 import { Basket } from '../pages/Basket';
 import { BecomeAnOwner } from '../pages/BecomeAnOwner';
 import { Login } from '../pages/Login';
+import { Main } from '../pages/Main';
 import { Messages } from '../pages/Messages';
-import { NotFoundpage } from '../pages/NotFoundpage';
 import { Registration } from '../pages/Registration';
 import { Saved } from '../pages/Saved';
 import { Subscribers } from '../pages/Subscribers';
@@ -11,6 +11,7 @@ import { Tours } from '../pages/Tours';
 import { Wishlist } from '../pages/Wishlist';
 
 export const locations = {
+  main: { path: '/main', component: <Main /> },
   tours: { path: '/path', component: <Tours /> },
   subscribers: { path: '/subscribers', component: <Subscribers /> },
   subscription: { path: '/subscription', component: <Subscriptions /> },
@@ -20,9 +21,5 @@ export const locations = {
   registration: { path: '/registration', component: <Registration /> },
   login: { path: '/log in', component: <Login /> },
   wishlist: { path: '/wishlist', component: <Wishlist /> },
-  basket: { path: '/basket', component: <Basket /> },
-  notfoundpage: { path: '*', component: <NotFoundpage /> }
+  basket: { path: '/basket', component: <Basket /> }
 };
-
-//   <Route path="basket" element={<Basket />} />
-//   <Route path="*" element={<NotFoundpage />} />
