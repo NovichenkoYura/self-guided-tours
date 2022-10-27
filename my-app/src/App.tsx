@@ -18,10 +18,13 @@ import { Layout } from './components/Layout';
 import { Login } from './pages/Login';
 import { Wishlist } from './pages/Wishlist';
 import { Basket } from './pages/Basket';
+import { ComponentRoutes } from './constants/componentRoutes';
 
 function App() {
   return (
     <>
+      {' '}
+      {/* <ComponentRoutes /> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path={locations.main.path} element={locations.main.component} />

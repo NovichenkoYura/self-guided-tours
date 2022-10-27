@@ -1,7 +1,8 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import { locations } from '../src/constants/locations';
+import { locations } from './locations';
+import { Layout } from '../components/Layout';
 
-export const componentRoutes = () => {
+export const ComponentRoutes = () => {
   return (
     <Route path="/" element={<Layout />}>
       <Route path={locations.main.path} element={locations.main.component} />
