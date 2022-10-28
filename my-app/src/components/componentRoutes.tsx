@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import { locations } from './locations';
-import { Layout } from '../components/Layout';
+import { locations } from '../constants/locations';
+import { Layout } from './Layout';
 
 export const ComponentRoutes = () => {
   return (

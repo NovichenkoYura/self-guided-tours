@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { ComponentRoutes } from './constants/componentRoutes';
+import { ComponentRoutes } from './components/componentRoutes';
 
 function App() {
   return (

@@ -66,6 +66,12 @@ const Tours = () => {
                 ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur soluta
                 dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
               </p>
+              <div className="tourData__forFilter">
+                <a className="tourData__forFilter__item">Duration: 6 days</a>
+                <a className="tourData__forFilter__item">Spain, Portugal</a>
+                <a className="tourData__forFilter__item">Budget for 1 person: 450 Euro</a>
+                <a className="tourData__forFilter__item">Feedback</a>
+              </div>
             </div>
           </div>
           <div className="tours__btns">
@@ -95,6 +101,12 @@ const Tours = () => {
                 ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur soluta
                 dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
               </p>
+              <div className="tourData__forFilter">
+                <a className="tourData__forFilter__item">Duration: 4 days</a>
+                <a className="tourData__forFilter__item">Germany</a>
+                <a className="tourData__forFilter__item">Budget for 1 person: 380 Euro</a>
+                <a className="tourData__forFilter__item">Feedback</a>
+              </div>
             </div>
           </div>
           <div className="tours__btns">

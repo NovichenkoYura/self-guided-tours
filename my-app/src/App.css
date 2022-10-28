@@ -341,8 +341,10 @@ transform: scale(1.2);
 
 .tourData__forFilter__item{
   font-weight: 700;
-  margin-left: 45px;
+  margin-left: 30px;
   cursor: pointer;
+  color: rgb(94, 94, 94);
+
 }
 
 .tourData__forFilter__item:first-child {
