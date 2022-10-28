@@ -241,8 +241,11 @@ transform: scale(1.2);
 .tours__item {
   width: 100%;
   list-style-type: none;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
+  border-radius: 15px;
   position: relative;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .wrap{

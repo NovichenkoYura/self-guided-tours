@@ -1,6 +1,6 @@
+карточки товаров, как задать ширину, ластчайлд, ферст чайлд
+
+
+
+
 rejected option
-куда в моем случае приплести cookie
-bear
-чому не працює localStorage.setItem('token', action.payload.token)
-логин и сайнап не на всю ширину заливка
-чому не працює console.log(getCookie(token))
