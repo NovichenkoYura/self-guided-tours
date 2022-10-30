@@ -18,6 +18,12 @@ const Tours = () => {
             <div className="toursItemImage__container">
               <img src={hamon_meal} className="toursItem__image" alt="Meal" />
               <img src={hamon_pig} className="toursItem__image" alt="Pig" />
+              <img src={hamon_meal} className="toursItem__image" alt="Meal" />
+              <img
+                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg"
+                className="toursItem__image"
+                alt="Pig"
+              />
             </div>
 
             <div className="tour__text-part">
