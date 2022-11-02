@@ -71,7 +71,7 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: User) => {
-    const response = await instance.get('http://localhost:3001/usersttttttttttttttttt');
+    const response = await instance.get('http://localhost:3001/users');
     const data = await response.data;
     const dataUser: User = {};
     data.forEach((profile: any) => {

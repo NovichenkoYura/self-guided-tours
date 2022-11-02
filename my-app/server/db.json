@@ -1,92 +1,20 @@
 {
   "users": [
     {
-      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b8",
-      "firstname": "кккккккккккккк",
-      "lastname": "ррррррррррррррррррр",
-      "email": "y.novichenko@mantis.com.ua",
-      "password": "2F7R8NKS",
-      "id": 1
-    },
-    {
-      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b9",
-      "firstname": "rrrrrrrrrrrrrrrrr",
-      "lastname": "aaaaaaaaaaaaaaaaaaaaa",
-      "email": "ysssssssssssss.novichenko@mantis.com.ua",
-      "password": "pppppppppp",
-      "id": 2
-    },
-    {
-      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b8",
-      "firstname": "кккккккккккккк",
-      "lastname": "ррррррррррррррррррр",
-      "email": "y.novichenko@mantis.com.ua",
-      "password": "2F7R8NKS",
-      "id": 3
-    },
-    {
-      "token": "81f6b06e-bedc-4fa5-9811-480d331a60b9",
-      "firstname": "rrrrrrrrrrrrrrrrr",
-      "lastname": "aaaaaaaaaaaaaaaaaaaaa",
-      "email": "ynovichenko@mantis.com.ua",
-      "password": "pppppppppp",
-      "id": 4
-    },
-    {
-      "token": "a6c3597b-e911-4f4f-bfb3-283204eca6ee",
+      "token": "d5602651-8fdb-4765-a683-eeff7720dcb5",
       "firstname": "Yurii",
       "lastname": "Novichenko",
       "email": "novichenko.y@gmail.com",
       "password": "qwerty",
-      "id": 5
+      "id": 1
     },
     {
-      "token": "4163981a-905a-4ac2-af5d-059d15d2a19d",
-      "firstname": "Новіченко",
-      "lastname": "Юрійsdfdsf",
-      "email": "novichenko.y@gmail.com",
-      "password": "2F7R8NKS",
-      "id": 6
-    },
-    {
-      "token": "fef8f74a-aeec-46f4-a87b-140084b1f087",
-      "firstname": "Новіченко",
-      "lastname": "Юрійdfdsgsdg",
-      "email": "boardshopua@gmail.com",
-      "password": "2F7R8NKS",
-      "id": 7
-    },
-    {
-      "token": "11515347-b65e-4a07-8ecd-e34aff5e3f76",
-      "firstname": "Новіченко",
-      "lastname": "Юрійfffffffff",
-      "email": "novichenko.y@gmail.com",
-      "password": "9YGC2T7C",
-      "id": 8
-    },
-    {
-      "token": "5351ffc9-f225-47f9-ae5b-4420bba307ae",
-      "firstname": "Новіченко",
-      "lastname": "Юрійfffffff",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "id": 9
-    },
-    {
-      "token": "7229d008-6537-4294-9027-302c1c8b8c14",
-      "firstname": "Новіченко",
-      "lastname": "Юрійdddddddddd",
-      "email": "boardshopua@gmail.com",
-      "password": "novichenko.y@gmail.com",
-      "id": 10
-    },
-    {
-      "token": "f08e2f43-7e34-4f46-902c-18f240fefcca",
-      "firstname": "Новіченко",
-      "lastname": "Юрійfffffff",
-      "email": "novichenko.y@gmail.com",
-      "password": "qwerty",
-      "id": 11
+      "token": "cb9eb3f7-95e5-4eb9-8db9-819a5134a0b3",
+      "firstname": "qqqqqqqqqq",
+      "lastname": "wwwwwwwwwwwwwww",
+      "email": "y.novichenko@mantis.com.ua",
+      "password": "9999999999999999",
+      "id": 2
     }
   ]
 }
