@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { string } from 'yup';
 
 interface User {
   token?: string;
@@ -13,6 +14,15 @@ interface Orders {
   price: number;
 }
 
+interface Tours {
+  imgsourse: string;
+  description: string;
+  duration: string;
+  country: string;
+  budget: string;
+  id: 1;
+}
+
 interface UsersState {
   list: User[];
   isFetching: boolean;
@@ -22,6 +32,7 @@ interface UsersState {
   email?: string;
   password?: string;
   orders: Orders[];
+  tours: Tours[];
 }
 
 const initialState: UsersState = {
@@ -32,7 +43,8 @@ const initialState: UsersState = {
   email: '',
   password: '',
   token: '',
-  orders: []
+  orders: [],
+  tours: []
 };
 
 const token = localStorage.getItem('token');
@@ -48,6 +60,12 @@ export const instance = axios.create({
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
   const response = await instance.get('http://localhost:3001/users');
 
+  const data = await response.data;
+  return data;
+});
+
+export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
+  const response = await instance.get('http://localhost:3001/tours');
   const data = await response.data;
   return data;
 });
@@ -119,6 +137,14 @@ const usersSlice = createSlice({
       state.isFetching = false;
       localStorage.setItem('token', String(action.payload.token));
     });
+    builder.addCase(getToursThunk.pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(getToursThunk.fulfilled, (state, action: PayloadAction<Tours[]>) => {
+      state.tours = action.payload;
+      state.isFetching = false;
+    });
+
     builder.addCase(loginThunk.rejected, () => {
       console.log('mistake');
     });

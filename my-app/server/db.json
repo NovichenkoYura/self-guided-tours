@@ -24,9 +24,8 @@
       "description": "lorem*30",
       "duration": "5 days",
       "country": "Spain",
-      "Budget for 1 person": "350 Euro",
+      "budget": "350 Euro",
       "id": 1
     }
-    
   ]
 }
