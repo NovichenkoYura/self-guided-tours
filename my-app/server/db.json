@@ -16,5 +16,17 @@
       "password": "9999999999999999",
       "id": 2
     }
+  ],
+  "tours": [
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Spain: Gastro tour",
+      "description": "lorem*30",
+      "duration": "5 days",
+      "country": "Spain",
+      "Budget for 1 person": "350 Euro",
+      "id": 1
+    }
+    
   ]
 }
