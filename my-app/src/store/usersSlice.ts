@@ -20,6 +20,7 @@ interface Tours {
   duration: string;
   country: string;
   budget: string;
+  name: string;
   id: 1;
 }
 

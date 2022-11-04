@@ -21,11 +21,29 @@
     {
       "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
       "name": "Spain: Gastro tour",
-      "description": "lorem*30",
-      "duration": "5 days",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "5",
       "country": "Spain",
-      "budget": "350 Euro",
+      "budget": "350",
       "id": 1
+    },
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Spain: Gastro tour",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "5",
+      "country": "Spain",
+      "budget": "350",
+      "id": 2
+    },
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Spain: Gastro tour",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "5",
+      "country": "Spain",
+      "budget": "350",
+      "id": 3
     }
   ]
 }
