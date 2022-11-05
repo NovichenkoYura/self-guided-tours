@@ -45,13 +45,13 @@ const Tours = () => {
                 <Basket className="tourCard__svgbasket" width="25" height="25" />
               </button>
               <button className="cardTours__btn">More...</button>
-              <button onClick={() => setWishItem(!wishItem)}>
+              <div onClick={() => setWishItem(!wishItem)}>
                 {wishItem ? (
                   <Chosen className="tourCard__svgwishlist" width="25" height="25" />
                 ) : (
                   <NotChosen className="tourCard__svgwishlist" width="25" height="25" />
                 )}
-              </button>
+              </div>
             </div>
           </li>
         ))}
