@@ -2,7 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 import { ReactComponent as LoginLines } from '../img/loginLines.svg';
-import { ReactComponent as Chosen } from '../img/hurt.svg';
+import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
 

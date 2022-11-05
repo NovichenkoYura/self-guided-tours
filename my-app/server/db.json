@@ -29,20 +29,20 @@
     },
     {
       "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "name": "Spain: Gastro tour",
+      "name": "Spain - Portugal: Atlantic coast",
       "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
-      "duration": "5",
-      "country": "Spain",
-      "budget": "350",
+      "duration": "6",
+      "country": "Spain, Porugal",
+      "budget": "450",
       "id": 2
     },
     {
       "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "name": "Spain: Gastro tour",
+      "name": "Germany: Alps and cities",
       "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
-      "duration": "5",
-      "country": "Spain",
-      "budget": "350",
+      "duration": "4",
+      "country": "Germany",
+      "budget": "380",
       "id": 3
     }
   ]
