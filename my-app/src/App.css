@@ -293,11 +293,17 @@ transform: scale(1.2);
   transition: color, transform 300ms ease;
 }
 
-.tourCard__svgwishlist{
+button.tourCard__svgwishlist{
   fill: #ff6b08;
   transition: color, transform 300ms ease;
-  margin-left: 15px;
-  
+  margin-left: 15px; 
+  padding: 0px; 
+}
+
+button.tourCard__svgwishlist:hover,
+button.tourCard__svgwishlist:focus {
+  background-color: white;
+  color: white;
 }
 
 .movie__title {
