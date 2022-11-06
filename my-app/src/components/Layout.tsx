@@ -57,11 +57,13 @@ const Layout = () => {
           <li className="headerOrder__item">
             <NavLink to={locations.wishlist.path}>
               <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
+              <div className="circle_wishList">1</div>
             </NavLink>
           </li>
           <li className="headerOrder__item">
             <NavLink to={locations.basket.path}>
               <Basket className="headerOrder_svgbasket" width="25" height="25" />
+              <div className="circle_basket">1</div>
             </NavLink>
           </li>
         </ul>

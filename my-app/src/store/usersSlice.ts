@@ -8,6 +8,7 @@ interface User {
   lastname?: string;
   email?: string;
   password?: string;
+  basketId?: number;
 }
 
 interface Orders {
@@ -21,7 +22,7 @@ interface Tours {
   country: string;
   budget: string;
   name: string;
-  id: 1;
+  id: number;
 }
 
 interface UsersState {
@@ -34,6 +35,7 @@ interface UsersState {
   password?: string;
   orders: Orders[];
   tours: Tours[];
+  basketId: User[];
 }
 
 const initialState: UsersState = {
@@ -45,7 +47,8 @@ const initialState: UsersState = {
   password: '',
   token: '',
   orders: [],
-  tours: []
+  tours: [],
+  basketId: []
 };
 
 const token = localStorage.getItem('token');
@@ -106,6 +109,16 @@ export const loginThunk = createAsyncThunk(
   }
 );
 
+export const addtoBasketThunk = createAsyncThunk(
+  'users/addtoBasket',
+  async ({ basketId }: User) => {
+    const response = await instance.post('http://localhost:3001/users', basketId);
+    const data = await response.data;
+    console.log(data);
+    return data;
+  }
+);
+
 const usersSlice = createSlice({
   name: 'users',
   initialState,
@@ -149,10 +162,18 @@ const usersSlice = createSlice({
     builder.addCase(loginThunk.rejected, () => {
       console.log('mistake');
     });
+
+    builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<Tours>) => {
+      state.basketId.push(action.payload);
+      state.isFetching = false;
+    });
   },
 
-  reducers: {}
+  reducers: {
+    onCurrentCardBasketId(state, action) {
+      state.basketId.push(action.payload);
+    }
+  }
 });
-
-// export const {} = usersSlice.actions;
+export const { onCurrentCardBasketId } = usersSlice.actions;
 export default usersSlice.reducer;

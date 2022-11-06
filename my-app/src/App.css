@@ -218,6 +218,7 @@ button:focus {
   fill: white;    
   transition: color, transform 300ms ease;
   z-index: 1;
+  position: relative;
 }
 
 .headerOrder_svgwishlist:hover,
@@ -231,6 +232,7 @@ transform: scale(1.2);
 .headerOrder_svgbasket {
   fill: white;  
   transition: color, transform 300ms ease;
+  position: relative;
 
 }
 
@@ -239,6 +241,30 @@ transform: scale(1.2);
 background-color: #bab9bf;
 border-radius: 5px;
 transform: scale(1.2);
+}
+
+.circle_basket{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top: -15px;
+  right:-15px;
+  text-align: center;
+  color: white;
+}
+
+.circle_wishList{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: grey;
+  position: absolute;
+  top: -15px;
+  right: 28px;
+  text-align: center;
+  color: white;
 }
 
 /* Card */
@@ -274,9 +300,7 @@ transform: scale(1.2);
   border-radius: 5px;
   height: 120px;
   z-index: 1;
-  margin-top: 10px;
-
-  
+  margin-top: 10px;  
 }
 
 .tour__text-part{

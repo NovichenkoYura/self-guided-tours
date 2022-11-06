@@ -2,12 +2,17 @@ import { ReactComponent as NotChosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Chosen } from '../img/hurt1_filled.svg';
 
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
-import { useAppSelector } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { useState } from 'react';
+import { addtoBasketThunk } from '../store/usersSlice';
+
+import { onCurrentCardBasketId } from '../store/usersSlice';
 
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.users);
   const [wishItem, setWishItem] = useState(false);
+
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -40,7 +45,9 @@ const Tours = () => {
               </div>
             </div>
             <div className="tours__btns">
-              <button className="cardTours__btn">
+              <button
+                onClick={() => dispatch(onCurrentCardBasketId(tour.id))}
+                className="cardTours__btn">
                 Add to
                 <Basket className="tourCard__svgbasket" width="25" height="25" />
               </button>
