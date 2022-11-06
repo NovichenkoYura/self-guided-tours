@@ -37,8 +37,7 @@ export const Registration: React.FC<formProps> = () => {
       lastname: '',
       email: '',
       password: '',
-      token: '',
-      basketId: ''
+      token: ''
     },
     onSubmit: (values, { resetForm }) => {
       dispatch(
@@ -47,7 +46,8 @@ export const Registration: React.FC<formProps> = () => {
           lastname: values.lastname,
           token: token,
           email: values.email,
-          password: values.password
+          password: values.password,
+          basketId: []
         })
       );
       resetForm();

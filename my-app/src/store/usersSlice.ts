@@ -8,7 +8,7 @@ interface User {
   lastname?: string;
   email?: string;
   password?: string;
-  basketId?: number;
+  basketId?: [];
 }
 
 interface Orders {
@@ -35,7 +35,7 @@ interface UsersState {
   password?: string;
   orders: Orders[];
   tours: Tours[];
-  basketId: User[];
+  basketId: [];
 }
 
 const initialState: UsersState = {
@@ -76,13 +76,14 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addUsersThunk = createAsyncThunk(
   'users/addUsers',
-  async ({ token, firstname, lastname, email, password }: User) => {
+  async ({ token, firstname, lastname, email, password, basketId }: User) => {
     const user = {
       token: token,
       firstname: firstname,
       lastname: lastname,
       email: email,
-      password: password
+      password: password,
+      basketId: basketId
     };
     const response = await instance.post('http://localhost:3001/users', user);
     const data = await response.data;
@@ -111,10 +112,17 @@ export const loginThunk = createAsyncThunk(
 
 export const addtoBasketThunk = createAsyncThunk(
   'users/addtoBasket',
-  async ({ basketId }: User) => {
-    const response = await instance.post('http://localhost:3001/users', basketId);
+  async (id: number, { getState }: any) => {
+    const store = getState().users;
+    // console.log(store);
+    console.log({ ...store, basketId: [...store.basketId, id] });
+    console.log('test');
+    const response = await instance.patch('http://localhost:3001/users?id=3', {
+      ...store,
+      basketId: [...store.basketId, id]
+    });
     const data = await response.data;
-    console.log(data);
+    // console.log(data);
     return data;
   }
 );
@@ -163,17 +171,13 @@ const usersSlice = createSlice({
       console.log('mistake');
     });
 
-    builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<Tours>) => {
-      state.basketId.push(action.payload);
+    builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      // state.basketId.push(action.payload);
       state.isFetching = false;
     });
   },
 
-  reducers: {
-    onCurrentCardBasketId(state, action) {
-      state.basketId.push(action.payload);
-    }
-  }
+  reducers: {}
 });
-export const { onCurrentCardBasketId } = usersSlice.actions;
+// export const { onCurrentCardBasketId } = usersSlice.actions;
 export default usersSlice.reducer;

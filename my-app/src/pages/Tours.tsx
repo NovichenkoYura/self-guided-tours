@@ -6,8 +6,6 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { useState } from 'react';
 import { addtoBasketThunk } from '../store/usersSlice';
 
-import { onCurrentCardBasketId } from '../store/usersSlice';
-
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.users);
   const [wishItem, setWishItem] = useState(false);
@@ -46,7 +44,7 @@ const Tours = () => {
             </div>
             <div className="tours__btns">
               <button
-                onClick={() => dispatch(onCurrentCardBasketId(tour.id))}
+                onClick={() => dispatch(addtoBasketThunk(tour.id))}
                 className="cardTours__btn">
                 Add to
                 <Basket className="tourCard__svgbasket" width="25" height="25" />
