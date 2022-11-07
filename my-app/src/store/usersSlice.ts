@@ -113,19 +113,39 @@ export const loginThunk = createAsyncThunk(
 export const addtoBasketThunk = createAsyncThunk(
   'users/addtoBasket',
   async (id: number, { getState }: any) => {
+    // console.log(id);
     const store = getState().users;
-    // console.log(store);
-    console.log({ ...store, basketId: [...store.basketId, id] });
-    console.log('test');
-    const response = await instance.patch('http://localhost:3001/users?id=3', {
-      ...store,
-      basketId: [...store.basketId, id]
-    });
+    console.log(...store.basketId);
+    const user = {
+      basketId: [11111]
+    };
+    // console.log({ ...store, basketId: [...store.basketId, id] });
+    const response = await instance.patch('http://localhost:3001/users?id=3', user);
     const data = await response.data;
     // console.log(data);
     return data;
   }
 );
+
+// const response = await instance.patch('http://localhost:3001/users?id=3', {
+//   ...store,
+//   basketId: [...store.basketId, id]
+// });
+
+// export const updNotesThunk = createAsyncThunk(
+//   'note/updNotes',
+//   async ({ id, title, description, lastModified }) => {
+//     const note = {
+//       id: id,
+//       title: title,
+//       description: description,
+//       lastModified: lastModified
+//     };
+//     const response = await axios.patch(`http://localhost:3001/notes/${note.id}`, note);
+//     const data = await response.data;
+//     return data;
+//   }
+// );
 
 const usersSlice = createSlice({
   name: 'users',
@@ -175,6 +195,9 @@ const usersSlice = createSlice({
       // state.basketId.push(action.payload);
       state.isFetching = false;
     });
+    // builder.addCase(addtoBasketThunk.rejected, () => {
+    //   alert('Network error');
+    // });
   },
 
   reducers: {}

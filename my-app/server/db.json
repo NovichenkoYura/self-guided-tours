@@ -14,6 +14,7 @@
       "lastname": "wwwwwwwwwwwwwww",
       "email": "y.novichenko@mantis.com.ua",
       "password": "9999999999999999",
+      "basketId": [],
       "id": 2
     },
     {
@@ -22,30 +23,8 @@
       "lastname": "Юрийtrt",
       "email": "craftyura@gmail.com",
       "password": "qwerty",
+      "basketId": [],
       "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "1": "",
-      "id": 9
-    },
-    {
-      "2": "",
-      "id": 10
     },
     {
       "token": "36cc32b2-9e19-4671-b5a3-374b924ca551",
@@ -55,10 +34,6 @@
       "password": "111111111111111111111111111111111",
       "basketId": [],
       "id": 11
-    },
-    {
-      "1": "",
-      "id": 12
     }
   ],
   "tours": [

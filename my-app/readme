@@ -2,6 +2,21 @@
 
 
 
+export const addtoBasketThunk = createAsyncThunk(
+'users/addtoBasket',
+async (id: number, { getState }: any) => {
+const store = getState().users;
+// console.log(store);
+console.log({ ...store, basketId: [...store.basketId, id] });
+const response = await instance.patch('http://localhost:3001/users?id=3', {
+...store,
+basketId: [...store.basketId, id]
+});
+const data = await response.data;
+// console.log(data);
+return data;
+}
+);
 
 {/* <h1>All tours</h1>
       <ul>
