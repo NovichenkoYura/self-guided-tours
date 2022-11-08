@@ -115,14 +115,19 @@ export const addtoBasketThunk = createAsyncThunk(
   async (id: number, { getState }: any) => {
     // console.log(id);
     const store = getState().users;
-    console.log(...store.basketId);
+    // console.log('store', store);
+    // console.log('...store', ...store);
+    // console.log([...store.basketId, id]);
     const user = {
       basketId: [11111]
     };
     // console.log({ ...store, basketId: [...store.basketId, id] });
-    const response = await instance.patch('http://localhost:3001/users?id=3', user);
+    const response = await instance.patch('http://localhost:3001/users?id=3', {
+      ...store,
+      basketId: [...store.basketId, id]
+    });
     const data = await response.data;
-    // console.log(data);
+    console.log(data);
     return data;
   }
 );
