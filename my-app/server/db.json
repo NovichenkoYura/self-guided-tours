@@ -1,40 +1,47 @@
 {
   "users": [
     {
-      "token": "d5602651-8fdb-4765-a683-eeff7720dcb5",
-      "firstname": "Yurii",
-      "lastname": "Novichenko",
-      "email": "novichenko.y@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "id": 1
-    },
-    {
-      "token": "cb9eb3f7-95e5-4eb9-8db9-819a5134a0b3",
-      "firstname": "qqqqqqqqqq",
-      "lastname": "wwwwwwwwwwwwwww",
-      "email": "y.novichenko@mantis.com.ua",
-      "password": "9999999999999999",
-      "basketId": [],
-      "id": 2
-    },
-    {
-      "token": "e2e8fbf9-748c-4550-b807-db5545f5c28e",
-      "firstname": "Yurii",
-      "lastname": "Юрийtrt",
-      "email": "craftyura@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "id": 3
-    },
-    {
-      "token": "36cc32b2-9e19-4671-b5a3-374b924ca551",
-      "firstname": "Новіченко",
-      "lastname": "Юрійdsfsdfsdgf",
-      "email": "craftyura@gmail.com",
-      "password": "111111111111111111111111111111111",
-      "basketId": [],
-      "id": 11
+      "token": "",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "basketId": [
+        1
+      ],
+      "id": 1,
+      "list": [],
+      "isFetching": false,
+      "orders": [],
+      "tours": [
+        {
+          "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+          "name": "Spain: Gastro tour",
+          "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+          "duration": "5",
+          "country": "Spain",
+          "budget": "350",
+          "id": 1
+        },
+        {
+          "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+          "name": "Spain - Portugal: Atlantic coast",
+          "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+          "duration": "6",
+          "country": "Spain, Porugal",
+          "budget": "450",
+          "id": 2
+        },
+        {
+          "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+          "name": "Germany: Alps and cities",
+          "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+          "duration": "4",
+          "country": "Germany",
+          "budget": "380",
+          "id": 3
+        }
+      ]
     }
   ],
   "tours": [

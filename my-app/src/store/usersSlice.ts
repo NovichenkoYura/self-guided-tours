@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { string } from 'yup';
@@ -116,18 +118,18 @@ export const addtoBasketThunk = createAsyncThunk(
     // console.log(id);
     const store = getState().users;
     // console.log('store', store);
-    // console.log('...store', ...store);
+    console.log('...store', ...store.basketId);
     // console.log([...store.basketId, id]);
     const user = {
       basketId: [11111]
     };
     // console.log({ ...store, basketId: [...store.basketId, id] });
-    const response = await instance.patch('http://localhost:3001/users?id=3', {
+    const response = await instance.patch(`http://localhost:3001/users/${store.id}`, {
       ...store,
       basketId: [...store.basketId, id]
     });
     const data = await response.data;
-    console.log(data);
+    // console.log(data);
     return data;
   }
 );
@@ -197,8 +199,9 @@ const usersSlice = createSlice({
     });
 
     builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
-      // state.basketId.push(action.payload);
+      state.basketId = action.payload.basketId;
       state.isFetching = false;
+      // state = action.payload;
     });
     // builder.addCase(addtoBasketThunk.rejected, () => {
     //   alert('Network error');
