@@ -10,7 +10,7 @@ interface User {
   lastname?: string;
   email?: string;
   password?: string;
-  basketId?: [];
+  basketId?: number[];
 }
 
 interface UsersState {
@@ -21,7 +21,7 @@ interface UsersState {
   lastname?: string;
   email?: string;
   password?: string;
-  basketId: [];
+  basketId: number[];
 }
 
 const initialState: UsersState = {
@@ -97,44 +97,15 @@ export const loginThunk = createAsyncThunk(
 export const addtoBasketThunk = createAsyncThunk(
   'users/addtoBasket',
   async (id: number, { getState }: any) => {
-    // console.log(id);
     const store = getState().users;
-    // console.log('store', store);
-    console.log('...store', ...store.basketId);
-    // console.log([...store.basketId, id]);
-    const user = {
-      basketId: [11111]
-    };
-    // console.log({ ...store, basketId: [...store.basketId, id] });
     const response = await instance.patch('http://localhost:3001/users/1', {
       ...store,
       basketId: [...store.basketId, id]
     });
     const data = await response.data;
-    // console.log(data);
     return data;
   }
 );
-
-// const response = await instance.patch('http://localhost:3001/users?id=3', {
-//   ...store,
-//   basketId: [...store.basketId, id]
-// });
-
-// export const updNotesThunk = createAsyncThunk(
-//   'note/updNotes',
-//   async ({ id, title, description, lastModified }) => {
-//     const note = {
-//       id: id,
-//       title: title,
-//       description: description,
-//       lastModified: lastModified
-//     };
-//     const response = await axios.patch(`http://localhost:3001/notes/${note.id}`, note);
-//     const data = await response.data;
-//     return data;
-//   }
-// );
 
 const usersSlice = createSlice({
   name: 'users',
@@ -168,13 +139,6 @@ const usersSlice = createSlice({
       state.isFetching = false;
       localStorage.setItem('token', String(action.payload.token));
     });
-    builder.addCase(getToursThunk.pending, (state) => {
-      state.isFetching = true;
-    });
-    builder.addCase(getToursThunk.fulfilled, (state, action: PayloadAction<Tours[]>) => {
-      state.tours = action.payload;
-      state.isFetching = false;
-    });
 
     builder.addCase(loginThunk.rejected, () => {
       console.log('mistake');
@@ -183,7 +147,6 @@ const usersSlice = createSlice({
     builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.basketId = action.payload.basketId;
       state.isFetching = false;
-      // state = action.payload;
     });
     // builder.addCase(addtoBasketThunk.rejected, () => {
     //   alert('Network error');
