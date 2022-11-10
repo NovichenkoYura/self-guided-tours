@@ -13,20 +13,6 @@ interface User {
   basketId?: [];
 }
 
-interface Orders {
-  price: number;
-}
-
-interface Tours {
-  imgsourse: string;
-  description: string;
-  duration: string;
-  country: string;
-  budget: string;
-  name: string;
-  id: number;
-}
-
 interface UsersState {
   list: User[];
   isFetching: boolean;
@@ -35,8 +21,6 @@ interface UsersState {
   lastname?: string;
   email?: string;
   password?: string;
-  orders: Orders[];
-  tours: Tours[];
   basketId: [];
 }
 
@@ -48,8 +32,6 @@ const initialState: UsersState = {
   email: '',
   password: '',
   token: '',
-  orders: [],
-  tours: [],
   basketId: []
 };
 
@@ -124,7 +106,7 @@ export const addtoBasketThunk = createAsyncThunk(
       basketId: [11111]
     };
     // console.log({ ...store, basketId: [...store.basketId, id] });
-    const response = await instance.patch(`http://localhost:3001/users/${store.id}`, {
+    const response = await instance.patch('http://localhost:3001/users/1', {
       ...store,
       basketId: [...store.basketId, id]
     });

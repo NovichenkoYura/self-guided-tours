@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { addtoBasketThunk } from '../store/usersSlice';
 
 const Tours = () => {
-  const { tours } = useAppSelector((state) => state.users);
+  const { tours } = useAppSelector((state) => state.tours);
   const [wishItem, setWishItem] = useState(false);
 
   const dispatch = useAppDispatch();
