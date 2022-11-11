@@ -243,6 +243,10 @@ border-radius: 5px;
 transform: scale(1.2);
 }
 
+.headerLogined_person{
+  color: white;
+}
+
 .circle_basket{
   width: 25px;
   height: 25px;

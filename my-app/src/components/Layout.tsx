@@ -11,7 +11,9 @@ const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-l
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const { basketId, wishListId } = useAppSelector((state) => state.users);
+  const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
+    (state) => state.users
+  );
 
   return (
     <>
@@ -38,14 +40,22 @@ const Layout = () => {
         <NavLink to={locations.becomeanowner.path} className={setActive}>
           Become an owner
         </NavLink>
-        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
-          <div className="loginsvg__lines">
-            <LoginLines className="login__person" width="20" height="20" />
+        {isAuth ? (
+          <>
+            <p className="headerLogined_person">{firstname}</p>
+            <p className="headerLogined_person">{lastname}</p>
+          </>
+        ) : (
+          <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
+            <div className="loginsvg__lines">
+              <LoginLines className="login__person" width="20" height="20" />
+            </div>
+            <div className="loginsvg__person">
+              <LoginPerson className="login__person" width="35" height="35" />
+            </div>
           </div>
-          <div className="loginsvg__person">
-            <LoginPerson className="login__person" width="35" height="35" />
-          </div>
-        </div>
+        )}
+
         {showDropdown && (
           <div className="dropdown__window">
             <NavLink to={locations.login.path} className="dropdown__item">
@@ -71,7 +81,6 @@ const Layout = () => {
               <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
                 {basketId.length}
               </div>
-              {/* className={`app-sidebar-note ${note.id === activeNote && "active"}`} */}
             </NavLink>
           </li>
         </ul>

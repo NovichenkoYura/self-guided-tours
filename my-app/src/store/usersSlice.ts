@@ -156,6 +156,7 @@ const usersSlice = createSlice({
       state.password = action.payload.password;
       state.email = action.payload.email;
       state.isFetching = false;
+      state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
     });
 
