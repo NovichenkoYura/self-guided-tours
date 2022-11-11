@@ -11,6 +11,7 @@ interface User {
   email?: string;
   password?: string;
   basketId?: number[];
+  wishListId?: number[];
 }
 
 interface UsersState {
@@ -22,6 +23,7 @@ interface UsersState {
   email?: string;
   password?: string;
   basketId: number[];
+  wishListId: number[];
   isAuth: boolean;
 }
 
@@ -34,7 +36,8 @@ const initialState: UsersState = {
   password: '',
   token: '',
   basketId: [],
-  isAuth: false
+  isAuth: false,
+  wishListId: []
 };
 
 const token = localStorage.getItem('token');
@@ -62,14 +65,15 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addUsersThunk = createAsyncThunk(
   'users/addUsers',
-  async ({ token, firstname, lastname, email, password, basketId }: User) => {
+  async ({ token, firstname, lastname, email, password, basketId, wishListId }: User) => {
     const user = {
       token: token,
       firstname: firstname,
       lastname: lastname,
       email: email,
       password: password,
-      basketId: basketId
+      basketId: basketId,
+      wishListId: wishListId
     };
     const response = await instance.post('http://localhost:3001/users', user);
     const data = await response.data;
@@ -103,6 +107,19 @@ export const addtoBasketThunk = createAsyncThunk(
     const response = await instance.patch('http://localhost:3001/users/1', {
       ...store,
       basketId: [...store.basketId, id]
+    });
+    const data = await response.data;
+    return data;
+  }
+);
+
+export const addtoWishListThunk = createAsyncThunk(
+  'users/addtoWishList',
+  async (id: number, { getState }: any) => {
+    const store = getState().users;
+    const response = await instance.patch('http://localhost:3001/users/1', {
+      ...store,
+      wishListId: [...store.wishListId, id]
     });
     const data = await response.data;
     return data;
@@ -153,6 +170,10 @@ const usersSlice = createSlice({
     // builder.addCase(addtoBasketThunk.rejected, () => {
     //   alert('Network error');
     // });
+    builder.addCase(addtoWishListThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      state.wishListId = action.payload.wishListId;
+      state.isFetching = false;
+    });
   },
 
   reducers: {}

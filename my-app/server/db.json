@@ -7,13 +7,16 @@
       "email": "",
       "password": "",
       "basketId": [
-        3
+        1
+      ],
+      "wishListId": [
+        2,
+        1
       ],
       "id": 1,
       "list": [],
       "isFetching": false,
-      "orders": [],
-      "tours": []
+      "isAuth": false
     }
   ],
   "tours": [

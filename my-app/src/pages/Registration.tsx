@@ -47,7 +47,8 @@ export const Registration: React.FC<formProps> = () => {
           token: token,
           email: values.email,
           password: values.password,
-          basketId: []
+          basketId: [],
+          wishListId: []
         })
       );
       resetForm();
