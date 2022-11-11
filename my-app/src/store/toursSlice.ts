@@ -9,6 +9,7 @@ interface Tours {
   budget: string;
   name: string;
   id: number;
+  cost: number;
 }
 
 interface ToursState {

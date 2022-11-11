@@ -22,6 +22,7 @@ interface UsersState {
   email?: string;
   password?: string;
   basketId: number[];
+  isAuth: boolean;
 }
 
 const initialState: UsersState = {
@@ -32,7 +33,8 @@ const initialState: UsersState = {
   email: '',
   password: '',
   token: '',
-  basketId: []
+  basketId: [],
+  isAuth: false
 };
 
 const token = localStorage.getItem('token');

@@ -7,7 +7,7 @@
       "email": "",
       "password": "",
       "basketId": [
-        2
+        3
       ],
       "id": 1,
       "list": [],
@@ -24,7 +24,8 @@
       "duration": "5",
       "country": "Spain",
       "budget": "350",
-      "id": 1
+      "id": 1,
+      "cost": 5
     },
     {
       "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
@@ -33,7 +34,8 @@
       "duration": "6",
       "country": "Spain, Porugal",
       "budget": "450",
-      "id": 2
+      "id": 2,
+      "cost": 5
     },
     {
       "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
@@ -42,7 +44,8 @@
       "duration": "4",
       "country": "Germany",
       "budget": "380",
-      "id": 3
+      "id": 3,
+      "cost": 5
     }
   ]
 }

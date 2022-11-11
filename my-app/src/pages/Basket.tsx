@@ -33,7 +33,11 @@ const Basket = () => {
                     <span>Budget for 1 person: </span>
                     {tour.budget} <span>Euro</span>
                   </a>
-                  <a className="tourData__forFilter__item">Feedback</a>
+                  <a className="tourData__forFilter__item">
+                    <span>Cost: </span>
+                    {tour.cost}
+                    <span>Euro</span>
+                  </a>
                 </div>
               </div>
             </div>
