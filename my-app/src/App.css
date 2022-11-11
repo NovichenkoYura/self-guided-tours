@@ -253,7 +253,11 @@ transform: scale(1.2);
   right:-15px;
   text-align: center;
   color: white;
-}
+ }
+
+ .circle_basket.ishidden{
+  visibility: hidden;
+ } 
 
 .circle_wishList{
   width: 25px;
@@ -266,6 +270,10 @@ transform: scale(1.2);
   text-align: center;
   color: white;
 }
+
+ .circle_wishList.ishidden {
+   visibility: hidden;
+ }
 
 /* Card */
 .tours__item {

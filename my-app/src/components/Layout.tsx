@@ -5,11 +5,14 @@ import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
+import { useAppSelector } from '../app/hooks';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { basketId, wishListId } = useAppSelector((state) => state.users);
+
   return (
     <>
       <header>
@@ -57,13 +60,18 @@ const Layout = () => {
           <li className="headerOrder__item">
             <NavLink to={locations.wishlist.path}>
               <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
-              <div className="circle_wishList">1</div>
+              <div className={`circle_wishList ${wishListId.length === 0 && 'ishidden'}`}>
+                {wishListId.length}
+              </div>
             </NavLink>
           </li>
           <li className="headerOrder__item">
             <NavLink to={locations.basket.path}>
               <Basket className="headerOrder_svgbasket" width="25" height="25" />
-              <div className="circle_basket">1</div>
+              <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
+                {basketId.length}
+              </div>
+              {/* className={`app-sidebar-note ${note.id === activeNote && "active"}`} */}
             </NavLink>
           </li>
         </ul>
