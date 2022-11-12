@@ -6,9 +6,19 @@
       "lastname": "Юрій111",
       "email": "novichenko.y@gmail.com",
       "password": "9999999999999999",
-      "basketId": [],
-      "wishListId": [],
-      "id": 2
+      "basketId": [
+        1,
+        2,
+        2
+      ],
+      "wishListId": [
+        1,
+        2
+      ],
+      "id": 1,
+      "list": [],
+      "isFetching": false,
+      "isAuth": true
     }
   ],
   "tours": [

@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { string } from 'yup';
@@ -10,20 +8,20 @@ interface User {
   lastname?: string;
   email?: string;
   password?: string;
-  basketId?: number[];
-  wishListId?: number[];
-}
-
-interface UsersState {
-  list: User[];
-  isFetching: boolean;
-  token?: string;
-  firstname?: string;
-  lastname?: string;
-  email?: string;
-  password?: string;
   basketId: number[];
   wishListId: number[];
+}
+
+interface UsersState extends User {
+  list: User[];
+  isFetching: boolean;
+  // token?: string;
+  // firstname?: string;
+  // lastname?: string;
+  // email?: string;
+  // password?: string;
+  // basketId: number[];
+  // wishListId: number[];
   isAuth: boolean;
 }
 
@@ -83,10 +81,10 @@ export const addUsersThunk = createAsyncThunk(
 
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
-  async ({ email, password }: User) => {
+  async ({ email, password }: Pick<User, 'email' | 'password'>) => {
     const response = await instance.get('http://localhost:3001/users');
     const data = await response.data;
-    const dataUser: User = {};
+    const dataUser = {} as User;
     data.forEach((profile: any) => {
       if (profile.email === email && profile.password === password) {
         dataUser.email = profile.email;
