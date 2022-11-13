@@ -7,13 +7,25 @@
       "email": "",
       "password": "",
       "basketId": [
-        1
+        1,
+        2,
+        3
       ],
       "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": false,
       "isAuth": false
+    },
+    {
+      "token": "2810f628-a1db-441e-9191-b6b5bb9e2d46",
+      "firstname": "Новіченко",
+      "lastname": "Юрій777",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "id": 2
     }
   ],
   "tours": [

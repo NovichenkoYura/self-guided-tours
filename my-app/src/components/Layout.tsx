@@ -12,7 +12,7 @@ const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-l
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [activeModal, setActiveModal] = useState(true);
+  // const [activeModal, setActiveModal] = useState(true);
   const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
     (state) => state.users
   );
@@ -78,10 +78,11 @@ const Layout = () => {
             </NavLink>
           </li>
           <li className="headerOrder__item">
-            <NavLink to={locations.basket.path} onClick={setActiveModal(true)}>
+            <NavLink to={locations.basket.path}>
               <Basket
-                activeModal={activeModal}
-                setActiveModal={setActiveModal}
+                // onClick={() => setActiveModal(true)}
+                // activeModal={activeModal}
+                // setActiveModal={setActiveModal}
                 className="headerOrder_svgbasket"
                 width="25"
                 height="25"

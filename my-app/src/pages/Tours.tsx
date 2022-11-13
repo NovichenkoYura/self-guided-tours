@@ -9,7 +9,6 @@ import { addtoBasketThunk, addtoWishListThunk } from '../store/usersSlice';
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.tours);
   const [wishItem, setWishItem] = useState(false);
-  console.log(wishItem);
 
   const dispatch = useAppDispatch();
   const addToWishList = () => {
