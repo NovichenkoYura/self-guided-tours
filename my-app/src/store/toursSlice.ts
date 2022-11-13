@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { instance } from '../api/apiConfig';
 
 interface Tours {
   imgsourse: string;
@@ -21,16 +22,6 @@ const initialState: ToursState = {
   isFetching: false,
   tours: []
 };
-
-const token = localStorage.getItem('token');
-
-export const instance = axios.create({
-  headers: token
-    ? {
-        Authorization: `Bearer ${token}`
-      }
-    : undefined
-});
 
 export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
   const response = await instance.get('http://localhost:3001/tours');

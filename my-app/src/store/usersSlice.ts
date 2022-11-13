@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { string } from 'yup';
+import { instance } from '../api/apiConfig';
 
 interface User {
   token?: string;
@@ -15,13 +16,6 @@ interface User {
 interface UsersState extends User {
   list: User[];
   isFetching: boolean;
-  // token?: string;
-  // firstname?: string;
-  // lastname?: string;
-  // email?: string;
-  // password?: string;
-  // basketId: number[];
-  // wishListId: number[];
   isAuth: boolean;
 }
 
@@ -37,16 +31,6 @@ const initialState: UsersState = {
   isAuth: false,
   wishListId: []
 };
-
-const token = localStorage.getItem('token');
-
-export const instance = axios.create({
-  headers: token
-    ? {
-        Authorization: `Bearer ${token}`
-      }
-    : undefined
-});
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
   const response = await instance.get('http://localhost:3001/users');

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { NavLink, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
@@ -11,6 +12,7 @@ const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-l
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeModal, setActiveModal] = useState(true);
   const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
     (state) => state.users
   );
@@ -76,8 +78,14 @@ const Layout = () => {
             </NavLink>
           </li>
           <li className="headerOrder__item">
-            <NavLink to={locations.basket.path}>
-              <Basket className="headerOrder_svgbasket" width="25" height="25" />
+            <NavLink to={locations.basket.path} onClick={setActiveModal(true)}>
+              <Basket
+                activeModal={activeModal}
+                setActiveModal={setActiveModal}
+                className="headerOrder_svgbasket"
+                width="25"
+                height="25"
+              />
               <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
                 {basketId.length}
               </div>

@@ -1,24 +1,19 @@
 {
   "users": [
     {
-      "token": "9034744c-265b-4ec1-ac2f-ee484ae51d7d",
-      "firstname": "Новіченко",
-      "lastname": "Юрій111",
-      "email": "novichenko.y@gmail.com",
-      "password": "9999999999999999",
+      "token": "",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
       "basketId": [
-        1,
-        2,
-        2
+        1
       ],
-      "wishListId": [
-        1,
-        2
-      ],
+      "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": false,
-      "isAuth": true
+      "isAuth": false
     }
   ],
   "tours": [
