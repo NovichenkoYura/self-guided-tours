@@ -8,14 +8,13 @@ import { addtoBasketThunk, addtoWishListThunk } from '../store/usersSlice';
 
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.tours);
+  const { wishListId } = useAppSelector((state) => state.users);
+
+  console.log(wishListId);
+
   const [wishItem, setWishItem] = useState(false);
 
   const dispatch = useAppDispatch();
-  const addToWishList = () => {
-    setWishItem(!wishItem);
-  };
-
-  // onClick={() => addToWishList()}>
 
   return (
     <>
@@ -60,7 +59,7 @@ const Tours = () => {
               </button>
               <button className="cardTours__btn">More...</button>
               <div onClick={() => dispatch(addtoWishListThunk(tour.id))}>
-                {wishItem ? (
+                {wishListId.includes(tour.id) ? (
                   <Chosen className="tourCard__svgwishlist" width="25" height="25" />
                 ) : (
                   <NotChosen className="tourCard__svgwishlist" width="25" height="25" />

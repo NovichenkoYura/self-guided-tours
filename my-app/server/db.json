@@ -8,12 +8,9 @@
       "password": "",
       "basketId": [
         1,
-        1,
-        1
+        2
       ],
-      "wishListId": [
-        1
-      ],
+      "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": false,

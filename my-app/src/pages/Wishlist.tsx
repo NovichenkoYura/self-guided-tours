@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 const Wishlist = () => {
   const { wishListId } = useAppSelector((state) => state.users);
   const { tours } = useAppSelector((state) => state.tours);
+  // console.log(wishListId);
 
   const toursInWishList = tours.filter((tour) => wishListId.includes(tour.id));
 
@@ -38,22 +39,6 @@ const Wishlist = () => {
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="tours__btns">
-              {/* <button
-                onClick={() => dispatch(addtoBasketThunk(tour.id))}
-                className="cardTours__btn">
-                Add to
-                <Basket className="tourCard__svgbasket" width="25" height="25" />
-              </button> */}
-              {/* <button className="cardTours__btn">More...</button>
-              <div onClick={() => setWishItem(!wishItem)}>
-                {wishItem ? (
-                  <Chosen className="tourCard__svgwishlist" width="25" height="25" />
-                ) : (
-                  <NotChosen className="tourCard__svgwishlist" width="25" height="25" />
-                )}
-              </div> */}
             </div>
           </li>
         ))}

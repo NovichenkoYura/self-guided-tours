@@ -19,7 +19,7 @@ const Layout = () => {
   );
   const onIsinBasket = () => dispatch(setIsBasket());
 
-  console.log(isBasket);
+  // console.log(isBasket);
 
   return (
     <>
