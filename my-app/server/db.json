@@ -8,14 +8,17 @@
       "password": "",
       "basketId": [
         1,
-        2,
-        3
+        1,
+        1
       ],
-      "wishListId": [],
+      "wishListId": [
+        1
+      ],
       "id": 1,
       "list": [],
       "isFetching": false,
-      "isAuth": false
+      "isAuth": false,
+      "isBasket": true
     },
     {
       "token": "2810f628-a1db-441e-9191-b6b5bb9e2d46",

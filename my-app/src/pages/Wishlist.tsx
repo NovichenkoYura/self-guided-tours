@@ -3,8 +3,6 @@ import { useAppDispatch, useAppSelector } from '../app/hooks';
 const Wishlist = () => {
   const { wishListId } = useAppSelector((state) => state.users);
   const { tours } = useAppSelector((state) => state.tours);
-  console.log('basketId', wishListId);
-  console.log('tours', tours);
 
   const toursInWishList = tours.filter((tour) => wishListId.includes(tour.id));
 

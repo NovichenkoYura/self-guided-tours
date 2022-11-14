@@ -6,16 +6,20 @@ import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
-import { useAppSelector } from '../app/hooks';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { setIsBasket } from '../store/usersSlice';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  // const [activeModal, setActiveModal] = useState(true);
-  const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
+  const dispatch = useAppDispatch();
+  const { basketId, wishListId, isAuth, firstname, lastname, isBasket } = useAppSelector(
     (state) => state.users
   );
+  const onIsinBasket = () => dispatch(setIsBasket());
+
+  console.log(isBasket);
 
   return (
     <>
@@ -80,9 +84,7 @@ const Layout = () => {
           <li className="headerOrder__item">
             <NavLink to={locations.basket.path}>
               <Basket
-                // onClick={() => setActiveModal(true)}
-                // activeModal={activeModal}
-                // setActiveModal={setActiveModal}
+                onClick={() => onIsinBasket(!isBasket)}
                 className="headerOrder_svgbasket"
                 width="25"
                 height="25"
