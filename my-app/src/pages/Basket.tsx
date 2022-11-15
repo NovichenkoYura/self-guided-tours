@@ -1,25 +1,29 @@
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { setIsBasket } from '../store/usersSlice';
 
-const Basket = () => {
+interface BasketProps {
+  openModalCallback: (arg1: boolean) => void;
+}
+
+const Basket: FC<BasketProps> = ({ openModalCallback }) => {
   const { basketId, isBasket } = useAppSelector((state) => state.users);
   const { tours } = useAppSelector((state) => state.tours);
-  console.log(isBasket);
 
   const [activeModal, setActiveModal] = useState(true);
 
   const toursInBasket = tours.filter((tour) => basketId.includes(tour.id));
 
   const dispatch = useAppDispatch();
-  const onIsinBasket = () => dispatch(setIsBasket());
 
   return (
     <>
-      <div className={isBasket ? 'modal active' : 'modal'} onClick={() => onIsinBasket(!isBasket)}>
+      <div className={isBasket ? 'modal active' : 'modal'}>
         <ul
           className={isBasket ? 'modal__content active' : 'modal__content'}
           onClick={(e) => e.stopPropagation()}>
+          <button onClick={() => openModalCallback(false)}>X</button>
+
           {toursInBasket.map((tour) => (
             <li className="tours__item" key={tour.id}>
               <div className="wrap">

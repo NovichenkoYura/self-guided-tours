@@ -16,7 +16,6 @@ export const ComponentRoutes = () => {
         <Route path={locations.registration.path} element={locations.registration.component} />
         <Route path={locations.login.path} element={locations.login.component} />
         <Route path={locations.wishlist.path} element={locations.wishlist.component} />
-        <Route path={locations.basket.path} element={locations.basket.component} />
       </Route>
     </Routes>
   );

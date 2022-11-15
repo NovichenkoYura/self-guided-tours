@@ -10,7 +10,11 @@
         1,
         2
       ],
-      "wishListId": [],
+      "wishListId": [
+        1,
+        1,
+        2
+      ],
       "id": 1,
       "list": [],
       "isFetching": false,

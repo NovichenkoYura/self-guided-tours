@@ -20,6 +20,5 @@ export const locations = {
   becomeanowner: { path: '/becomeanowner', component: <BecomeAnOwner /> },
   registration: { path: '/registration', component: <Registration /> },
   login: { path: '/log in', component: <Login /> },
-  wishlist: { path: '/wishlist', component: <Wishlist /> },
-  basket: { path: '/basket', component: <Basket /> }
+  wishlist: { path: '/wishlist', component: <Wishlist /> }
 };

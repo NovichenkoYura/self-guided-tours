@@ -8,11 +8,14 @@ import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { setIsBasket } from '../store/usersSlice';
+import { Basket as BasketModal } from '../pages/Basket';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isOnBasket, setisOnBasket] = useState(false);
+
   const dispatch = useAppDispatch();
   const { basketId, wishListId, isAuth, firstname, lastname, isBasket } = useAppSelector(
     (state) => state.users
@@ -82,21 +85,21 @@ const Layout = () => {
             </NavLink>
           </li>
           <li className="headerOrder__item">
-            <NavLink to={locations.basket.path}>
-              <Basket
-                onClick={() => onIsinBasket(!isBasket)}
-                className="headerOrder_svgbasket"
-                width="25"
-                height="25"
-              />
-              <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
-                {basketId.length}
-              </div>
-            </NavLink>
+            {/* <NavLink to={locations.basket.path}> */}
+            <Basket
+              onClick={() => setisOnBasket(true)}
+              className="headerOrder_svgbasket"
+              width="25"
+              height="25"
+            />
+            <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
+              {basketId.length}
+            </div>
+            {/* </NavLink> */}
           </li>
         </ul>
       </header>
-
+      {isOnBasket && <BasketModal openModalCallback={setisOnBasket} />}
       <main className="container">
         <Outlet />
       </main>
