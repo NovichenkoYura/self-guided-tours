@@ -7,14 +7,15 @@ import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { setIsBasket } from '../store/usersSlice';
 import { Basket as BasketModal } from '../pages/Basket';
+import { Wishlist as WishListModal } from '../pages/Wishlist';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isOnBasket, setisOnBasket] = useState(false);
+  const [isOnWishList, setisOnWishList] = useState(false);
 
   const dispatch = useAppDispatch();
   const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
@@ -74,15 +75,17 @@ const Layout = () => {
         )}
         <ul className="headerOrder__container">
           <li className="headerOrder__item">
-            <NavLink to={locations.wishlist.path}>
-              <Chosen className="headerOrder_svgwishlist" width="25" height="25" />
-              <div className={`circle_wishList ${wishListId.length === 0 && 'ishidden'}`}>
-                {wishListId.length}
-              </div>
-            </NavLink>
+            <Chosen
+              onClick={() => setisOnWishList(true)}
+              className="headerOrder_svgwishlist"
+              width="25"
+              height="25"
+            />
+            <div className={`circle_wishList ${wishListId.length === 0 && 'ishidden'}`}>
+              {wishListId.length}
+            </div>
           </li>
           <li className="headerOrder__item">
-            {/* <NavLink to={locations.basket.path}> */}
             <Basket
               onClick={() => setisOnBasket(true)}
               className="headerOrder_svgbasket"
@@ -92,11 +95,12 @@ const Layout = () => {
             <div className={`circle_basket ${basketId.length === 0 && 'ishidden'}`}>
               {basketId.length}
             </div>
-            {/* </NavLink> */}
           </li>
         </ul>
       </header>
+      {isOnWishList && <WishListModal openWishListCallback={setisOnWishList} />}
       {isOnBasket && <BasketModal openModalCallback={setisOnBasket} />}
+
       <main className="container">
         <Outlet />
       </main>

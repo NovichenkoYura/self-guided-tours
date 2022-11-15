@@ -1,4 +1,3 @@
-import { Basket } from '../pages/Basket';
 import { BecomeAnOwner } from '../pages/BecomeAnOwner';
 import { Login } from '../pages/Login';
 import { Main } from '../pages/Main';
@@ -8,7 +7,6 @@ import { Saved } from '../pages/Saved';
 import { Subscribers } from '../pages/Subscribers';
 import { Subscriptions } from '../pages/Subscriptions';
 import { Tours } from '../pages/Tours';
-import { Wishlist } from '../pages/Wishlist';
 
 export const locations = {
   main: { path: '/main', component: <Main /> },
@@ -19,6 +17,5 @@ export const locations = {
   saved: { path: '/saved', component: <Saved /> },
   becomeanowner: { path: '/becomeanowner', component: <BecomeAnOwner /> },
   registration: { path: '/registration', component: <Registration /> },
-  login: { path: '/log in', component: <Login /> },
-  wishlist: { path: '/wishlist', component: <Wishlist /> }
+  login: { path: '/log in', component: <Login /> }
 };
