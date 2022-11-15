@@ -131,15 +131,16 @@ button:focus {
 }
 
 
-.popup-close {
+button.popup-close {
   position: absolute;
   background: transparent;
   color: #ffffff;
   border: none;
-  top: -23px;
-  right: -50px;
+  top: -30px;
+  right: -35px;
   font-size: 3rem;
   font-weight: 300;
+  padding: 0px;
 }
 
 .popup-content {
@@ -160,6 +161,19 @@ button:focus {
   transform: translateX(-50%);
   /* width: 300px; */
 }
+
+.close__svg{
+  fill: #ededed;
+  margin-left: 15px; 
+  padding-left: 0px; 
+  cursor: pointer;
+}
+
+.close__svg:hover,
+.close__svg:focus{
+  fill: #ff6b08;
+}
+
 
 
 /* .modal{

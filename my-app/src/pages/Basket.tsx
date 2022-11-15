@@ -1,5 +1,6 @@
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { FC, useState } from 'react';
+import { ReactComponent as Close } from '../img/close-svgrepo-com.svg';
 
 interface BasketProps {
   openModalCallback: (arg1: boolean) => void;
@@ -15,7 +16,9 @@ const Basket: FC<BasketProps> = ({ openModalCallback }) => {
     <>
       <div className="popup">
         <ul className="popup-content" onClick={(e) => e.stopPropagation()}>
-          <button onClick={() => openModalCallback(false)}>X</button>
+          <button className="popup-close" onClick={() => openModalCallback(false)}>
+            <Close width="25" height="25" className="close__svg" />
+          </button>
 
           {toursInBasket.map((tour) => (
             <li className="tours__item" key={tour.id}>
