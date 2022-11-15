@@ -10,8 +10,6 @@ const Tours = () => {
   const { tours } = useAppSelector((state) => state.tours);
   const { wishListId } = useAppSelector((state) => state.users);
 
-  console.log(wishListId);
-
   const [wishItem, setWishItem] = useState(false);
 
   const dispatch = useAppDispatch();

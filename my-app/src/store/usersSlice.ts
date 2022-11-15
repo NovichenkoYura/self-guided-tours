@@ -17,7 +17,6 @@ interface UsersState extends User {
   list: User[];
   isFetching: boolean;
   isAuth: boolean;
-  isBasket: boolean;
 }
 
 const initialState: UsersState = {
@@ -30,8 +29,7 @@ const initialState: UsersState = {
   token: '',
   basketId: [],
   isAuth: false,
-  wishListId: [],
-  isBasket: true
+  wishListId: []
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
@@ -161,12 +159,7 @@ const usersSlice = createSlice({
     });
   },
 
-  reducers: {
-    setIsBasket(state, action) {
-      console.log(action.payload);
-      state.isBasket = action.payload;
-    }
-  }
+  reducers: {}
 });
-export const { setIsBasket } = usersSlice.actions;
+// export const {  } = usersSlice.actions;
 export default usersSlice.reducer;

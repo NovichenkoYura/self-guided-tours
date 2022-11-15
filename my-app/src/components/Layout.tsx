@@ -17,12 +17,9 @@ const Layout = () => {
   const [isOnBasket, setisOnBasket] = useState(false);
 
   const dispatch = useAppDispatch();
-  const { basketId, wishListId, isAuth, firstname, lastname, isBasket } = useAppSelector(
+  const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
     (state) => state.users
   );
-  const onIsinBasket = () => dispatch(setIsBasket());
-
-  // console.log(isBasket);
 
   return (
     <>
