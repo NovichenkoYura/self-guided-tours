@@ -439,10 +439,10 @@ transform: scale(1.2);
   margin: 0px 5px;
 }
 
-.cardTours__btn:disabled{
+/* .cardTours__btn:disabled{
   cursor: default;
   background-color: #dfb192;
-}
+} */
 
 /* Data for filter */
 .tourData__forFilter{
