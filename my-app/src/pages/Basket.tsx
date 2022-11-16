@@ -14,7 +14,7 @@ const Basket: FC<BasketProps> = ({ openModalCallback }) => {
   // className={isBasket ? 'modal active' : 'modal'}
   return (
     <>
-      <div className="popup">
+      <div className="popup" onClick={() => openModalCallback(false)}>
         <ul className="popup-content" onClick={(e) => e.stopPropagation()}>
           <button className="popup-close" onClick={() => openModalCallback(false)}>
             <Close width="25" height="25" className="close__svg" />

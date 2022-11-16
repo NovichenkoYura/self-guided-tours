@@ -49,7 +49,7 @@ const Layout = () => {
         </NavLink>
         {isAuth ? (
           <>
-            <p className="headerLogined_person">{firstname}</p>
+            {/* <p className="headerLogined_person">{firstname}</p> */}
             <p className="headerLogined_person">{lastname}</p>
           </>
         ) : (

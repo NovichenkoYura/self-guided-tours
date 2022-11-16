@@ -14,7 +14,7 @@ const Wishlist: FC<WishListProps> = ({ openWishListCallback }) => {
 
   return (
     <>
-      <div className="popup">
+      <div className="popup" onClick={() => openWishListCallback(false)}>
         <ul className="popup-content" onClick={(e) => e.stopPropagation()}>
           <button className="popup-close" onClick={() => openWishListCallback(false)}>
             <Close width="25" height="25" className="close__svg" />

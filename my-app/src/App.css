@@ -149,7 +149,7 @@ button.popup-close {
 .popup-content {
   position: fixed;
   text-align: center;
-  width: 80vw;
+  width: 40vw;
   padding: 20px;
   left: 50%;
   top: 14%;
@@ -314,6 +314,9 @@ transform: scale(1.2);
 
 .headerLogined_person{
   color: white;
+  position: absolute;
+  top:15px;
+  right: 140px;
 }
 
 .circle_basket{
