@@ -17,5 +17,5 @@ export const locations = {
   saved: { path: '/saved', component: <Saved /> },
   becomeanowner: { path: '/becomeanowner', component: <BecomeAnOwner /> },
   registration: { path: '/registration', component: <Registration /> },
-  login: { path: '/log in', component: <Login /> }
+  login: { path: '/log_in', component: <Login /> }
 };

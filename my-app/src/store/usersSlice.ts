@@ -143,8 +143,9 @@ const usersSlice = createSlice({
       localStorage.setItem('token', String(action.payload.token));
     });
 
-    builder.addCase(loginThunk.rejected, () => {
-      console.log('mistake');
+    builder.addCase(loginThunk.rejected, (state) => {
+      toast("error")
+      state.isFetching = false;
     });
 
     builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
