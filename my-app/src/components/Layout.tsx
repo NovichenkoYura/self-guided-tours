@@ -9,6 +9,8 @@ import { locations } from '../constants/locations';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { Basket as BasketModal } from '../pages/Basket';
 import { Wishlist as WishListModal } from '../pages/Wishlist';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -21,6 +23,8 @@ const Layout = () => {
   const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
     (state) => state.users
   );
+
+  const notify = () => toast('Wow so easy!');
 
   return (
     <>
@@ -49,18 +53,24 @@ const Layout = () => {
         </NavLink>
         {isAuth ? (
           <>
-            {/* <p className="headerLogined_person">{firstname}</p> */}
             <p className="headerLogined_person">{lastname}</p>
           </>
         ) : (
-          <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
-            <div className="loginsvg__lines">
-              <LoginLines className="login__person" width="20" height="20" />
+          <>
+            <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__link">
+              <div className="loginsvg__lines">
+                <LoginLines className="login__person" width="20" height="20" />
+              </div>
+              <div className="loginsvg__person">
+                <LoginPerson className="login__person" width="35" height="35" />
+              </div>
             </div>
-            <div className="loginsvg__person">
-              <LoginPerson className="login__person" width="35" height="35" />
-            </div>
-          </div>
+            {/* <div>
+              {() => !isAuth && notify()}
+              <button onClick={notify}>Notify!</button>
+              <ToastContainer />
+            </div> */}
+          </>
         )}
 
         {showDropdown && (

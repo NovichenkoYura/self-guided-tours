@@ -15,7 +15,7 @@ interface formProps {
 
 export const Login: React.FC<formProps> = () => {
   const dispatch = useAppDispatch();
-  const { isFetching } = useAppSelector((state) => state.users);
+  const { isFetching, isAuth } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
     return Yup.object({

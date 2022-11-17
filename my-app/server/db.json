@@ -1,22 +1,20 @@
 {
   "users": [
     {
-      "token": "2810f628-a1db-441e-9191-b6b5bb9e2d46",
-      "firstname": "Новіченко",
-      "lastname": "Юрій777",
-      "email": "novichenko.y@gmail.com",
-      "password": "qwerty",
+      "token": "",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
       "basketId": [
-        1
-      ],
-      "wishListId": [
         1,
         2
       ],
+      "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": false,
-      "isAuth": true,
+      "isAuth": false,
       "isBasket": true
     },
     {
