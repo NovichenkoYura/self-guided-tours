@@ -74,7 +74,7 @@ const Layout = () => {
           </>
         )}
 
-        {showDropdown && (
+        {!isAuth && showDropdown && (
           <div className="dropdown__window">
             <NavLink to={locations.login.path} className="dropdown__item">
               Log in

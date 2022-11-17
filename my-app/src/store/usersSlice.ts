@@ -2,6 +2,8 @@ import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { string } from 'yup';
 import { instance } from '../api/apiConfig';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface User {
   token?: string;
