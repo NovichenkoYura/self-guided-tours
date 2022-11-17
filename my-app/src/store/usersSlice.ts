@@ -132,7 +132,6 @@ const usersSlice = createSlice({
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.token = action.payload.token;
-      console.log(action.payload.token);
       state.firstname = action.payload.firstname;
       state.lastname = action.payload.lastname;
       state.password = action.payload.password;

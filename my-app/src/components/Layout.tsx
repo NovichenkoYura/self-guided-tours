@@ -16,6 +16,7 @@ const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-l
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  console.log(showDropdown);
   const [isOnBasket, setisOnBasket] = useState(false);
   const [isOnWishList, setisOnWishList] = useState(false);
 
