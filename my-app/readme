@@ -1,0 +1,155 @@
+при огінізації уброать вікно дропдаун
+модалка: анимация, плавные переходы, скрытие при клике в пустую область 
+при нажатии на пустую корзину появляется пустая модалка
+задизейблить кнопку? какое условие проверятеся?
+void js что это
+при логинизации если сначала войти зарегестрированным пользователем, менется изаус на тру, а потом зайти незареганным,
+то все равно позсоляет добавлять в карту
+
+
+добалвяются все туры в корзину при нажатии на 1 карточку, 
+как посчитать стоимость в корзине всех туров
+цепочка юзер/юзерстейт/инишл
+tc ноучек на юзерслайсе
+adtowishlists
+как сделать чтоб добавлялась одна карточка токльо один раз
+isauth надо на сервак?
+коли краще тернарнрий оператор коли &&
+
+
+
+карточки товаров, как задать ширину, ластчайлд, ферст чайлд
+
+
+
+export const addtoBasketThunk = createAsyncThunk(
+'users/addtoBasket',
+async (id: number, { getState }: any) => {
+const store = getState().users;
+// console.log(store);
+console.log({ ...store, basketId: [...store.basketId, id] });
+const response = await instance.patch('http://localhost:3001/users?id=3', {
+...store,
+basketId: [...store.basketId, id]
+});
+const data = await response.data;
+// console.log(data);
+return data;
+}
+);
+
+{/* <h1>All tours</h1>
+      <ul>
+        <li className="tours__item">
+          <div className="wrap">
+            <div className="toursItemImage__container">
+              <img src={hamon_meal} className="toursItem__image" alt="Meal" />
+              <img src={hamon_pig} className="toursItem__image" alt="Pig" />
+              <img src={hamon_meal} className="toursItem__image" alt="Meal" />
+              <img
+                src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg"
+                className="toursItem__image"
+                alt="Pig"
+              />
+            </div>
+
+            <div className="tour__text-part">
+              <h2 className="tour__title">Spain: Gastro tour</h2>
+              <p className="tour__generaldecsription">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus molestiae
+                est quisquam ullam iure commodi iste harum, temporibus reiciendis ipsa sapiente
+                assumenda qui repudiandae deleniti cum nam, perspiciatis aliquam aut. Vero ab
+                similique doloremque repudiandae expedita itaque neque totam provident officiis
+                nulla! Velit iste dolorum, vel, pariatur nemo quia et quasi eaque voluptatibus natus
+                ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur soluta
+                dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
+              </p>
+              <div className="tourData__forFilter">
+                <a className="tourData__forFilter__item">Duration: 5 days</a>
+                <a className="tourData__forFilter__item">Spain</a>
+                <a className="tourData__forFilter__item">Budget for 1 person: 350 Euro</a>
+                <a className="tourData__forFilter__item">Feedback</a>
+              </div>
+            </div>
+          </div>
+          <div className="tours__btns">
+            <button className="cardTours__btn">
+              Add to
+              <Basket className="tourCard__svgbasket" width="25" height="25" />
+            </button>
+            <button className="cardTours__btn">More...</button>
+            <Chosen className="tourCard__svgwishlist" width="25" height="25" />
+          </div>
+        </li>
+        <li className="tours__item">
+          <div className="wrap">
+            <div className="toursItemImage__container">
+              <img src={atlantic_ocean} className="toursItem__image" alt="atlantic_ocean" />
+              <img src={atlantic_castle} className="toursItem__image" alt="castle" />
+            </div>
+
+            <div className="tour__text-part">
+              <h2 className="tour__title">Spain - Portugal: Atlantic coast</h2>
+              <p className="tour__generaldecsription">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus molestiae
+                est quisquam ullam iure commodi iste harum, temporibus reiciendis ipsa sapiente
+                assumenda qui repudiandae deleniti cum nam, perspiciatis aliquam aut. Vero ab
+                similique doloremque repudiandae expedita itaque neque totam provident officiis
+                nulla! Velit iste dolorum, vel, pariatur nemo quia et quasi eaque voluptatibus natus
+                ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur soluta
+                dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
+              </p>
+              <div className="tourData__forFilter">
+                <a className="tourData__forFilter__item">Duration: 6 days</a>
+                <a className="tourData__forFilter__item">Spain, Portugal</a>
+                <a className="tourData__forFilter__item">Budget for 1 person: 450 Euro</a>
+                <a className="tourData__forFilter__item">Feedback</a>
+              </div>
+            </div>
+          </div>
+          <div className="tours__btns">
+            <button className="cardTours__btn">
+              Add to
+              <Basket className="tourCard__svgbasket" width="25" height="25" />
+            </button>
+            <button className="cardTours__btn">More...</button>
+            <Chosen className="tourCard__svgwishlist" width="25" height="25" />
+          </div>
+        </li>
+        <li className="tours__item">
+          <div className="wrap">
+            <div className="toursItemImage__container">
+              <img src={germany_alps} className="toursItem__image" alt="alps" />
+              <img src={germany_town} className="toursItem__image" alt="town" />
+            </div>
+
+            <div className="tour__text-part">
+              <h2 className="tour__title">Germany: Alps and cities</h2>
+              <p className="tour__generaldecsription">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus molestiae
+                est quisquam ullam iure commodi iste harum, temporibus reiciendis ipsa sapiente
+                assumenda qui repudiandae deleniti cum nam, perspiciatis aliquam aut. Vero ab
+                similique doloremque repudiandae expedita itaque neque totam provident officiis
+                nulla! Velit iste dolorum, vel, pariatur nemo quia et quasi eaque voluptatibus natus
+                ipsam magnam doloribus eius odit inventore! Magnam delectus aspernatur soluta
+                dolorum ut commodi voluptatem nam, rerum aliquam voluptatum aliquid,
+              </p>
+              <div className="tourData__forFilter">
+                <a className="tourData__forFilter__item">Duration: 4 days</a>
+                <a className="tourData__forFilter__item">Germany</a>
+                <a className="tourData__forFilter__item">Budget for 1 person: 380 Euro</a>
+                <a className="tourData__forFilter__item">Feedback</a>
+              </div>
+            </div>
+          </div>
+          <div className="tours__btns">
+            <button className="cardTours__btn">
+              Add to
+              <Basket className="tourCard__svgbasket" width="25" height="25" />
+            </button>
+            <button className="cardTours__btn">More...</button>
+            <Chosen className="tourCard__svgwishlist" width="25" height="25" />
+          </div>
+        </li>
+      </ul> */}
+

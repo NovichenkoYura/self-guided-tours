@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "token": "",
+      "firstname": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "basketId": [
+        1
+      ],
+      "wishListId": [],
+      "id": 1,
+      "list": [],
+      "isFetching": false,
+      "isAuth": false,
+      "isBasket": true
+    },
+    {
+      "token": "2810f628-a1db-441e-9191-b6b5bb9e2d46",
+      "firstname": "Новіченко",
+      "lastname": "Юрій777",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "id": 2
+    }
+  ],
+  "tours": [
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Spain: Gastro tour",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "5",
+      "country": "Spain",
+      "budget": "350",
+      "id": 1,
+      "cost": 5
+    },
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Spain - Portugal: Atlantic coast",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "6",
+      "country": "Spain, Porugal",
+      "budget": "450",
+      "id": 2,
+      "cost": 5
+    },
+    {
+      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "name": "Germany: Alps and cities",
+      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "duration": "4",
+      "country": "Germany",
+      "budget": "380",
+      "id": 3,
+      "cost": 5
+    }
+  ]
+}
