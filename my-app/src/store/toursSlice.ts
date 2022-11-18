@@ -40,6 +40,9 @@ const toursSlice = createSlice({
       state.tours = action.payload;
       state.isFetching = false;
     });
+    builder.addCase(getToursThunk.rejected, () => {
+      alert('something goes wrong with tours');
+    });
   },
 
   reducers: {}

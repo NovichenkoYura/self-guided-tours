@@ -6,10 +6,10 @@
       "lastName": "",
       "email": "",
       "password": "",
-      "basketId": [
+      "basketId": [],
+      "wishListId": [
         1
       ],
-      "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": false,
@@ -17,14 +17,20 @@
       "isBasket": true
     },
     {
-      "token": "2810f628-a1db-441e-9191-b6b5bb9e2d46",
-      "firstName": "Новіченко",
-      "lastName": "Юрій777",
-      "email": "novichenko.y@gmail.com",
-      "password": "qwerty",
+      "token": "",
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
       "basketId": [],
-      "wishListId": [],
-      "id": 2
+      "wishListId": [
+        1,
+        2
+      ],
+      "id": 2,
+      "list": [],
+      "isFetching": false,
+      "isAuth": false
     },
     {
       "token": "b8d503ab-7e39-4119-aece-f83a84ad2513",
@@ -35,6 +41,26 @@
       "basketId": [],
       "wishListId": [],
       "id": 3
+    },
+    {
+      "token": "71bd8f1e-85c2-40e5-baf9-6bb50fa0246c",
+      "firstName": "rrrrrrrr",
+      "lastName": "rrrrrrrrr",
+      "email": "boardshopua@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "id": 4
+    },
+    {
+      "token": "b721bc70-c62e-4f4d-b545-698d536c2d69",
+      "firstName": "eeeeeeeee",
+      "lastName": "eeeeeeeeeeee",
+      "email": "boardshopua@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "id": 5
     }
   ],
   "tours": [

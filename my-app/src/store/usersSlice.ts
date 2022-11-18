@@ -5,11 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { notificationMessages } from '../constants/notificationMessages';
 import { endpoints } from '../api/endpoints';
 
-// remove unused imports
-
 interface User {
   token?: string;
-  firstName?: string; //rename to camel case
+  firstName?: string;
   lastName?: string;
   email?: string;
   password?: string;
@@ -88,7 +86,7 @@ export const loginThunk = createAsyncThunk(
 );
 
 export const addToBasketThunk = createAsyncThunk(
-  'users/addToBasket', // camel case
+  'users/addToBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
     const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
@@ -100,12 +98,11 @@ export const addToBasketThunk = createAsyncThunk(
   }
 );
 
-export const addtoWishListThunk = createAsyncThunk(
-  'users/addtoWishList', // camel case
+export const addToWishListThunk = createAsyncThunk(
+  'users/addToWishList',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch('http://localhost:3001/users/1', {
-      // take out in  endpoints.ts
+    const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
       ...store,
       wishListId: [...store.wishListId, id]
     });
@@ -136,9 +133,11 @@ const usersSlice = createSlice({
     builder.addCase(addUsersThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.list.push(action.payload);
       state.isFetching = false;
+      toast(notificationMessages.register.success);
     });
     builder.addCase(addUsersThunk.rejected, (state) => {
       state.isFetching = false;
+      toast(notificationMessages.register.error);
     });
 
     builder.addCase(loginThunk.pending, (state) => {
@@ -153,7 +152,9 @@ const usersSlice = createSlice({
       state.isFetching = false;
       state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
-      toast(notificationMessages.login.success); // get title fot toast from notificationMessages.ts
+      toast(notificationMessages.login.success);
+
+      // get title fot toast from notificationMessages.ts
       // add notification where necessary
     });
     builder.addCase(loginThunk.rejected, (state) => {
@@ -161,25 +162,27 @@ const usersSlice = createSlice({
       toast(notificationMessages.login.error);
     });
 
-    // builder.addCase(addToBasketThunk.pending, () => {
-    // });
+    builder.addCase(addToBasketThunk.pending, (state) => {
+      state.isFetching = true;
+    });
     builder.addCase(addToBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.basketId = action.payload.basketId;
       state.isFetching = false;
     });
-    // builder.addCase(addToBasketThunk.rejected, () => {
-    // });
+    builder.addCase(addToBasketThunk.rejected, () => {
+      alert('the good is not in the basket');
+    });
 
-    // builder.addCase(addtoWishListThunk.pending, () => {
-    // });
-    builder.addCase(addtoWishListThunk.fulfilled, (state, action: PayloadAction<User>) => {
+    builder.addCase(addToWishListThunk.pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(addToWishListThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.wishListId = action.payload.wishListId;
       state.isFetching = false;
     });
-    // builder.addCase(addtoWishListThunk.rejected, () => {
-    // });
-
-    // dont forget to write pending and rejected case
+    builder.addCase(addToWishListThunk.rejected, () => {
+      alert('the good is not in the WishList');
+    });
   },
 
   reducers: {}

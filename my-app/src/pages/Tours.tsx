@@ -4,7 +4,7 @@ import { ReactComponent as Chosen } from '../img/hurt1_filled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { useState } from 'react';
-import { addToBasketThunk, addtoWishListThunk } from '../store/usersSlice';
+import { addToBasketThunk, addToWishListThunk } from '../store/usersSlice';
 
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.tours);
@@ -56,7 +56,7 @@ const Tours = () => {
                 <Basket className="tourCard__svgbasket" width="25" height="25" />
               </button>
               <button className="cardTours__btn">More...</button>
-              <div onClick={() => dispatch(addtoWishListThunk(tour.id))}>
+              <div onClick={() => dispatch(addToWishListThunk(tour.id))}>
                 {wishListId.includes(tour.id) ? (
                   <Chosen className="tourCard__svgwishlist" width="25" height="25" />
                 ) : (
