@@ -1,9 +1,5 @@
-const BecomeAnOwner = () => {
-  return (
-    <div>
-      <h1>Become an owner</h1>
-    </div>
-  );
-};
+import { BecomeAnOwnerModule } from '../components/modules/BecomeAnOwnerModule';
+
+const BecomeAnOwner = () => <BecomeAnOwnerModule />;
 
 export { BecomeAnOwner };

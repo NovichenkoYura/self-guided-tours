@@ -6,13 +6,15 @@
       "lastName": "",
       "email": "",
       "password": "",
-      "basketId": [],
+      "basketId": [
+        1
+      ],
       "wishListId": [
         1
       ],
       "id": 1,
       "list": [],
-      "isFetching": false,
+      "isFetching": true,
       "isAuth": false,
       "isBasket": true
     },
