@@ -7,9 +7,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { notificationMessages } from '../constants/notificationMessages';
 import { endpoints } from '../api/endpoints';
 
+// remove unused imports
+
 interface User {
   token?: string;
-  firstname?: string;
+  firstname?: string; //rename to camel case
   lastname?: string;
   email?: string;
   password?: string;
@@ -27,7 +29,7 @@ const initialState: UsersState = {
   list: [],
   isFetching: false,
   firstname: '',
-  lastname: '',
+  lastname: '',//rename to camel case
   email: '',
   password: '',
   token: '',
@@ -73,7 +75,7 @@ export const loginThunk = createAsyncThunk(
     const response = await instance.get(endpoints.users);
     const data = await response.data;
     const dataUser = {} as User;
-    data.forEach((profile: any) => {
+    data.forEach((profile: any) => { // type it 
       if (profile.email === email && profile.password === password) {
         dataUser.email = profile.email;
         dataUser.password = profile.password;
@@ -87,7 +89,7 @@ export const loginThunk = createAsyncThunk(
 );
 
 export const addtoBasketThunk = createAsyncThunk(
-  'users/addtoBasket',
+  'users/addtoBasket', // camel case
   async (id: number, { getState }: any) => {
     const store = getState().users;
     const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
@@ -100,10 +102,10 @@ export const addtoBasketThunk = createAsyncThunk(
 );
 
 export const addtoWishListThunk = createAsyncThunk(
-  'users/addtoWishList',
+  'users/addtoWishList',// camel case
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch('http://localhost:3001/users/1', {
+    const response = await instance.patch('http://localhost:3001/users/1', { // take out in  endpoints.ts
       ...store,
       wishListId: [...store.wishListId, id]
     });
@@ -151,7 +153,8 @@ const usersSlice = createSlice({
       state.isFetching = false;
       state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
-      toast(notificationMessages.login.success)
+      toast(notificationMessages.login.success) // get title fot toast from notificationMessages.ts
+      // add notification where necessary
     });
     builder.addCase(loginThunk.rejected, (state) => {
       state.isFetching = false;
@@ -175,6 +178,8 @@ const usersSlice = createSlice({
     });
     // builder.addCase(addtoWishListThunk.rejected, () => {
     // });
+
+    // dont forget to write pending and rejected case 
   },
 
   reducers: {}

@@ -1,9 +1,5 @@
-const Main = () => {
-  return (
-    <div>
-      <h1>Main Page</h1>
-    </div>
-  );
-};
+import { MainModule } from "../components/modules/MainModule";
+
+const Main = () => <MainModule/>
 
 export { Main };

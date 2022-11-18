@@ -12,6 +12,7 @@ interface Tours {
   cost: number;
 }
 
+
 interface ToursState {
   isFetching: boolean;
   tours: Tours[];
