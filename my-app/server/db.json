@@ -29,7 +29,7 @@
   ],
   "tours": [
     {
-      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
       "name": "Spain: Gastro tour",
       "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
       "duration": "5",
@@ -39,7 +39,7 @@
       "cost": 5
     },
     {
-      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
       "name": "Spain - Portugal: Atlantic coast",
       "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
       "duration": "6",
@@ -49,7 +49,7 @@
       "cost": 5
     },
     {
-      "imgsourse": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
       "name": "Germany: Alps and cities",
       "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
       "duration": "4",
