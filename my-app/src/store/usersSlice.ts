@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { string } from 'yup';
 import { instance } from '../api/apiConfig';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { notificationMessages } from '../constants/notificationMessages';
 import { endpoints } from '../api/endpoints';
@@ -11,8 +9,8 @@ import { endpoints } from '../api/endpoints';
 
 interface User {
   token?: string;
-  firstname?: string; //rename to camel case
-  lastname?: string;
+  firstName?: string; //rename to camel case
+  lastName?: string;
   email?: string;
   password?: string;
   basketId: number[];
@@ -28,8 +26,8 @@ interface UsersState extends User {
 const initialState: UsersState = {
   list: [],
   isFetching: false,
-  firstname: '',
-  lastname: '',//rename to camel case
+  firstName: '',
+  lastName: '',
   email: '',
   password: '',
   token: '',
@@ -53,11 +51,11 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addUsersThunk = createAsyncThunk(
   'users/addUsers',
-  async ({ token, firstname, lastname, email, password, basketId, wishListId }: User) => {
+  async ({ token, firstName, lastName, email, password, basketId, wishListId }: User) => {
     const user = {
       token: token,
-      firstname: firstname,
-      lastname: lastname,
+      firstName: firstName,
+      lastName: lastName,
       email: email,
       password: password,
       basketId: basketId,
@@ -75,21 +73,22 @@ export const loginThunk = createAsyncThunk(
     const response = await instance.get(endpoints.users);
     const data = await response.data;
     const dataUser = {} as User;
-    data.forEach((profile: any) => { // type it 
+    data.forEach((profile: any) => {
+      // type it
       if (profile.email === email && profile.password === password) {
         dataUser.email = profile.email;
         dataUser.password = profile.password;
         dataUser.token = profile.token;
-        dataUser.firstname = profile.firstname;
-        dataUser.lastname = profile.lastname;
+        dataUser.firstName = profile.firstName;
+        dataUser.lastName = profile.lastName;
       }
     });
     return dataUser;
   }
 );
 
-export const addtoBasketThunk = createAsyncThunk(
-  'users/addtoBasket', // camel case
+export const addToBasketThunk = createAsyncThunk(
+  'users/addToBasket', // camel case
   async (id: number, { getState }: any) => {
     const store = getState().users;
     const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
@@ -102,10 +101,11 @@ export const addtoBasketThunk = createAsyncThunk(
 );
 
 export const addtoWishListThunk = createAsyncThunk(
-  'users/addtoWishList',// camel case
+  'users/addtoWishList', // camel case
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch('http://localhost:3001/users/1', { // take out in  endpoints.ts
+    const response = await instance.patch('http://localhost:3001/users/1', {
+      // take out in  endpoints.ts
       ...store,
       wishListId: [...store.wishListId, id]
     });
@@ -146,28 +146,28 @@ const usersSlice = createSlice({
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.token = action.payload.token;
-      state.firstname = action.payload.firstname;
-      state.lastname = action.payload.lastname;
+      state.firstName = action.payload.firstName;
+      state.lastName = action.payload.lastName;
       state.password = action.payload.password;
       state.email = action.payload.email;
       state.isFetching = false;
       state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
-      toast(notificationMessages.login.success) // get title fot toast from notificationMessages.ts
+      toast(notificationMessages.login.success); // get title fot toast from notificationMessages.ts
       // add notification where necessary
     });
     builder.addCase(loginThunk.rejected, (state) => {
       state.isFetching = false;
-      toast(notificationMessages.login.error)
+      toast(notificationMessages.login.error);
     });
 
-    // builder.addCase(addtoBasketThunk.pending, () => {
+    // builder.addCase(addToBasketThunk.pending, () => {
     // });
-    builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
+    builder.addCase(addToBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.basketId = action.payload.basketId;
       state.isFetching = false;
     });
-    // builder.addCase(addtoBasketThunk.rejected, () => {
+    // builder.addCase(addToBasketThunk.rejected, () => {
     // });
 
     // builder.addCase(addtoWishListThunk.pending, () => {
@@ -179,7 +179,7 @@ const usersSlice = createSlice({
     // builder.addCase(addtoWishListThunk.rejected, () => {
     // });
 
-    // dont forget to write pending and rejected case 
+    // dont forget to write pending and rejected case
   },
 
   reducers: {}

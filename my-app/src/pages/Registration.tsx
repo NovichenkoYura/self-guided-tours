@@ -11,8 +11,8 @@ import preloader from '../img/preloader.gif';
 
 interface formProps {
   token?: string;
-  firstname?: string;
-  lastname?: string;
+  firstName?: string;
+  lastName?: string;
   email?: string;
   password?: string;
 }
@@ -24,8 +24,8 @@ export const Registration: React.FC<formProps> = () => {
 
   const validationSchema = useMemo(() => {
     return Yup.object({
-      firstname: Yup.string().min(2).max(100).required('Required'),
-      lastname: Yup.string().min(5).max(500).required('Required'),
+      firstName: Yup.string().min(2).max(100).required('Required'),
+      lastName: Yup.string().min(2).max(500).required('Required'),
       email: Yup.string().email().required('Required'),
       password: Yup.string().min(5).max(500).required('Required')
     });
@@ -33,8 +33,8 @@ export const Registration: React.FC<formProps> = () => {
 
   const formik = useFormik({
     initialValues: {
-      firstname: '',
-      lastname: '',
+      firstName: '',
+      lastName: '',
       email: '',
       password: '',
       token: ''
@@ -42,8 +42,8 @@ export const Registration: React.FC<formProps> = () => {
     onSubmit: (values, { resetForm }) => {
       dispatch(
         addUsersThunk({
-          firstname: values.firstname,
-          lastname: values.lastname,
+          firstName: values.firstName,
+          lastName: values.lastName,
           token: token,
           email: values.email,
           password: values.password,
@@ -60,24 +60,24 @@ export const Registration: React.FC<formProps> = () => {
       <div className="formik-form ">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
         <input
-          id="firstname"
-          name="firstname"
+          id="firstName"
+          name="firstName"
           onChange={formik.handleChange}
-          value={formik.values.firstname}
+          value={formik.values.firstName}
           className="formik-input"
-          placeholder="Your firstname..."
+          placeholder="Your firstName..."
         />
-        <p className="formik-errors-message">{formik.errors.firstname}</p>
+        <p className="formik-errors-message">{formik.errors.firstName}</p>
 
         <input
-          id="lastname"
-          name="lastname"
+          id="lastName"
+          name="lastName"
           onChange={formik.handleChange}
-          value={formik.values.lastname}
+          value={formik.values.lastName}
           className="formik-input"
-          placeholder="Your lastname..."
+          placeholder="Your lastName..."
         />
-        <p className="formik-errors-message">{formik.errors.lastname}</p>
+        <p className="formik-errors-message">{formik.errors.lastName}</p>
 
         <input
           id="email"

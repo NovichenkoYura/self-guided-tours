@@ -4,7 +4,7 @@ import { ReactComponent as Chosen } from '../img/hurt1_filled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { useState } from 'react';
-import { addtoBasketThunk, addtoWishListThunk } from '../store/usersSlice';
+import { addToBasketThunk, addtoWishListThunk } from '../store/usersSlice';
 
 const Tours = () => {
   const { tours } = useAppSelector((state) => state.tours);
@@ -50,7 +50,7 @@ const Tours = () => {
             </div>
             <div className="tours__btns">
               <button
-                onClick={() => dispatch(addtoBasketThunk(tour.id))}
+                onClick={() => dispatch(addToBasketThunk(tour.id))}
                 className="cardTours__btn">
                 Add to
                 <Basket className="tourCard__svgbasket" width="25" height="25" />

@@ -21,9 +21,7 @@ const Layout = () => {
   const [isOnWishList, setisOnWishList] = useState(false);
 
   const dispatch = useAppDispatch();
-  const { basketId, wishListId, isAuth, firstname, lastname } = useAppSelector(
-    (state) => state.users
-  );
+  const { basketId, wishListId, isAuth, lastName } = useAppSelector((state) => state.users);
 
   const notify = () => toast('Wow so easy!');
 
@@ -54,7 +52,7 @@ const Layout = () => {
         </NavLink>
         {isAuth ? (
           <>
-            <p className="headerLogined_person">{lastname}</p>
+            <p className="headerLogined_person">{lastName}</p>
           </>
         ) : (
           <>

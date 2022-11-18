@@ -22,8 +22,8 @@ isauth надо на сервак?
 
 
 
-export const addtoBasketThunk = createAsyncThunk(
-'users/addtoBasket',
+export const addToBasketThunk = createAsyncThunk(
+'users/addToBasket',
 async (id: number, { getState }: any) => {
 const store = getState().users;
 // console.log(store);

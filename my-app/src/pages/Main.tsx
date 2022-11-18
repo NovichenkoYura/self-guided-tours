@@ -1,5 +1,5 @@
-import { MainModule } from "../components/modules/MainModule";
+import { MainModule } from '../components/modules/MainModule';
 
-const Main = () => <MainModule/>
+const Main = () => <MainModule />;
 
 export { Main };

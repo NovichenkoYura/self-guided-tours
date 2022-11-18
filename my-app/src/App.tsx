@@ -7,9 +7,8 @@ import { ComponentRoutes } from './components/componentRoutes';
 import { getToursThunk } from './store/toursSlice';
 
 export const App: React.FC = () => {
-
   const dispatch = useAppDispatch();
-  
+
   React.useEffect(() => {
     dispatch(getToursThunk());
   }, []);
