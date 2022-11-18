@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { instance } from '../api/apiConfig';
 
 interface Tours {
-  imgsourse: string;
+  imgSrc: string;
   description: string;
   duration: string;
   country: string;
@@ -45,5 +44,6 @@ const toursSlice = createSlice({
 
   reducers: {}
 });
-// export const { onCurrentCardBasketId } = usersSlice.actions;
+
+// export const { } = usersSlice.actions;
 export default toursSlice.reducer;

@@ -4,6 +4,8 @@ import { string } from 'yup';
 import { instance } from '../api/apiConfig';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { notificationMessages } from '../constants/notificationMessages';
+import { endpoints } from '../api/endpoints';
 
 interface User {
   token?: string;
@@ -35,14 +37,14 @@ const initialState: UsersState = {
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
-  const response = await instance.get('http://localhost:3001/users');
+  const response = await instance.get(endpoints.users);
 
   const data = await response.data;
   return data;
 });
 
 export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
-  const response = await instance.get('http://localhost:3001/tours');
+  const response = await instance.get(endpoints.tours);
   const data = await response.data;
   return data;
 });
@@ -59,7 +61,7 @@ export const addUsersThunk = createAsyncThunk(
       basketId: basketId,
       wishListId: wishListId
     };
-    const response = await instance.post('http://localhost:3001/users', user);
+    const response = await instance.post(endpoints.users, user);
     const data = await response.data;
     return data;
   }
@@ -68,7 +70,7 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: Pick<User, 'email' | 'password'>) => {
-    const response = await instance.get('http://localhost:3001/users');
+    const response = await instance.get(endpoints.users);
     const data = await response.data;
     const dataUser = {} as User;
     data.forEach((profile: any) => {
@@ -88,7 +90,7 @@ export const addtoBasketThunk = createAsyncThunk(
   'users/addtoBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch('http://localhost:3001/users/1', {
+    const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
       ...store,
       basketId: [...store.basketId, id]
     });
@@ -122,6 +124,10 @@ const usersSlice = createSlice({
       state.list = action.payload;
       state.isFetching = false;
     });
+    builder.addCase(getUsersThunk.rejected, (state) => {
+      state.isFetching = false;
+    });
+
     builder.addCase(addUsersThunk.pending, (state) => {
       state.isFetching = true;
     });
@@ -129,6 +135,10 @@ const usersSlice = createSlice({
       state.list.push(action.payload);
       state.isFetching = false;
     });
+    builder.addCase(addUsersThunk.rejected, (state) => {
+      state.isFetching = false;
+    });
+
     builder.addCase(loginThunk.pending, (state) => {
       state.isFetching = true;
     });
@@ -141,27 +151,34 @@ const usersSlice = createSlice({
       state.isFetching = false;
       state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
+      toast(notificationMessages.login.success)
     });
-
     builder.addCase(loginThunk.rejected, (state) => {
-      toast("error")
       state.isFetching = false;
+      toast(notificationMessages.login.error)
     });
 
+    // builder.addCase(addtoBasketThunk.pending, () => {
+    // });
     builder.addCase(addtoBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.basketId = action.payload.basketId;
       state.isFetching = false;
     });
     // builder.addCase(addtoBasketThunk.rejected, () => {
-    //   alert('Network error');
+    // });
+
+    // builder.addCase(addtoWishListThunk.pending, () => {
     // });
     builder.addCase(addtoWishListThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.wishListId = action.payload.wishListId;
       state.isFetching = false;
     });
+    // builder.addCase(addtoWishListThunk.rejected, () => {
+    // });
   },
 
   reducers: {}
 });
+
 // export const {  } = usersSlice.actions;
 export default usersSlice.reducer;
