@@ -1,9 +1,5 @@
-const Saved = () => {
-  return (
-    <div>
-      <h1> Saved </h1>
-    </div>
-  );
-};
+import { SavedModule } from '../components/modules/SavedModule';
+
+const Saved = () => <SavedModule />;
 
 export { Saved };

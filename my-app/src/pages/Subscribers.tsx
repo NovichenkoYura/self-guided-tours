@@ -1,9 +1,5 @@
-const Subscribers = () => {
-  return (
-    <div>
-      <h1>Subscribers</h1>
-    </div>
-  );
-};
+import { SubscribersModule } from '../components/modules/SubscribersModule';
+
+const Subscribers = () => <SubscribersModule />;
 
 export { Subscribers };

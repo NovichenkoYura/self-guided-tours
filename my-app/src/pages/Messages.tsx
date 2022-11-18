@@ -1,9 +1,5 @@
-const Messages = () => {
-  return (
-    <div>
-      <h1>Messages</h1>
-    </div>
-  );
-};
+import { MessagesModule } from '../components/modules/MessagesModule';
+
+const Messages = () => <MessagesModule />;
 
 export { Messages };

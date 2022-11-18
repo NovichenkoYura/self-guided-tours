@@ -63,6 +63,16 @@
       "basketId": [],
       "wishListId": [],
       "id": 5
+    },
+    {
+      "token": "fb236423-fde9-400b-886d-aa6d45b45e05",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "2F7R8NKS",
+      "basketId": [],
+      "wishListId": [],
+      "id": 6
     }
   ],
   "tours": [
