@@ -71,8 +71,7 @@ export const loginThunk = createAsyncThunk(
     const response = await instance.get(endpoints.users);
     const data = await response.data;
     const dataUser = {} as User;
-    data.forEach((profile: any) => {
-      // type it
+    data.forEach((profile: User) => {
       if (profile.email === email && profile.password === password) {
         dataUser.email = profile.email;
         dataUser.password = profile.password;
@@ -81,6 +80,9 @@ export const loginThunk = createAsyncThunk(
         dataUser.lastName = profile.lastName;
       }
     });
+    if (!dataUser.email) {
+      throw new Error('Required');
+    }
     return dataUser;
   }
 );
@@ -159,6 +161,7 @@ const usersSlice = createSlice({
     });
     builder.addCase(loginThunk.rejected, (state) => {
       state.isFetching = false;
+      console.log('er');
       toast(notificationMessages.login.error);
     });
 

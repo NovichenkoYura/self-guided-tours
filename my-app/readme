@@ -5,9 +5,6 @@ const response = await instance.patch(endpoints.user.replace(':id', String(id)),
       ...store,
       basketId: [...store.basketId, id]
     });
-тоаст опдинаковый на фулфилд и риджектед
-навіщо дробити по файлам
-basketmodule - тсх і не працює закриття
 
 
 

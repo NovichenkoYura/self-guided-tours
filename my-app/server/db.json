@@ -1,38 +1,20 @@
 {
   "users": [
     {
-      "token": "",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
+      "token": "b8d503ab-7e39-4119-aece-f83a84ad2513",
+      "firstName": "Новіченко",
+      "lastName": "Юрій999",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
       "basketId": [
         1
       ],
-      "wishListId": [
-        1
-      ],
+      "wishListId": [],
       "id": 1,
       "list": [],
       "isFetching": true,
-      "isAuth": false,
+      "isAuth": true,
       "isBasket": true
-    },
-    {
-      "token": "",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "basketId": [],
-      "wishListId": [
-        1,
-        2
-      ],
-      "id": 2,
-      "list": [],
-      "isFetching": false,
-      "isAuth": false
     },
     {
       "token": "b8d503ab-7e39-4119-aece-f83a84ad2513",
@@ -40,9 +22,32 @@
       "lastName": "Юрій999",
       "email": "novichenko.y@gmail.com",
       "password": "qwerty",
-      "basketId": [],
+      "basketId": [
+        1,
+        2
+      ],
       "wishListId": [],
-      "id": 3
+      "id": 2,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
+    },
+    {
+      "token": "b8d503ab-7e39-4119-aece-f83a84ad2513",
+      "firstName": "Новіченко",
+      "lastName": "Юрій999",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [
+        1,
+        2,
+        3
+      ],
+      "wishListId": [],
+      "id": 3,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     },
     {
       "token": "71bd8f1e-85c2-40e5-baf9-6bb50fa0246c",

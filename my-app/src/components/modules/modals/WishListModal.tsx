@@ -1,25 +1,25 @@
 import { FC } from 'react';
-import { useAppSelector } from '../../app/hooks';
-import { ReactComponent as Close } from '../../img/close-svgrepo-com.svg';
+import { useAppSelector } from '../../../app/hooks';
+import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
 
-interface BasketProps {
-  openModalCallback: (arg1: boolean) => void;
+interface WishListProps {
+  openWishListCallback: (arg1: boolean) => void;
 }
 
-export const BasketModule: FC<BasketProps> = ({ openModalCallback }) => {
-  const { basketId } = useAppSelector((state) => state.users);
+const WishListModal: FC<WishListProps> = ({ openWishListCallback }) => {
+  const { wishListId } = useAppSelector((state) => state.users);
   const { tours } = useAppSelector((state) => state.tours);
 
-  const toursInBasket = tours.filter((tour) => basketId.includes(tour.id));
+  const toursInWishList = tours.filter((tour) => wishListId.includes(tour.id));
+
   return (
     <>
-      <div className="popup" onClick={() => openModalCallback(false)}>
+      <div className="popup" onClick={() => openWishListCallback(false)}>
         <ul className="popup-content" onClick={(e) => e.stopPropagation()}>
-          <button className="popup-close" onClick={() => openModalCallback(false)}>
+          <button className="popup-close" onClick={() => openWishListCallback(false)}>
             <Close width="25" height="25" className="close__svg" />
           </button>
-
-          {toursInBasket.map((tour) => (
+          {toursInWishList.map((tour) => (
             <li className="tours__item" key={tour.id}>
               <div className="wrap">
                 <div className="toursItemImage__container">
@@ -56,3 +56,5 @@ export const BasketModule: FC<BasketProps> = ({ openModalCallback }) => {
     </>
   );
 };
+
+export { WishListModal };

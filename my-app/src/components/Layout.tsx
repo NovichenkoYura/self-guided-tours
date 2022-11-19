@@ -7,10 +7,12 @@ import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { Basket as BasketModal } from '../pages/Basket';
-import { Wishlist as WishListModal } from '../pages/Wishlist';
+// import { Basket as BasketModal } from '../pages/Basket';
+// import { Wishlist as WishListModal } from '../pages/Wishlist';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { WishListModal } from './modules/modals/WishListModal';
+import { BasketModal } from './modules/modals/BasketModal';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
