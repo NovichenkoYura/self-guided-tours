@@ -6,10 +6,7 @@ import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
 import { ReactComponent as Basket } from '../img/shoppingCart.svg';
 import { locations } from '../constants/locations';
-import { useAppDispatch, useAppSelector } from '../app/hooks';
-// import { Basket as BasketModal } from '../pages/Basket';
-// import { Wishlist as WishListModal } from '../pages/Wishlist';
-import { ToastContainer, toast } from 'react-toastify';
+import { useAppSelector } from '../app/hooks';
 import 'react-toastify/dist/ReactToastify.css';
 import { WishListModal } from './modules/modals/WishListModal';
 import { BasketModal } from './modules/modals/BasketModal';
@@ -18,14 +15,13 @@ const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-l
 
 const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  console.log(showDropdown);
   const [isOnBasket, setisOnBasket] = useState(false);
   const [isOnWishList, setisOnWishList] = useState(false);
 
-  const dispatch = useAppDispatch();
-  const { basketId, wishListId, isAuth, lastName } = useAppSelector((state) => state.users);
-
-  const notify = () => toast('Wow so easy!');
+  const { basketId, wishListId, isAuth, lastName, isRegistered } = useAppSelector(
+    (state) => state.users
+  );
+  console.log(isRegistered);
 
   return (
     <>
@@ -66,15 +62,10 @@ const Layout = () => {
                 <LoginPerson className="login__person" width="35" height="35" />
               </div>
             </div>
-            {/* <div>
-              {() => !isAuth && notify()}
-              <button onClick={notify}>Notify!</button>
-              <ToastContainer />
-            </div> */}
           </>
         )}
 
-        {!isAuth && showDropdown && (
+        {!isAuth && !isRegistered && showDropdown && (
           <div className="dropdown__window">
             <NavLink to={locations.login.path} className="dropdown__item">
               Log in

@@ -13,6 +13,7 @@ interface User {
   password?: string;
   basketId: number[];
   wishListId: number[];
+  isRegistered: boolean;
 }
 
 interface UsersState extends User {
@@ -31,7 +32,8 @@ const initialState: UsersState = {
   token: '',
   basketId: [],
   isAuth: false,
-  wishListId: []
+  wishListId: [],
+  isRegistered: false
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
@@ -49,7 +51,16 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addUsersThunk = createAsyncThunk(
   'users/addUsers',
-  async ({ token, firstName, lastName, email, password, basketId, wishListId }: User) => {
+  async ({
+    token,
+    firstName,
+    lastName,
+    email,
+    password,
+    basketId,
+    wishListId,
+    isRegistered
+  }: User) => {
     const user = {
       token: token,
       firstName: firstName,
@@ -57,7 +68,8 @@ export const addUsersThunk = createAsyncThunk(
       email: email,
       password: password,
       basketId: basketId,
-      wishListId: wishListId
+      wishListId: wishListId,
+      isRegistered: isRegistered
     };
     const response = await instance.post(endpoints.users, user);
     const data = await response.data;
@@ -134,6 +146,7 @@ const usersSlice = createSlice({
     });
     builder.addCase(addUsersThunk.fulfilled, (state, action: PayloadAction<User>) => {
       state.list.push(action.payload);
+      state.isRegistered = action.payload.isRegistered;
       state.isFetching = false;
       toast(notificationMessages.register.success);
     });
@@ -155,13 +168,9 @@ const usersSlice = createSlice({
       state.isAuth = true;
       localStorage.setItem('token', String(action.payload.token));
       toast(notificationMessages.login.success);
-
-      // get title fot toast from notificationMessages.ts
-      // add notification where necessary
     });
     builder.addCase(loginThunk.rejected, (state) => {
       state.isFetching = false;
-      console.log('er');
       toast(notificationMessages.login.error);
     });
 
