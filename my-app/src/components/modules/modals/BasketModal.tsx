@@ -1,13 +1,16 @@
 import { FC } from 'react';
-import { useAppSelector } from '../../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../../app/hooks';
 import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
 import { ReactComponent as Delete } from '../../../img/delete-svgrepo-com.svg';
+import { deleteFromBasketThunk } from '../../../store/usersSlice';
 
 interface BasketProps {
   openModalCallback: (arg1: boolean) => void;
 }
 
 export const BasketModal: FC<BasketProps> = ({ openModalCallback }) => {
+  const dispatch = useAppDispatch();
+
   const { basketId } = useAppSelector((state) => state.users);
   const { tours } = useAppSelector((state) => state.tours);
 
@@ -23,7 +26,9 @@ export const BasketModal: FC<BasketProps> = ({ openModalCallback }) => {
 
           {toursInBasket.map((tour) => (
             <li className="tours__item" key={tour.id}>
-              <button className="btnDelete__good">
+              <button
+                className="btnDelete__good"
+                onClick={() => dispatch(deleteFromBasketThunk(tour.id))}>
                 <Delete width="25" height="25" className="svgDelete__good" />
               </button>
               <div className="wrap">

@@ -21,7 +21,6 @@ const Layout = () => {
   const { basketId, wishListId, isAuth, lastName, isRegistered } = useAppSelector(
     (state) => state.users
   );
-  console.log(isRegistered);
 
   return (
     <>

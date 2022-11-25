@@ -108,6 +108,21 @@ export const addToBasketThunk = createAsyncThunk(
       basketId: [...store.basketId, id]
     });
     const data = await response.data;
+    console.log('add', data);
+    return data;
+  }
+);
+
+export const deleteFromBasketThunk = createAsyncThunk(
+  'users/deleteFromBasket',
+  async (id: number, { getState }: any) => {
+    const store = getState().users;
+    const response = await instance.delete(endpoints.user.replace(':id', String(id)), {
+      ...store,
+      basketId: [...store.basketId, id]
+    });
+    const data = await response.data;
+    console.log('del', data);
     return data;
   }
 );
