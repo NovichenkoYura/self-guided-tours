@@ -117,6 +117,7 @@ export const deleteFromBasketThunk = createAsyncThunk(
   'users/deleteFromBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
+    console.log(store.basketId);
     const response = await instance.delete(endpoints.user.replace(':id', String(id)), {
       ...store,
       basketId: [...store.basketId, id]
