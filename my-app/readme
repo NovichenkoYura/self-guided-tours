@@ -1,5 +1,11 @@
 дізейбл кнопки
 скролл модалки
+дропдаун вікно після реєстрації
+ситуація на ринку праці, перспективи
+
+
+
+
 пояснить запись слайсе:
 const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
       ...store,

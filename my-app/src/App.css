@@ -466,3 +466,29 @@ transform: scale(1.2);
  margin-left: 0px;
 }
 
+/* Basket */
+
+button.btnDelete__good {
+  position: absolute;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  top: -13px;
+  right: 5px;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 0px;
+}
+
+.svgDelete__good {
+  fill: gray;
+  margin-left: 15px;
+  padding-left: 0px;
+  cursor: pointer;
+}
+
+.svgDelete__good:hover,
+.svgDelete__good:focus {
+  fill: #ff6b08;
+}
+

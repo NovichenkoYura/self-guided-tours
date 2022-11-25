@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { useAppSelector } from '../../../app/hooks';
 import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
+import { ReactComponent as Delete } from '../../../img/delete-svgrepo-com.svg';
 
 interface BasketProps {
   openModalCallback: (arg1: boolean) => void;
@@ -22,6 +23,9 @@ export const BasketModal: FC<BasketProps> = ({ openModalCallback }) => {
 
           {toursInBasket.map((tour) => (
             <li className="tours__item" key={tour.id}>
+              <button className="btnDelete__good">
+                <Delete width="25" height="25" className="svgDelete__good" />
+              </button>
               <div className="wrap">
                 <div className="toursItemImage__container">
                   <img src={tour.imgSrc} className="toursItem__image" alt="Meal" />
