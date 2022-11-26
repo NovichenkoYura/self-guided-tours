@@ -117,10 +117,9 @@ export const deleteFromBasketThunk = createAsyncThunk(
   'users/deleteFromBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    console.log(store.basketId);
     const response = await instance.delete(endpoints.user.replace(':id', String(id)), {
       ...store,
-      basketId: [...store.basketId, id]
+      basketId: [...store.basketId.filter((item) => item.id !== id)]
     });
     const data = await response.data;
     console.log('del', data);
@@ -199,6 +198,17 @@ const usersSlice = createSlice({
     });
     builder.addCase(addToBasketThunk.rejected, () => {
       alert('the good is not in the basket');
+    });
+
+    builder.addCase(deleteFromBasketThunk.pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(deleteFromBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      state.basketId = action.payload.basketId;
+      state.isFetching = false;
+    });
+    builder.addCase(deleteFromBasketThunk.rejected, () => {
+      alert('the good is not removed from the basket');
     });
 
     builder.addCase(addToWishListThunk.pending, (state) => {
