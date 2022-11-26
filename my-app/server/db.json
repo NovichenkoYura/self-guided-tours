@@ -1,14 +1,20 @@
 {
   "users": [
     {
-      "token": "a211ed40-7c4f-4c4d-8792-8651da18c7ad",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
+      "token": "",
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "basketId": [
+        1
+      ],
       "wishListId": [],
-      "id": 4
+      "id": 4,
+      "list": [],
+      "isFetching": true,
+      "isAuth": false,
+      "isRegistered": false
     },
     {
       "token": "23329612-9079-45a3-a491-47b218a8ec93",
@@ -38,21 +44,15 @@
       "lastName": "Юрій",
       "email": "boardshopua@gmail.com",
       "password": "qwerty",
-      "basketId": [],
+      "basketId": [
+        2
+      ],
       "wishListId": [],
-      "isRegistered": true,
-      "id": 7
-    },
-    {
-      "token": "e45c20dd-3b91-48b6-bdb4-60a53e99bd45",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 8
+      "isRegistered": false,
+      "id": 7,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     },
     {
       "token": "2d148ac1-2f99-49f0-a761-8820ef80567b",
@@ -64,28 +64,6 @@
       "wishListId": [],
       "isRegistered": true,
       "id": 9
-    },
-    {
-      "token": "5eb87e20-f176-4484-8a6e-54d1d5cb6867",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 10
-    },
-    {
-      "token": "4b24e9f7-d808-4c7e-b67c-bc69db9b55c7",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 11
     },
     {
       "token": "8774cbef-8358-440a-a6f3-96e231ef2aec",
@@ -119,6 +97,17 @@
       "wishListId": [],
       "isRegistered": true,
       "id": 14
+    },
+    {
+      "token": "e83ce888-a109-41d2-8fbb-91996690aa58",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "id": 15
     }
   ],
   "tours": [

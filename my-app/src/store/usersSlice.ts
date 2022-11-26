@@ -14,6 +14,7 @@ interface User {
   basketId: number[];
   wishListId: number[];
   isRegistered: boolean;
+  id: string;
 }
 
 interface UsersState extends User {
@@ -33,7 +34,8 @@ const initialState: UsersState = {
   basketId: [],
   isAuth: false,
   wishListId: [],
-  isRegistered: false
+  isRegistered: false,
+  id: ''
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
@@ -90,6 +92,7 @@ export const loginThunk = createAsyncThunk(
         dataUser.token = profile.token;
         dataUser.firstName = profile.firstName;
         dataUser.lastName = profile.lastName;
+        dataUser.id = profile.id;
       }
     });
     if (!dataUser.email) {
@@ -103,7 +106,8 @@ export const addToBasketThunk = createAsyncThunk(
   'users/addToBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
+    console.log(store);
+    const response = await instance.patch(endpoints.user.replace(':id', String(store.id)), {
       ...store,
       basketId: [...store.basketId, id]
     });
@@ -117,9 +121,9 @@ export const deleteFromBasketThunk = createAsyncThunk(
   'users/deleteFromBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.delete(endpoints.user.replace(':id', String(id)), {
+    const response = await instance.patch(endpoints.user.replace(':id', String(store.id)), {
       ...store,
-      basketId: [...store.basketId.filter((item) => item.id !== id)]
+      basketId: [...store.basketId.filter((item: any) => item !== id)]
     });
     const data = await response.data;
     console.log('del', data);
@@ -181,6 +185,7 @@ const usersSlice = createSlice({
       state.email = action.payload.email;
       state.isFetching = false;
       state.isAuth = true;
+      state.id = action.payload.id;
       localStorage.setItem('token', String(action.payload.token));
       toast(notificationMessages.login.success);
     });
@@ -204,6 +209,7 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(deleteFromBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      console.log(action.payload);
       state.basketId = action.payload.basketId;
       state.isFetching = false;
     });
