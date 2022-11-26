@@ -44,9 +44,7 @@
       "lastName": "Юрій",
       "email": "boardshopua@gmail.com",
       "password": "qwerty",
-      "basketId": [
-        2
-      ],
+      "basketId": [],
       "wishListId": [],
       "isRegistered": false,
       "id": 7,

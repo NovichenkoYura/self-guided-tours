@@ -1,6 +1,9 @@
 import { FC } from 'react';
-import { useAppSelector } from '../../../app/hooks';
+import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
+import { ReactComponent as Delete } from '../../../img/delete-svgrepo-com.svg';
+
+import { deleteFromWishListThunk } from '../../../store/usersSlice';
 
 interface WishListProps {
   openWishListCallback: (arg1: boolean) => void;
@@ -12,6 +15,8 @@ const WishListModal: FC<WishListProps> = ({ openWishListCallback }) => {
 
   const toursInWishList = tours.filter((tour) => wishListId.includes(tour.id));
 
+  const dispatch = useAppDispatch();
+
   return (
     <>
       <div className="popup" onClick={() => openWishListCallback(false)}>
@@ -21,6 +26,11 @@ const WishListModal: FC<WishListProps> = ({ openWishListCallback }) => {
           </button>
           {toursInWishList.map((tour) => (
             <li className="tours__item" key={tour.id}>
+              <button
+                className="btnDelete__good"
+                onClick={() => dispatch(deleteFromWishListThunk(tour.id))}>
+                <Delete width="25" height="25" className="svgDelete__good" />
+              </button>
               <div className="wrap">
                 <div className="toursItemImage__container">
                   <img src={tour.imgSrc} className="toursItem__image" alt="Meal" />

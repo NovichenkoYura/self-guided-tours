@@ -112,7 +112,6 @@ export const addToBasketThunk = createAsyncThunk(
       basketId: [...store.basketId, id]
     });
     const data = await response.data;
-    console.log('add', data);
     return data;
   }
 );
@@ -126,7 +125,7 @@ export const deleteFromBasketThunk = createAsyncThunk(
       basketId: [...store.basketId.filter((item: any) => item !== id)]
     });
     const data = await response.data;
-    console.log('del', data);
+    // console.log('del', data);
     return data;
   }
 );
@@ -135,9 +134,22 @@ export const addToWishListThunk = createAsyncThunk(
   'users/addToWishList',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    const response = await instance.patch(endpoints.user.replace(':id', String(id)), {
+    const response = await instance.patch(endpoints.user.replace(':id', String(store.id)), {
       ...store,
       wishListId: [...store.wishListId, id]
+    });
+    const data = await response.data;
+    return data;
+  }
+);
+
+export const deleteFromWishListThunk = createAsyncThunk(
+  'users/deleteFromWishList',
+  async (id: number, { getState }: any) => {
+    const store = getState().users;
+    const response = await instance.patch(endpoints.user.replace(':id', String(store.id)), {
+      ...store,
+      wishListId: [...store.wishListId.filter((item: any) => item !== id)]
     });
     const data = await response.data;
     return data;
@@ -209,12 +221,22 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(deleteFromBasketThunk.fulfilled, (state, action: PayloadAction<User>) => {
-      console.log(action.payload);
       state.basketId = action.payload.basketId;
       state.isFetching = false;
     });
     builder.addCase(deleteFromBasketThunk.rejected, () => {
       alert('the good is not removed from the basket');
+    });
+
+    builder.addCase(deleteFromWishListThunk.pending, (state) => {
+      state.isFetching = true;
+    });
+    builder.addCase(deleteFromWishListThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      state.wishListId = action.payload.wishListId;
+      state.isFetching = false;
+    });
+    builder.addCase(deleteFromWishListThunk.rejected, () => {
+      alert('the good is not removed from the wishlist');
     });
 
     builder.addCase(addToWishListThunk.pending, (state) => {
