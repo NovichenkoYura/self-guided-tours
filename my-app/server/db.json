@@ -44,7 +44,10 @@
       "lastName": "Юрій",
       "email": "boardshopua@gmail.com",
       "password": "qwerty",
-      "basketId": [],
+      "basketId": [
+        1,
+        2
+      ],
       "wishListId": [],
       "isRegistered": false,
       "id": 7,
@@ -106,6 +109,87 @@
       "wishListId": [],
       "isRegistered": true,
       "id": 15
+    },
+    {
+      "token": "41286a93-40a8-41e6-8a74-20f5c5fd1dcf",
+      "firstName": "222222222222222222",
+      "lastName": "2222222222222222222222222",
+      "email": "craftyura@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "id": 16
+    },
+    {
+      "token": "484dd735-d3c8-4c80-b9cc-fc471de40e53",
+      "firstName": "333333333333333333",
+      "lastName": "333333333333333333333",
+      "email": "craftyura@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "id": 17
+    },
+    {
+      "token": "18d54fca-40e6-486f-8c83-d9302384a9e1",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "44444444444444",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "id": 18
+    },
+    {
+      "token": "28df27f3-f8ec-490f-b58a-c0b1de5b8c46",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 19
+    },
+    {
+      "token": "e9c1d640-cc7e-4c3b-a589-2412c2e5cbd2",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 20
+    },
+    {
+      "token": "6f1afa73-4fbf-4bcc-8d0f-2c54f98782c6",
+      "firstName": "7777777777777777777",
+      "lastName": "77777777777777777",
+      "email": "craftyura@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 21
+    },
+    {
+      "token": "4b267ee1-1cc4-4edd-a949-e594b3106d32",
+      "firstName": "555555555555Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "5555555555555555",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 22
     }
   ],
   "tours": [

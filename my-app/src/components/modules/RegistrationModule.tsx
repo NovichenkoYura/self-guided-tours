@@ -50,7 +50,8 @@ export const RegistrationModule: React.FC<formProps> = () => {
           password: values.password,
           basketId: [],
           wishListId: [],
-          isRegistered: true
+          isRegistered: true,
+          isAuthor: false
         })
       );
       resetForm();

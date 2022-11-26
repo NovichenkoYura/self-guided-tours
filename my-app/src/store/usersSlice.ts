@@ -15,6 +15,7 @@ interface User {
   wishListId: number[];
   isRegistered: boolean;
   id: string;
+  isAuthor: boolean;
 }
 
 interface UsersState extends User {
@@ -35,7 +36,8 @@ const initialState: UsersState = {
   isAuth: false,
   wishListId: [],
   isRegistered: false,
-  id: ''
+  id: '',
+  isAuthor: false
 };
 
 export const getUsersThunk = createAsyncThunk('users/getUsers', async () => {
@@ -61,7 +63,8 @@ export const addUsersThunk = createAsyncThunk(
     password,
     basketId,
     wishListId,
-    isRegistered
+    isRegistered,
+    isAuthor
   }: User) => {
     const user = {
       token: token,
@@ -71,7 +74,8 @@ export const addUsersThunk = createAsyncThunk(
       password: password,
       basketId: basketId,
       wishListId: wishListId,
-      isRegistered: isRegistered
+      isRegistered: isRegistered,
+      isAuthor: isAuthor
     };
     const response = await instance.post(endpoints.users, user);
     const data = await response.data;
@@ -106,7 +110,6 @@ export const addToBasketThunk = createAsyncThunk(
   'users/addToBasket',
   async (id: number, { getState }: any) => {
     const store = getState().users;
-    console.log(store);
     const response = await instance.patch(endpoints.user.replace(':id', String(store.id)), {
       ...store,
       basketId: [...store.basketId, id]
@@ -125,7 +128,6 @@ export const deleteFromBasketThunk = createAsyncThunk(
       basketId: [...store.basketId.filter((item: any) => item !== id)]
     });
     const data = await response.data;
-    // console.log('del', data);
     return data;
   }
 );
@@ -176,8 +178,10 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(addUsersThunk.fulfilled, (state, action: PayloadAction<User>) => {
+      console.log(action.payload);
       state.list.push(action.payload);
       state.isRegistered = action.payload.isRegistered;
+      state.isAuthor = action.payload.isAuthor;
       state.isFetching = false;
       toast(notificationMessages.register.success);
     });
