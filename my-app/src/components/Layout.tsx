@@ -18,7 +18,7 @@ const Layout = () => {
   const [isOnBasket, setisOnBasket] = useState(false);
   const [isOnWishList, setisOnWishList] = useState(false);
 
-  const { basketId, wishListId, isAuth, lastName, isRegistered } = useAppSelector(
+  const { basketId, wishListId, isAuth, lastName, isRegistered, isAuthor } = useAppSelector(
     (state) => state.users
   );
 
@@ -64,7 +64,9 @@ const Layout = () => {
           </>
         )}
 
-        {!isAuth && !isRegistered && showDropdown && (
+        {isAuthor && isAuth && <p className="headerLogined_person">автор</p>}
+
+        {!isAuth && showDropdown && (
           <div className="dropdown__window">
             <NavLink to={locations.login.path} className="dropdown__item">
               Log in

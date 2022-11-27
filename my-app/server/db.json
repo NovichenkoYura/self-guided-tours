@@ -1,195 +1,52 @@
 {
   "users": [
     {
-      "token": "",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "password": "",
-      "basketId": [
-        1
-      ],
-      "wishListId": [],
-      "id": 4,
-      "list": [],
-      "isFetching": true,
-      "isAuth": false,
-      "isRegistered": false
-    },
-    {
-      "token": "23329612-9079-45a3-a491-47b218a8ec93",
+      "token": "8789059b-4af3-4114-ab54-201cc54382b9",
       "firstName": "Новіченко",
       "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "2F7R8NKS",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 5
-    },
-    {
-      "token": "9536c5bc-8850-44e2-8899-b5927a98b763",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 6
-    },
-    {
-      "token": "c4650766-750d-48f3-9e17-f3a928ed91be",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "qwerty",
-      "basketId": [
-        1,
-        2
-      ],
-      "wishListId": [],
-      "isRegistered": false,
-      "id": 7,
-      "list": [],
-      "isFetching": true,
-      "isAuth": true
-    },
-    {
-      "token": "2d148ac1-2f99-49f0-a761-8820ef80567b",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "2F7R8NKS",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 9
-    },
-    {
-      "token": "8774cbef-8358-440a-a6f3-96e231ef2aec",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "9YGC2T7C",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 12
-    },
-    {
-      "token": "d67e89ee-d929-48b6-8e83-bede6c9ff301",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "9YGC2T7C",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 13
-    },
-    {
-      "token": "10222469-7bda-4d19-95b0-5b089ea1da61",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "novichenko.y@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 14
-    },
-    {
-      "token": "e83ce888-a109-41d2-8fbb-91996690aa58",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 15
-    },
-    {
-      "token": "41286a93-40a8-41e6-8a74-20f5c5fd1dcf",
-      "firstName": "222222222222222222",
-      "lastName": "2222222222222222222222222",
-      "email": "craftyura@gmail.com",
-      "password": "111111111111111111111111111111111",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 16
-    },
-    {
-      "token": "484dd735-d3c8-4c80-b9cc-fc471de40e53",
-      "firstName": "333333333333333333",
-      "lastName": "333333333333333333333",
-      "email": "craftyura@gmail.com",
-      "password": "111111111111111111111111111111111",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 17
-    },
-    {
-      "token": "18d54fca-40e6-486f-8c83-d9302384a9e1",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "44444444444444",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "id": 18
-    },
-    {
-      "token": "28df27f3-f8ec-490f-b58a-c0b1de5b8c46",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "111111111111111111111111111111111",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "isAuthor": true,
-      "id": 19
-    },
-    {
-      "token": "e9c1d640-cc7e-4c3b-a589-2412c2e5cbd2",
-      "firstName": "Новіченко",
-      "lastName": "Юрій",
-      "email": "boardshopua@gmail.com",
-      "password": "111111111111111111111111111111111",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "isAuthor": false,
-      "id": 20
-    },
-    {
-      "token": "6f1afa73-4fbf-4bcc-8d0f-2c54f98782c6",
-      "firstName": "7777777777777777777",
-      "lastName": "77777777777777777",
       "email": "craftyura@gmail.com",
       "password": "9999999999999999",
       "basketId": [],
       "wishListId": [],
       "isRegistered": true,
       "isAuthor": true,
-      "id": 21
+      "id": 1
     },
     {
-      "token": "4b267ee1-1cc4-4edd-a949-e594b3106d32",
-      "firstName": "555555555555Новіченко",
-      "lastName": "Юрій",
-      "email": "craftyura@gmail.com",
-      "password": "5555555555555555",
+      "token": "76ed3a00-8025-4a1a-9b65-cff36d8749c0",
+      "firstName": "111111111",
+      "lastName": "111111111111",
+      "email": "y.novichenko@mantis.com.ua",
+      "password": "qwerty",
       "basketId": [],
       "wishListId": [],
       "isRegistered": true,
       "isAuthor": false,
-      "id": 22
+      "id": 2
+    },
+    {
+      "token": "7a401089-9cf1-4fb0-bdd9-45364c5f8f9b",
+      "firstName": "7777777777",
+      "lastName": "7777777777777",
+      "email": "yurasuperman@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 3
+    },
+    {
+      "token": "66f29cdd-d039-4e7d-b187-c4b3f56f27c8",
+      "firstName": "5555555555",
+      "lastName": "55555555555555",
+      "email": "yurasuperman@gmail.com",
+      "password": "9YGC2T7C",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 4
     }
   ],
   "tours": [
