@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../api/apiConfig';
+import { endpoints } from '../api/endpoints';
 
 interface Tours {
   imgSrc: string;
@@ -31,7 +32,7 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 export const addToursThunk = createAsyncThunk(
   'tours/addTours',
   async ({ imgSrc, description, duration, country, budget, name, id, cost }: Tours) => {
-    const user = {
+    const tour = {
       imgSrc: imgSrc,
       description: description,
       duration: duration,
@@ -41,7 +42,7 @@ export const addToursThunk = createAsyncThunk(
       id: id,
       cost: cost
     };
-    const response = await instance.post(endpoints.users, user);
+    const response = await instance.post(endpoints.tours, tour);
     const data = await response.data;
     return data;
   }

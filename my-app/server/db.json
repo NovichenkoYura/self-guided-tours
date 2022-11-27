@@ -71,6 +71,30 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 6
+    },
+    {
+      "token": "0bd8f995-ad70-4874-a6d3-3c7e2aa0fbbb",
+      "firstName": "3333333333333",
+      "lastName": "3333333333",
+      "email": "craftyura@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 7
+    },
+    {
+      "token": "e97d1ca1-4925-47f6-91ac-5b8eae4099dd",
+      "firstName": "wwwwwwwwwwwww",
+      "lastName": "wwwwwwwwwwwww",
+      "email": "craftyura@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 8
     }
   ],
   "tours": [
@@ -102,6 +126,16 @@
       "country": "Germany",
       "budget": "380",
       "id": 3,
+      "cost": 5
+    },
+    {
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "description": "eeeeeeeeee",
+      "duration": "24",
+      "country": "eeeeeeeeee",
+      "budget": "234",
+      "name": "eeeeeeeeee",
+      "id": "e8bd7c49-b1f4-4c42-b0a1-bf533344f568",
       "cost": 5
     }
   ]

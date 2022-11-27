@@ -10,6 +10,7 @@ import { useAppSelector } from '../app/hooks';
 import 'react-toastify/dist/ReactToastify.css';
 import { WishListModal } from './modules/modals/WishListModal';
 import { BasketModal } from './modules/modals/BasketModal';
+import { AddTourModal } from './modules/modals/AddTourModal';
 
 const setActive = ({ isActive }: { isActive: boolean }) => (isActive ? 'active-link' : '');
 
@@ -17,6 +18,7 @@ const Layout = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isOnBasket, setisOnBasket] = useState(false);
   const [isOnWishList, setisOnWishList] = useState(false);
+  const [isOnTour, setIsOnTour] = useState(false);
 
   const { basketId, wishListId, isAuth, lastName, isRegistered, isAuthor } = useAppSelector(
     (state) => state.users
@@ -64,7 +66,11 @@ const Layout = () => {
           </>
         )}
 
-        {isAuthor && isAuth && <p className="headerLogined_person add_tour">Add tour</p>}
+        {isAuthor && isAuth && (
+          <p className="headerLogined_person add_tour" onClick={() => setIsOnTour(true)}>
+            Add tour
+          </p>
+        )}
 
         {!isAuth && showDropdown && (
           <div className="dropdown__window">
@@ -103,6 +109,7 @@ const Layout = () => {
       </header>
       {isOnWishList && <WishListModal openWishListCallback={setisOnWishList} />}
       {isOnBasket && <BasketModal openModalCallback={setisOnBasket} />}
+      {isOnTour && <AddTourModal openAddTourModalCallback={setIsOnTour} />}
 
       <main className="container">
         <Outlet />
