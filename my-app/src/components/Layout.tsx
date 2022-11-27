@@ -64,7 +64,7 @@ const Layout = () => {
           </>
         )}
 
-        {isAuthor && isAuth && <p className="headerLogined_person">автор</p>}
+        {isAuthor && isAuth && <p className="headerLogined_person add_tour">Add tour</p>}
 
         {!isAuth && showDropdown && (
           <div className="dropdown__window">

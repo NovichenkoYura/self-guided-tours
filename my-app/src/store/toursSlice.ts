@@ -28,6 +28,25 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
   return data;
 });
 
+export const addToursThunk = createAsyncThunk(
+  'tours/addTours',
+  async ({ imgSrc, description, duration, country, budget, name, id, cost }: Tours) => {
+    const user = {
+      imgSrc: imgSrc,
+      description: description,
+      duration: duration,
+      country: country,
+      budget: budget,
+      name: name,
+      id: id,
+      cost: cost
+    };
+    const response = await instance.post(endpoints.users, user);
+    const data = await response.data;
+    return data;
+  }
+);
+
 const toursSlice = createSlice({
   name: 'tours',
   initialState,

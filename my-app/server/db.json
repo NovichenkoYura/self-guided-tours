@@ -47,6 +47,30 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 4
+    },
+    {
+      "token": "8bb537ae-a00c-42d2-9625-f9326ef2cb51",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 5
+    },
+    {
+      "token": "de9788ab-0d6e-4feb-933b-306b2bc2f328",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "craftyura@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 6
     }
   ],
   "tours": [

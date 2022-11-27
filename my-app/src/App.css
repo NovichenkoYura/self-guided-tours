@@ -319,6 +319,11 @@ transform: scale(1.2);
   right: 140px;
 }
 
+.headerLogined_person.add_tour{
+  top: 35px;
+  right: 140px;
+}
+
 .circle_basket{
   width: 25px;
   height: 25px;
