@@ -95,6 +95,54 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 8
+    },
+    {
+      "token": "d7922e44-ef9c-4f3e-ac23-a96801796dea",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 9
+    },
+    {
+      "token": "e6b157ec-f400-4077-9aae-5170d9550d4c",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 10
+    },
+    {
+      "token": "757e335a-1090-4722-8778-e32117c8493b",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 11
+    },
+    {
+      "token": "37f3bd72-1fdb-4ca8-8b16-be0f591a7304",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 12
     }
   ],
   "tours": [

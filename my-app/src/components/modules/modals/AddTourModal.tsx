@@ -70,11 +70,11 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
   return (
     <>
       <div className="popup" onClick={() => openAddTourModalCallback(false)}>
-        <ul className="popup-content" onClick={(e) => e.stopPropagation()}>
+        <ul className="popup-content add__tour" onClick={(e) => e.stopPropagation()}>
           <button className="popup-close" onClick={() => openAddTourModalCallback(false)}>
             <Close width="25" height="25" className="close__svg" />
           </button>
-          <form onSubmit={formik.handleSubmit} className="registrationForm__container ">
+          <form onSubmit={formik.handleSubmit} className="registrationForm__container add__tour">
             <div className="formik-form ">
               {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
               <input
@@ -82,7 +82,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="name"
                 onChange={formik.handleChange}
                 value={formik.values.name}
-                className="formik-input"
+                className="formik-input add_tour"
                 placeholder="The title of the tour..."
               />
               <p className="formik-errors-message">{formik.errors.name}</p>
@@ -92,7 +92,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="description"
                 onChange={formik.handleChange}
                 value={formik.values.description}
-                className="formik-input"
+                className="formik-input add_tour"
                 placeholder="Description of the tour..."
               />
               <p className="formik-errors-message">{formik.errors.description}</p>
@@ -102,7 +102,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="country"
                 onChange={formik.handleChange}
                 value={formik.values.country}
-                className="formik-input"
+                className="formik-input add_tour"
                 placeholder="Coutry of the tour..."
               />
               <p className="formik-errors-message">{formik.errors.country}</p>
@@ -112,7 +112,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="budget"
                 onChange={formik.handleChange}
                 value={formik.values.budget}
-                className="formik-input"
+                className="formik-input add_tour"
                 placeholder="Estimated budget per one person..."
               />
               <p className="formik-errors-message">{formik.errors.budget}</p>
@@ -122,7 +122,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="duration"
                 onChange={formik.handleChange}
                 value={formik.values.duration}
-                className="formik-input"
+                className="formik-input add_tour"
                 placeholder="Duration of the tour..."
               />
               <p className="formik-errors-message">{formik.errors.duration}</p>
