@@ -138,11 +138,29 @@
       "lastName": "Юрій",
       "email": "boardshopua@gmail.com",
       "password": "9999999999999999",
-      "basketId": [],
+      "basketId": [
+        1
+      ],
       "wishListId": [],
       "isRegistered": true,
       "isAuthor": true,
-      "id": 12
+      "id": 12,
+      "list": [
+        {
+          "token": "37f3bd72-1fdb-4ca8-8b16-be0f591a7304",
+          "firstName": "Новіченко",
+          "lastName": "Юрій",
+          "email": "boardshopua@gmail.com",
+          "password": "9999999999999999",
+          "basketId": [],
+          "wishListId": [],
+          "isRegistered": true,
+          "isAuthor": true,
+          "id": 12
+        }
+      ],
+      "isFetching": true,
+      "isAuth": true
     }
   ],
   "tours": [

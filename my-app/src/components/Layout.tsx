@@ -47,7 +47,7 @@ const Layout = () => {
         </NavLink>
 
         <NavLink to={locations.becomeanowner.path} className={setActive}>
-          Become an owner
+          Become an Author
         </NavLink>
         {isAuth ? (
           <>

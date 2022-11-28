@@ -96,7 +96,14 @@ input {
   resize: none;
   font-size: inherit;
   font-family: inherit;
+  margin-bottom: 15px;
 }
+
+/* .formik-errors-message{
+  position: absolute;
+  top: 0;
+  right: 0;
+} */
 
 
 
@@ -169,6 +176,10 @@ button.popup-close {
 
 input.add_tour{
   width: 65vw;
+}
+
+input.add_tour.description{
+  height: 160px;
 }
 
 

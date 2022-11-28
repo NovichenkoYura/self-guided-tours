@@ -83,7 +83,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 onChange={formik.handleChange}
                 value={formik.values.name}
                 className="formik-input add_tour"
-                placeholder="The title of the tour..."
+                placeholder="Write the title of the tour in several words..."
               />
               <p className="formik-errors-message">{formik.errors.name}</p>
 
@@ -92,8 +92,8 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 name="description"
                 onChange={formik.handleChange}
                 value={formik.values.description}
-                className="formik-input add_tour"
-                placeholder="Description of the tour..."
+                className="formik-input add_tour description"
+                placeholder="Write the description of the tour..."
               />
               <p className="formik-errors-message">{formik.errors.description}</p>
 
@@ -128,7 +128,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
               <p className="formik-errors-message">{formik.errors.duration}</p>
 
               <button type="submit" className="main__button">
-                Add user
+                Add tour
               </button>
             </div>
           </form>
