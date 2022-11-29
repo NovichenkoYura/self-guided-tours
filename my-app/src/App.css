@@ -37,6 +37,7 @@ header>a:hover {
 h1 {
   text-align: center;
   margin-top: 0;
+  margin: 0;
 }
 
 h2{
@@ -96,14 +97,13 @@ input {
   resize: none;
   font-size: inherit;
   font-family: inherit;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
-/* .formik-errors-message{
-  position: absolute;
-  top: 0;
-  right: 0;
-} */
+.formik-errors-message{
+ height: 20px;
+ margin: 0;
+}
 
 
 
@@ -526,3 +526,8 @@ button.btnDelete__good {
   fill: #ff6b08;
 }
 
+/* Become an Author */
+
+.becomeAnAuthor__text{
+  text-align: center;
+}

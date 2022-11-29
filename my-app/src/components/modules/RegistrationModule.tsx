@@ -102,7 +102,6 @@ export const RegistrationModule: React.FC<formProps> = () => {
         />
         <p className="formik-errors-message">{formik.errors.password}</p>
 
-        <p className="formik-errors-message">{formik.errors.password}</p>
         <button type="submit" className="main__button">
           Add user
         </button>

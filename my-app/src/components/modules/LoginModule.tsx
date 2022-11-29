@@ -63,7 +63,6 @@ export const LoginModule: React.FC<formProps> = () => {
         />
         <p className="formik-errors-message">{formik.errors.password}</p>
 
-        <p className="formik-errors-message">{formik.errors.password}</p>
         <button type="submit" className="main__button">
           Log in
         </button>

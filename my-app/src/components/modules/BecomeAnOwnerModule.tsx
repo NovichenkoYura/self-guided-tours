@@ -62,7 +62,7 @@ export const BecomeAnOwnerModule: React.FC<formProps> = () => {
   return (
     <div>
       <h1>Become an Author</h1>
-      <p>
+      <p className="becomeAnAuthor__text">
         Fill the form bellow and become an Author of the tours. That allow to get the royalty of you
         tours.
       </p>
@@ -110,7 +110,6 @@ export const BecomeAnOwnerModule: React.FC<formProps> = () => {
           />
           <p className="formik-errors-message">{formik.errors.password}</p>
 
-          <p className="formik-errors-message">{formik.errors.password}</p>
           <button type="submit" className="main__button">
             Add Author
           </button>

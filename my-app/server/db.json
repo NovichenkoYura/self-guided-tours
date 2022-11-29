@@ -161,6 +161,46 @@
       ],
       "isFetching": true,
       "isAuth": true
+    },
+    {
+      "token": "a7fd0ec7-4faf-4a45-8704-dd38e7b04d9c",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 13,
+      "list": [
+        {
+          "token": "a7fd0ec7-4faf-4a45-8704-dd38e7b04d9c",
+          "firstName": "Новіченко",
+          "lastName": "Юрій",
+          "email": "boardshopua@gmail.com",
+          "password": "9999999999999999",
+          "basketId": [],
+          "wishListId": [],
+          "isRegistered": true,
+          "isAuthor": true,
+          "id": 13
+        }
+      ],
+      "isFetching": true,
+      "isAuth": true
+    },
+    {
+      "token": "e0b9927d-ecd0-4bb4-9e7d-d9e2378f78e4",
+      "firstName": "wqq",
+      "lastName": "qqq",
+      "email": "boardshopua@gmail.com",
+      "password": "novichenko.y@gmail.com",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 14
     }
   ],
   "tours": [
