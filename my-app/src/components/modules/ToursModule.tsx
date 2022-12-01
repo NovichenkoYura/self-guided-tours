@@ -1,9 +1,12 @@
 import { ReactComponent as NotChosen } from '../../img/hurt1_notfilled.svg';
 import { ReactComponent as Chosen } from '../../img/hurt1_filled.svg';
+import { ReactComponent as FilterUp } from '../../img/up-arrow-filter1.svg';
+import { ReactComponent as FilterDown } from '../../img/down-arrow-filter1.svg';
 
 import { ReactComponent as Basket } from '../../img/shoppingCart.svg';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { addToBasketThunk, addToWishListThunk } from '../../store/usersSlice';
+import { FilterDropDownModuleInTours } from '../FilterDropDownModuleInTours';
 
 const ToursModule = () => {
   const { tours } = useAppSelector((state) => state.tours);
@@ -14,6 +17,7 @@ const ToursModule = () => {
   return (
     <>
       <h1>All tours</h1>
+      <FilterDropDownModuleInTours />
       <ul>
         {tours.map((tour) => (
           <li className="tours__item" key={tour.id}>
