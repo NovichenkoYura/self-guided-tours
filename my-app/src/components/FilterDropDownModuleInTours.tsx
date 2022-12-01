@@ -5,18 +5,19 @@ export const FilterDropDownModuleInTours = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   return (
     <>
-      <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__startWindow">
-        <p className="dropdown__text">Sort by:</p>
-        <FilterArrow className="dropdown__startWindow__svg" width="20" height="20" />
+      <div className="dropdown__startWindow__container">
+        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__startWindow">
+          <p className="dropdown__text">Sort by:</p>
+          <FilterArrow className="dropdown__startWindow__svg" width="20" height="20" />
+        </div>
+        {showDropdown && (
+          <ul className="dropdownWindowSort__list ">
+            <li className="dropdownWindowSort__Item">Budget: Low to High</li>
+            <li className="dropdownWindowSort__Item">Budget: High to Low</li>
+            <li className="dropdownWindowSort__Item">Duration</li>
+          </ul>
+        )}
       </div>
-      {showDropdown && (
-        <ul className="dropdown__window">
-          <li>Cost: Low to High</li>
-          <li>Cost: High to Low</li>
-          <li>Budget: Low to High</li>
-          <li>Budget: High to Low</li>
-        </ul>
-      )}
     </>
   );
 };
