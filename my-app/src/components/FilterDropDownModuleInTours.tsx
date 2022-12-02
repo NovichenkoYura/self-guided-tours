@@ -1,8 +1,17 @@
+// @ts-nocheck
 import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { ReactComponent as FilterArrow } from '../img/arrow-down-sort.svg';
+import { sortBudgetLowToHigh } from '../store/toursSlice';
 
 export const FilterDropDownModuleInTours = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { tours } = useAppSelector((state) => state.tours);
+  console.log(tours);
+
+  const dispatch = useAppDispatch();
+  const onFilterBudgetLowToHigh = () => dispatch(sortBudgetLowToHigh());
+
   return (
     <>
       <div className="dropdown__startWindow__container">
@@ -12,7 +21,9 @@ export const FilterDropDownModuleInTours = () => {
         </div>
         {showDropdown && (
           <ul className="dropdownWindowSort__list ">
-            <li className="dropdownWindowSort__Item">Budget: Low to High</li>
+            <li className="dropdownWindowSort__Item" onClick={() => onFilterBudgetLowToHigh()}>
+              Budget: Low to High
+            </li>
             <li className="dropdownWindowSort__Item">Budget: High to Low</li>
             <li className="dropdownWindowSort__Item">Duration</li>
           </ul>
@@ -21,16 +32,3 @@ export const FilterDropDownModuleInTours = () => {
     </>
   );
 };
-
-// {
-//   !isAuth && showDropdown && (
-//     <div className="dropdown__window">
-//       <NavLink to={locations.login.path} className="dropdown__item">
-//         Log in
-//       </NavLink>
-//       <NavLink to={locations.registration.path} className="dropdown__item">
-//         Sign up
-//       </NavLink>
-//     </div>
-//   );
-// }

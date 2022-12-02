@@ -5,9 +5,9 @@ import { endpoints } from '../api/endpoints';
 interface Tours {
   imgSrc: string;
   description: string;
-  duration: string;
+  duration: number;
   country: string;
-  budget: string;
+  budget: number;
   name: string;
   id: number;
   cost: number;
@@ -65,8 +65,13 @@ const toursSlice = createSlice({
     });
   },
 
-  reducers: {}
+  reducers: {
+    sortBudgetLowToHigh(state, action) {
+      // console.log(action.payload);
+      state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
+    }
+  }
 });
 
-// export const { } = usersSlice.actions;
+export const { sortBudgetLowToHigh } = toursSlice.actions;
 export default toursSlice.reducer;
