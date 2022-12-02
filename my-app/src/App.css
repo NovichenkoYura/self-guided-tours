@@ -574,7 +574,7 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 120px;
+  height: 130px;
   width: 180px;  
   position: absolute;
   top: 20px;
@@ -592,7 +592,7 @@ cursor: pointer;
 .dropdownWindowSort__Item{
   width: 100%;
   list-style-type: none;
-  padding: 6px 0 6px 15px;
+  padding: 2px 0 2px 8px;
   height: 40px;  
   width: 100%;
   align-items: center;

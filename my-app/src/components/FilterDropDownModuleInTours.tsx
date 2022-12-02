@@ -2,7 +2,12 @@
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { ReactComponent as FilterArrow } from '../img/arrow-down-sort.svg';
-import { sortBudgetLowToHigh } from '../store/toursSlice';
+import {
+  sortBudgetLowToHigh,
+  sortBudgetHighToLow,
+  sortDurationLowToHigh,
+  sortDurationHighToLow
+} from '../store/toursSlice';
 
 export const FilterDropDownModuleInTours = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -11,6 +16,9 @@ export const FilterDropDownModuleInTours = () => {
 
   const dispatch = useAppDispatch();
   const onFilterBudgetLowToHigh = () => dispatch(sortBudgetLowToHigh());
+  const onFilterBudgetHighToLow = () => dispatch(sortBudgetHighToLow());
+  const onFilterDurationLowToHigh = () => dispatch(sortDurationLowToHigh());
+  const onFilterDurationHighToLow = () => dispatch(sortDurationHighToLow());
 
   return (
     <>
@@ -24,8 +32,15 @@ export const FilterDropDownModuleInTours = () => {
             <li className="dropdownWindowSort__Item" onClick={() => onFilterBudgetLowToHigh()}>
               Budget: Low to High
             </li>
-            <li className="dropdownWindowSort__Item">Budget: High to Low</li>
-            <li className="dropdownWindowSort__Item">Duration</li>
+            <li className="dropdownWindowSort__Item" onClick={() => onFilterBudgetHighToLow()}>
+              Budget: High to Low
+            </li>
+            <li className="dropdownWindowSort__Item" onClick={() => onFilterDurationLowToHigh()}>
+              Duration: Low to High
+            </li>
+            <li className="dropdownWindowSort__Item" onClick={() => onFilterDurationHighToLow()}>
+              Duration: High to Low
+            </li>
           </ul>
         )}
       </div>

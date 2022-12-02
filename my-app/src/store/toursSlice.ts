@@ -66,12 +66,25 @@ const toursSlice = createSlice({
   },
 
   reducers: {
-    sortBudgetLowToHigh(state, action) {
-      // console.log(action.payload);
+    sortBudgetLowToHigh(state) {
       state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
+    },
+    sortBudgetHighToLow(state) {
+      state.tours = state.tours.sort((a, b) => (b.budget > a.budget ? 1 : -1));
+    },
+    sortDurationLowToHigh(state) {
+      state.tours = state.tours.sort((a, b) => (a.duration > b.duration ? 1 : -1));
+    },
+    sortDurationHighToLow(state) {
+      state.tours = state.tours.sort((a, b) => (b.duration > a.duration ? 1 : -1));
     }
   }
 });
 
-export const { sortBudgetLowToHigh } = toursSlice.actions;
+export const {
+  sortBudgetLowToHigh,
+  sortBudgetHighToLow,
+  sortDurationLowToHigh,
+  sortDurationHighToLow
+} = toursSlice.actions;
 export default toursSlice.reducer;
