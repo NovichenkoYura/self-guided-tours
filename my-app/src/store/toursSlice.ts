@@ -1,17 +1,7 @@
+import { Tours } from './../types';
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../api/apiConfig';
 import { endpoints } from '../api/endpoints';
-
-interface Tours {
-  imgSrc: string;
-  description: string;
-  duration: number;
-  country: string;
-  budget: number;
-  name: string;
-  id: number;
-  cost: number;
-}
 
 interface ToursState {
   isFetching: boolean;
