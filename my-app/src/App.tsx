@@ -17,6 +17,7 @@ export const App: React.FC = () => {
     <>
       <ComponentRoutes />
       <ToastContainer />
+      {/* here must be loader in separated component (common)*/}
     </>
   );
 };

@@ -1,4 +1,5 @@
 // @ts-nocheck
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import React, { useMemo } from 'react';
@@ -9,16 +10,15 @@ import preloader from '../../img/preloader.gif';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { addUsersThunk } from '../../store/usersSlice';
 
-interface formProps {
-  token?: string;
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  password?: string;
-  isAuthor: boolean;
-}
+// interface formProps {
+//   token?: string;
+//   firstName?: string;
+//   lastName?: string;
+//   email?: string;
+//   password?: string;
+// }
 
-export const BecomeAnOwnerModule: React.FC<formProps> = () => {
+export const BecomeAnOwnerModule = () => {
   const dispatch = useAppDispatch();
   const token: string = uuidv4();
   const { isFetching } = useAppSelector((state) => state.users);
