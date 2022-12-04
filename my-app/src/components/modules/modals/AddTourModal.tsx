@@ -34,8 +34,8 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
       name: Yup.string().min(2).max(20).required('Required'),
       description: Yup.string().min(2).max(500).required('Required'),
       country: Yup.string().min(2).max(40).required('Required'),
-      duration: Yup.string().min(2).max(4).required('Required'),
-      budget: Yup.string().min(2).max(6).required('Required')
+      duration: Yup.string().min(1).max(4).required('Required'),
+      budget: Yup.string().min(1).max(6).required('Required')
     });
   }, []);
 
@@ -87,7 +87,16 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
               />
               <p className="formik-errors-message">{formik.errors.name}</p>
 
-              <input
+              {/* <input
+                id="description"
+                name="description"
+                onChange={formik.handleChange}
+                value={formik.values.description}
+                className="formik-input add_tour description"
+                placeholder="Write the description of the tour..."
+              /> */}
+
+              <textarea
                 id="description"
                 name="description"
                 onChange={formik.handleChange}

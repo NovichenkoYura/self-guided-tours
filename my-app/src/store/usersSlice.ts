@@ -181,7 +181,6 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(addUsersThunk.fulfilled, (state, action: PayloadAction<User>) => {
-      // console.log(action.payload);
       state.list.push(action.payload);
       state.isRegistered = action.payload.isRegistered;
       state.isAuthor = action.payload.isAuthor;
@@ -197,7 +196,6 @@ const usersSlice = createSlice({
       state.isFetching = true;
     });
     builder.addCase(loginThunk.fulfilled, (state, action: PayloadAction<User>) => {
-      // console.log(action.payload);
       state.token = action.payload.token;
       state.firstName = action.payload.firstName;
       state.lastName = action.payload.lastName;
@@ -205,7 +203,6 @@ const usersSlice = createSlice({
       state.email = action.payload.email;
       state.isFetching = false;
       state.isAuth = true;
-      // state.isAuthor = action.payload.isAuthor;
       state.id = action.payload.id;
       localStorage.setItem('token', String(action.payload.token));
       toast(notificationMessages.login.success);

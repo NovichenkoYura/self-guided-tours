@@ -15,7 +15,6 @@ interface formProps {
   lastName?: string;
   email?: string;
   password?: string;
-  // isRegistered: boolean;
 }
 
 export const RegistrationModule: React.FC<formProps> = () => {

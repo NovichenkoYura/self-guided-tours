@@ -231,6 +231,66 @@
       "list": [],
       "isFetching": true,
       "isAuth": true
+    },
+    {
+      "token": "c35f5edc-f249-49b1-83e9-2cb46246bf8b",
+      "firstName": "For Adding tour",
+      "lastName": "For Adding tour",
+      "email": "novichenko.y@gmail.com",
+      "password": "For Adding tour",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 17
+    },
+    {
+      "token": "a7501c55-3173-41db-abe8-7d6d244cc01a",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 18
+    },
+    {
+      "token": "c7a51115-ef48-4a32-99d1-37cbec665a63",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 19
+    },
+    {
+      "token": "d5bbfe94-4c6e-4540-83be-3227fc18a159",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 20
+    },
+    {
+      "token": "13a07e01-9a83-4ddc-a374-28ac02752533",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 21
     }
   ],
   "tours": [
@@ -266,12 +326,12 @@
     },
     {
       "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "description": "eeeeeeeeee",
-      "duration": 8,
-      "country": "eeeeeeeeee",
-      "budget": "234",
-      "name": "eeeeeeeeee",
-      "id": "e8bd7c49-b1f4-4c42-b0a1-bf533344f568",
+      "description": "For Adding tour:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "duration": "06",
+      "country": "England",
+      "budget": "680",
+      "name": "For Adding tour",
+      "id": "ad91206c-ac29-4e64-8f6d-a7dc0e7f9c8d",
       "cost": 5
     }
   ]

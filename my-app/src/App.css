@@ -103,6 +103,7 @@ input {
 .formik-errors-message{
  height: 20px;
  margin: 0;
+ text-align: start;
 }
 
 
@@ -178,7 +179,17 @@ input.add_tour{
   width: 65vw;
 }
 
-input.add_tour.description{
+textarea.add_tour.description{
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  /* width: 400px; */
+  width: 65vw;
+  height: 40px;
+  padding: 10px;
+  resize: none;
+  font-size: inherit;
+  font-family: inherit;
   height: 160px;
 }
 

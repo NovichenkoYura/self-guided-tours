@@ -10,14 +10,6 @@ import preloader from '../../img/preloader.gif';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { addUsersThunk } from '../../store/usersSlice';
 
-// interface formProps {
-//   token?: string;
-//   firstName?: string;
-//   lastName?: string;
-//   email?: string;
-//   password?: string;
-// }
-
 export const BecomeAnOwnerModule = () => {
   const dispatch = useAppDispatch();
   const token: string = uuidv4();
