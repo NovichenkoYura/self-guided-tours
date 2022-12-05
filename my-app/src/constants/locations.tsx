@@ -15,7 +15,7 @@ export const locations = {
   subscription: { path: '/subscription', component: <Subscriptions /> },
   messages: { path: '/messages', component: <Messages /> },
   saved: { path: '/saved', component: <Saved /> },
-  becomeanowner: { path: '/becomeanowner', component: <BecomeAnOwner /> }, // camel case
+  becomeanowner: { path: '/becomeanowner', component: <BecomeAnOwner /> },
   registration: { path: '/registration', component: <Registration /> },
   login: { path: '/log_in', component: <Login /> }
 };

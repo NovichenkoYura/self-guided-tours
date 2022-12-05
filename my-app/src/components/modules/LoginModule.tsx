@@ -39,7 +39,7 @@ export const LoginModule: React.FC<formProps> = () => {
     validationSchema
   });
   return (
-    <form onSubmit={formik.handleSubmit} className="registrationForm__container">
+    <form onSubmit={formik.handleSubmit} className="registrationForm__container logIn">
       <div className="formik-form">
         {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
 

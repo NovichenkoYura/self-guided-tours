@@ -76,7 +76,7 @@ main a:hover {
       border: 1px solid #ddd;
       border-radius: 5px;
       width: 450px;
-      height: 320px;
+      height: 425px;
       padding: 25px 25px 0px 25px;
       padding-bottom: 0px;
       background-color: rgb(177, 174, 174);
@@ -85,6 +85,9 @@ main a:hover {
       font-family: inherit;
 }
 
+.registrationForm__container.logIn{
+  height: 260px;
+}
 
 
 input {
@@ -102,7 +105,7 @@ input {
 
 .formik-errors-message{
  height: 20px;
- margin: 0;
+ margin: 10px 0px;
  text-align: start;
 }
 
@@ -172,7 +175,8 @@ button.popup-close {
 
 .popup-content.add__tour{
   width: 80vw;
-  height: 80vh;
+  height: 94vh;
+  top: 3%;
 }
 
 input.add_tour{
@@ -197,8 +201,10 @@ textarea.add_tour.description{
 
 .registrationForm__container.add__tour{
   width: 70vw;
-  height: 70vh;
+  height: 82vh;
 }
+
+
 
 .close__svg{
   fill: #ededed;
