@@ -2,9 +2,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import React, { useMemo } from 'react';
 
-import preloader from '../../img/preloader.gif';
 import { loginThunk } from '../../store/usersSlice';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { useAppDispatch } from '../../app/hooks';
 
 interface formProps {
   email?: string;
@@ -13,7 +12,6 @@ interface formProps {
 
 export const LoginModule: React.FC<formProps> = () => {
   const dispatch = useAppDispatch();
-  const { isFetching } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
     return Yup.object({
@@ -41,8 +39,6 @@ export const LoginModule: React.FC<formProps> = () => {
   return (
     <form onSubmit={formik.handleSubmit} className="registrationForm__container logIn">
       <div className="formik-form">
-        {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
-
         <input
           id="email"
           name="email"

@@ -625,3 +625,11 @@ cursor: pointer;
   background-color: #f1f0f3;
   font-weight: 700;
 }
+
+/* Preloader */
+.preloader{
+  position: absolute;
+  width: 70px;
+  top:8px;
+  left: 70px;
+}

@@ -5,8 +5,7 @@ import React, { useMemo } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import preloader from '../../../img/preloader.gif';
-import { useAppDispatch, useAppSelector } from '../../../app/hooks';
+import { useAppDispatch } from '../../../app/hooks';
 import { addToursThunk } from '../../../store/toursSlice';
 
 import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
@@ -27,7 +26,6 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
   const dispatch = useAppDispatch();
   0;
   const token: string = uuidv4();
-  const { isFetching } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
     return Yup.object({
@@ -76,7 +74,6 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
           </button>
           <form onSubmit={formik.handleSubmit} className="registrationForm__container add__tour">
             <div className="formik-form ">
-              {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
               <input
                 id="name"
                 name="name"
@@ -86,15 +83,6 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
                 placeholder="Write the title of the tour in several words..."
               />
               <p className="formik-errors-message">{formik.errors.name}</p>
-
-              {/* <input
-                id="description"
-                name="description"
-                onChange={formik.handleChange}
-                value={formik.values.description}
-                className="formik-input add_tour description"
-                placeholder="Write the description of the tour..."
-              /> */}
 
               <textarea
                 id="description"

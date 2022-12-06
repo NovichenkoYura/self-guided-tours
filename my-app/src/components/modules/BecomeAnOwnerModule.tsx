@@ -6,14 +6,12 @@ import React, { useMemo } from 'react';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import preloader from '../../img/preloader.gif';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { useAppDispatch } from '../../app/hooks';
 import { addUsersThunk } from '../../store/usersSlice';
 
 export const BecomeAnOwnerModule = () => {
   const dispatch = useAppDispatch();
   const token: string = uuidv4();
-  const { isFetching } = useAppSelector((state) => state.users);
 
   const validationSchema = useMemo(() => {
     return Yup.object({
@@ -61,7 +59,6 @@ export const BecomeAnOwnerModule = () => {
 
       <form onSubmit={formik.handleSubmit} className="registrationForm__container ">
         <div className="formik-form ">
-          {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
           <input
             id="firstName"
             name="firstName"

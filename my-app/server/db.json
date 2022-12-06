@@ -335,6 +335,42 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 24
+    },
+    {
+      "token": "96ed8090-2f44-4d9d-89b8-bd4bbc4999da",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 25
+    },
+    {
+      "token": "1cd9e7b2-7494-454c-b67e-43c9cefba4f6",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 26
+    },
+    {
+      "token": "8ff99996-7d71-403c-911f-301a208543f8",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 27
     }
   ],
   "tours": [
@@ -386,6 +422,26 @@
       "budget": "dgdfg",
       "name": "Новіченко Юрій",
       "id": "22ce888c-3dab-4a82-8257-a121a0cf12aa",
+      "cost": 5
+    },
+    {
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "description": "345435",
+      "duration": "44",
+      "country": "55555555",
+      "budget": "444",
+      "name": "44444444",
+      "id": "402cf2fd-74f6-4c83-805c-ee62c0674940",
+      "cost": 5
+    },
+    {
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "description": "eeee",
+      "duration": "ee",
+      "country": "eee",
+      "budget": "ee",
+      "name": "44444444",
+      "id": "c25ccb08-5d7d-425b-a981-15702fa0f58e",
       "cost": 5
     }
   ]
