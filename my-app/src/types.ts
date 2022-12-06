@@ -1,5 +1,5 @@
 // rename  on Tour
-export interface Tours {
+export interface Tour {
   imgSrc: string;
   description: string;
   duration: number;

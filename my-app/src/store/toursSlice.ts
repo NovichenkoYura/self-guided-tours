@@ -1,11 +1,11 @@
-import { Tours } from './../types';
+import { Tour } from './../types';
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../api/apiConfig';
 import { endpoints } from '../api/endpoints';
 
 interface ToursState {
   isFetching: boolean;
-  tours: Tours[];
+  tours: Tour[];
 }
 
 const initialState: ToursState = {
@@ -21,7 +21,7 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addToursThunk = createAsyncThunk(
   'tours/addTours',
-  async ({ imgSrc, description, duration, country, budget, name, id, cost }: Tours) => {
+  async ({ imgSrc, description, duration, country, budget, name, id, cost }: Tour) => {
     const tour = {
       imgSrc: imgSrc,
       description: description,
@@ -46,7 +46,7 @@ const toursSlice = createSlice({
     builder.addCase(getToursThunk.pending, (state) => {
       state.isFetching = true;
     });
-    builder.addCase(getToursThunk.fulfilled, (state, action: PayloadAction<Tours[]>) => {
+    builder.addCase(getToursThunk.fulfilled, (state, action: PayloadAction<Tour[]>) => {
       state.tours = action.payload;
       state.isFetching = false;
     });

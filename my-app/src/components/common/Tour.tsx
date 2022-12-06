@@ -3,16 +3,16 @@ import { ReactComponent as Chosen } from '../../img/hurt1_filled.svg';
 
 import { ReactComponent as Basket } from '../../img/shoppingCart.svg';
 
-import { Tours } from '../../types';
+import { Tour } from '../../types';
 import { addToBasketThunk, addToWishListThunk } from '../../store/usersSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { Button } from './Button';
 
 interface TourProps {
-  tour: Tours;
+  tour: Tour;
 }
 
-export const Tour: React.FC<TourProps> = ({ tour }) => {
+export const Tours: React.FC<TourProps> = ({ tour }) => {
   const dispatch = useAppDispatch();
   const { wishListId } = useAppSelector((state) => state.users);
 
