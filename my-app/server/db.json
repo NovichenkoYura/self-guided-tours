@@ -323,6 +323,18 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 23
+    },
+    {
+      "token": "f4104045-6025-4d91-bb48-4d808e0e7510",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 24
     }
   ],
   "tours": [
@@ -364,6 +376,16 @@
       "budget": "680",
       "name": "For Adding tour",
       "id": "ad91206c-ac29-4e64-8f6d-a7dc0e7f9c8d",
+      "cost": 5
+    },
+    {
+      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
+      "description": "dfgdfgdfg",
+      "duration": "dfgd",
+      "country": "dfgdffg",
+      "budget": "dgdfg",
+      "name": "Новіченко Юрій",
+      "id": "22ce888c-3dab-4a82-8257-a121a0cf12aa",
       "cost": 5
     }
   ]

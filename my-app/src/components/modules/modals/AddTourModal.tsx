@@ -76,7 +76,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
           </button>
           <form onSubmit={formik.handleSubmit} className="registrationForm__container add__tour">
             <div className="formik-form ">
-              {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
+              {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
               <input
                 id="name"
                 name="name"

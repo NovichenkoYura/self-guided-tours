@@ -60,7 +60,7 @@ export const RegistrationModule: React.FC<formProps> = () => {
   return (
     <form onSubmit={formik.handleSubmit} className="registrationForm__container ">
       <div className="formik-form ">
-        {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null}
+        {/* {isFetching ? <img src={preloader} className="preloader" alt="loading" /> : null} */}
         <input
           id="firstName"
           name="firstName"
