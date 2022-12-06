@@ -162,8 +162,8 @@ button.popup-close {
 .popup-content {
   position: fixed;
   text-align: center;
-  width: 40vw;
-  padding: 20px;
+  width: 55vw;
+  padding: 30px;
   left: 50%;
   top: 14%;
   background-color: #ededed;
@@ -174,7 +174,7 @@ button.popup-close {
 }
 
 .popup-content.add__tour{
-  width: 80vw;
+  width: 77vw;
   height: 94vh;
   top: 3%;
 }

@@ -250,11 +250,19 @@
       "lastName": "Юрій",
       "email": "novichenko.y@gmail.com",
       "password": "qwerty",
-      "basketId": [],
-      "wishListId": [],
-      "isRegistered": true,
-      "isAuthor": true,
-      "id": 18
+      "basketId": [
+        2
+      ],
+      "wishListId": [
+        1,
+        2
+      ],
+      "isRegistered": false,
+      "isAuthor": false,
+      "id": 18,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     },
     {
       "token": "c7a51115-ef48-4a32-99d1-37cbec665a63",
@@ -303,6 +311,18 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 22
+    },
+    {
+      "token": "92c5ec3a-94a1-435d-b4fd-ede69cec41f4",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 23
     }
   ],
   "tours": [
