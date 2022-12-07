@@ -1,6 +1,7 @@
 // @ts-nocheck
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 import { ReactComponent as LoginLines } from '../img/loginLines.svg';
 import { ReactComponent as Chosen } from '../img/hurt1_notfilled.svg';
@@ -20,9 +21,11 @@ const Layout = () => {
   const [isOnWishList, setisOnWishList] = useState(false);
   const [isOnTour, setIsOnTour] = useState(false);
 
-  const { basketId, wishListId, isAuth, lastName, isRegistered, isAuthor } = useAppSelector(
+  const { basketId, wishListId, isAuth, lastName, isAuthor } = useAppSelector(
     (state) => state.users
   );
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -82,6 +85,9 @@ const Layout = () => {
             </NavLink>
           </div>
         )}
+        {/* {isAuth && navigate('/path')} */}
+
+        <button onClick={() => navigate('/path')}>on tours</button>
         <ul className="headerOrder__container">
           <li className="headerOrder__item">
             <Chosen

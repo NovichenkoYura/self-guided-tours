@@ -371,6 +371,18 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 27
+    },
+    {
+      "token": "a3ec0cc6-681e-4663-83b0-4242676eefee",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 28
     }
   ],
   "tours": [
