@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { ReactComponent as LoginPerson } from '../img/loginPerson.svg';
 import { ReactComponent as LoginLines } from '../img/loginLines.svg';
@@ -26,6 +26,11 @@ const Layout = () => {
   );
 
   const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuth) {
+      navigate('/path');
+    }
+  }, [isAuth]);
 
   return (
     <>
@@ -87,7 +92,7 @@ const Layout = () => {
         )}
         {/* {isAuth && navigate('/path')} */}
 
-        <button onClick={() => navigate('/path')}>on tours</button>
+        {/* <button onClick={() => navigate('/path')}>on tours</button> */}
         <ul className="headerOrder__container">
           <li className="headerOrder__item">
             <Chosen
