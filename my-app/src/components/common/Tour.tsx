@@ -51,8 +51,13 @@ export const Tour: React.FC<TourProps> = ({ tour }) => {
           Add to
           <Basket className="tourCard__svgbasket" width="25" height="25" />
         </button> */}
-        <Button typeOfButton="basket" callback={() => dispatch(addToBasketThunk(tour.id))} />
-        <button className="cardTours__btn">More...</button>
+        <Button
+          typeOfButton="basket"
+          title="Add to"
+          callback={() => dispatch(addToBasketThunk(tour.id))}
+          isSvgIcon={true}
+        />
+        <Button typeOfButton="basket" title="More..." isSvgIcon={false} />
         <div onClick={() => dispatch(addToWishListThunk(tour.id))}>
           {wishListId.includes(tour.id) ? (
             <Chosen className="tourCard__svgwishlist" width="25" height="25" />

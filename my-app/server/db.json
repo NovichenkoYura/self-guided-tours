@@ -378,11 +378,17 @@
       "lastName": "Юрій",
       "email": "boardshopua@gmail.com",
       "password": "9999999999999999",
-      "basketId": [],
+      "basketId": [
+        1,
+        2
+      ],
       "wishListId": [],
-      "isRegistered": true,
+      "isRegistered": false,
       "isAuthor": false,
-      "id": 28
+      "id": 28,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     }
   ],
   "tours": [
