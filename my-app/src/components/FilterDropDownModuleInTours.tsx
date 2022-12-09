@@ -16,12 +16,10 @@ interface FilterItemProps {
 
 export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const { tours } = useAppSelector((state) => state.tours);
-  console.log(tours);
 
   const dispatch = useAppDispatch();
-  const onFilterBudgetLowToHigh = () => dispatch(sortBudgetLowToHigh());
-  const onFilterBudgetHighToLow = () => dispatch(sortBudgetHighToLow());
+  const onFilterBudgetLowToHigh = (title) => dispatch(sortBudgetLowToHigh(title));
+  const onFilterBudgetHighToLow = (title) => dispatch(sortBudgetHighToLow(), title);
   const onFilterDurationLowToHigh = () => dispatch(sortDurationLowToHigh());
   const onFilterDurationHighToLow = () => dispatch(sortDurationHighToLow());
 
@@ -34,8 +32,14 @@ export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }
         </div>
         {showDropdown && (
           <ul className="dropdownWindowSort__list ">
-            <FiterItem title="Budget: Low to High" callback={() => onFilterBudgetLowToHigh()} />
-            <FiterItem title="Budget: High to Low" callback={() => onFilterBudgetHighToLow()} />
+            <FiterItem
+              title="Budget: Low to High"
+              callback={() => onFilterBudgetLowToHigh(title)}
+            />
+            <FiterItem
+              title="Budget: High to Low"
+              callback={(() => onFilterBudgetHighToLow(), title)}
+            />
             <FiterItem title="Duration: Low to High" callback={() => onFilterDurationLowToHigh()} />
             <FiterItem title="Duration: High to Low" callback={() => onFilterDurationHighToLow()} />
           </ul>

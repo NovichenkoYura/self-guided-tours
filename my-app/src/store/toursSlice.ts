@@ -56,7 +56,8 @@ const toursSlice = createSlice({
   },
 
   reducers: {
-    sortBudgetLowToHigh(state) {
+    sortBudgetLowToHigh(state, action) {
+      console.log(action.payload);
       state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
     },
     sortBudgetHighToLow(state) {
