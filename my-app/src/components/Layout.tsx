@@ -90,9 +90,7 @@ const Layout = () => {
             </NavLink>
           </div>
         )}
-        {/* {isAuth && navigate('/path')} */}
 
-        {/* <button onClick={() => navigate('/path')}>on tours</button> */}
         <ul className="headerOrder__container">
           <li className="headerOrder__item">
             <Chosen

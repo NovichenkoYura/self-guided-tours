@@ -1,8 +1,6 @@
 import { ReactComponent as NotChosen } from '../../img/hurt1_notfilled.svg';
 import { ReactComponent as Chosen } from '../../img/hurt1_filled.svg';
 
-import { ReactComponent as Basket } from '../../img/shoppingCart.svg';
-
 import { TourInterface } from '../../types';
 import { addToBasketThunk, addToWishListThunk } from '../../store/usersSlice';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
@@ -47,10 +45,6 @@ export const Tour: React.FC<TourProps> = ({ tour }) => {
         </div>
       </div>
       <div className="tours__btns">
-        {/* <button onClick={() => dispatch(addToBasketThunk(tour.id))} className="cardTours__btn">
-          Add to
-          <Basket className="tourCard__svgbasket" width="25" height="25" />
-        </button> */}
         <Button
           typeOfButton="basket"
           title="Add to"
