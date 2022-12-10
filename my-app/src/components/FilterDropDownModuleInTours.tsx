@@ -6,7 +6,8 @@ import {
   sortBudgetLowToHigh,
   sortBudgetHighToLow,
   sortDurationLowToHigh,
-  sortDurationHighToLow
+  sortDurationHighToLow,
+  sortTours
 } from '../store/toursSlice';
 
 import { FiterItem } from '../components/common/FilterItem';
@@ -14,12 +15,19 @@ interface FilterItemProps {
   title: string;
 }
 
+const sortItems: { title: string; typeOfSort: string } = [
+  { title: 'Budget: Low to High', typeOfSort: 'BLTH' },
+  { title: 'Budget: High to Low', typeOfSort: 'BHTL' },
+  { title: 'Duration: Low to High', typeOfSort: 'DLTH' },
+  { title: 'Duration: High to Low', typeOfSort: 'DHTL' }
+];
+
 export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const dispatch = useAppDispatch();
-  const onFilterBudgetLowToHigh = (title) => dispatch(sortBudgetLowToHigh(title));
-  const onFilterBudgetHighToLow = (title) => dispatch(sortBudgetHighToLow(), title);
+  const onFilterBudgetLowToHigh = () => dispatch(sortBudgetLowToHigh());
+  const onFilterBudgetHighToLow = () => dispatch(sortBudgetHighToLow());
   const onFilterDurationLowToHigh = () => dispatch(sortDurationLowToHigh());
   const onFilterDurationHighToLow = () => dispatch(sortDurationHighToLow());
 
@@ -32,16 +40,17 @@ export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }
         </div>
         {showDropdown && (
           <ul className="dropdownWindowSort__list ">
-            <FiterItem
-              title="Budget: Low to High"
-              callback={() => onFilterBudgetLowToHigh(title)}
-            />
-            <FiterItem
-              title="Budget: High to Low"
-              callback={(() => onFilterBudgetHighToLow(), title)}
-            />
-            <FiterItem title="Duration: Low to High" callback={() => onFilterDurationLowToHigh()} />
-            <FiterItem title="Duration: High to Low" callback={() => onFilterDurationHighToLow()} />
+            {sortItems.map((item) => (
+              <FiterItem
+                title={item.title}
+                callback={() => dispatch(sortTours(item.typeOfSort))}
+                key={item.typeOfSort}
+              />
+            ))}
+            {/* <FiterItem title="Budget: Low to High" callback={() => dispatch(sortTours('BLTH'))} />
+            <FiterItem title="Budget: High to Low" callback={() => dispatch(sortTours('BHTL'))} />
+            <FiterItem title="Duration: Low to High" callback={() => dispatch(sortTours('DLTH'))} />
+            <FiterItem title="Duration: High to Low" callback={() => dispatch(sortTours('DHTL'))} /> */}
           </ul>
         )}
       </div>

@@ -1,7 +1,7 @@
 import { ReactComponent as Basket } from '../../img/shoppingCart.svg';
 
 interface ButtonProps {
-  callback: () => void;
+  callback?: () => void;
   typeOfButton: 'basket' | 'wishList';
   title: string;
   isSvgIcon: boolean;

@@ -380,7 +380,8 @@
       "password": "9999999999999999",
       "basketId": [
         1,
-        2
+        2,
+        3
       ],
       "wishListId": [],
       "isRegistered": false,

@@ -56,6 +56,26 @@ const toursSlice = createSlice({
   },
 
   reducers: {
+    sortTours(state, action) {
+      console.log(action.payload);
+      switch (action.payload) {
+        case 'BLTH':
+          state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
+          break;
+        case 'BHTL':
+          state.tours = state.tours.sort((a, b) => (b.budget > a.budget ? 1 : -1));
+          break;
+        case 'DLTH':
+          state.tours = state.tours.sort((a, b) => (a.duration > b.duration ? 1 : -1));
+          break;
+        case 'DHTL':
+          state.tours = state.tours.sort((a, b) => (b.duration > a.duration ? 1 : -1));
+          break;
+
+        default:
+          break;
+      }
+    },
     sortBudgetLowToHigh(state, action) {
       console.log(action.payload);
       state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
@@ -76,6 +96,7 @@ export const {
   sortBudgetLowToHigh,
   sortBudgetHighToLow,
   sortDurationLowToHigh,
-  sortDurationHighToLow
+  sortDurationHighToLow,
+  sortTours
 } = toursSlice.actions;
 export default toursSlice.reducer;
