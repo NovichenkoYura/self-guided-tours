@@ -2,13 +2,7 @@
 import { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { ReactComponent as FilterArrow } from '../img/arrow-down-sort.svg';
-import {
-  sortBudgetLowToHigh,
-  sortBudgetHighToLow,
-  sortDurationLowToHigh,
-  sortDurationHighToLow,
-  sortTours
-} from '../store/toursSlice';
+import { sortTours } from '../store/toursSlice';
 
 import { FiterItem } from '../components/common/FilterItem';
 interface FilterItemProps {
@@ -25,17 +19,19 @@ const sortItems: { title: string; typeOfSort: string } = [
 export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const { titleOfSort } = useAppSelector((state) => state.tours);
+
   const dispatch = useAppDispatch();
-  const onFilterBudgetLowToHigh = () => dispatch(sortBudgetLowToHigh());
-  const onFilterBudgetHighToLow = () => dispatch(sortBudgetHighToLow());
-  const onFilterDurationLowToHigh = () => dispatch(sortDurationLowToHigh());
-  const onFilterDurationHighToLow = () => dispatch(sortDurationHighToLow());
 
   return (
     <>
       <div className="dropdown__startWindow__container">
-        <div onClick={() => setShowDropdown(!showDropdown)} className="dropdown__startWindow">
-          <p className="dropdown__text">Sort by:{title}</p>
+        <div
+          onClick={() => setShowDropdown(!showDropdown)}
+          className="dropdown__startWindow title__OfSort">
+          <p className="dropdown__text">
+            Sort by: <span>{titleOfSort}</span>{' '}
+          </p>
           <FilterArrow className="dropdown__startWindow__svg" width="20" height="20" />
         </div>
         {showDropdown && (
@@ -43,14 +39,10 @@ export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }
             {sortItems.map((item) => (
               <FiterItem
                 title={item.title}
-                callback={() => dispatch(sortTours(item.typeOfSort))}
+                callback={() => dispatch(sortTours({ item }))}
                 key={item.typeOfSort}
               />
             ))}
-            {/* <FiterItem title="Budget: Low to High" callback={() => dispatch(sortTours('BLTH'))} />
-            <FiterItem title="Budget: High to Low" callback={() => dispatch(sortTours('BHTL'))} />
-            <FiterItem title="Duration: Low to High" callback={() => dispatch(sortTours('DLTH'))} />
-            <FiterItem title="Duration: High to Low" callback={() => dispatch(sortTours('DHTL'))} /> */}
           </ul>
         )}
       </div>

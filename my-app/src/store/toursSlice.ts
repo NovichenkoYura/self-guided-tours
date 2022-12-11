@@ -6,11 +6,13 @@ import { endpoints } from '../api/endpoints';
 interface ToursState {
   isFetching: boolean;
   tours: TourInterface[];
+  titleOfSort: string;
 }
 
 const initialState: ToursState = {
   isFetching: false,
-  tours: []
+  tours: [],
+  titleOfSort: ''
 };
 
 export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
@@ -57,8 +59,9 @@ const toursSlice = createSlice({
 
   reducers: {
     sortTours(state, action) {
-      console.log(action.payload);
-      switch (action.payload) {
+      console.log(action.payload.item.typeOfSort);
+      state.titleOfSort = action.payload.item.title;
+      switch (action.payload.item.typeOfSort) {
         case 'BLTH':
           state.tours = state.tours.sort((a, b) => (a.budget > b.budget ? 1 : -1));
           break;
