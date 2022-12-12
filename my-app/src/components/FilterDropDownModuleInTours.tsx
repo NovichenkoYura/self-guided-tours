@@ -26,14 +26,14 @@ export const FilterDropDownModuleInTours: React.FC<FilterItemProps> = ({ title }
   return (
     <>
       <div className="dropdown__startWindow__container">
-        <div
-          onClick={() => setShowDropdown(!showDropdown)}
-          className="dropdown__startWindow title__OfSort">
-          <p className="dropdown__text">
-            Sort by: <span>{titleOfSort}</span>{' '}
-          </p>
+        <div className="dropdown__startWindow__wrap" onClick={() => setShowDropdown(!showDropdown)}>
+          <div className={`dropdown__startWindow ${titleOfSort && 'title__OfSort'}`}>
+            <p className="dropdown__text">Sort by:</p>
+            <span className="dropdown__titleOfSort">{titleOfSort}</span>
+          </div>
           <FilterArrow className="dropdown__startWindow__svg" width="20" height="20" />
         </div>
+
         {showDropdown && (
           <ul className="dropdownWindowSort__list ">
             {sortItems.map((item) => (
