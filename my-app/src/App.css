@@ -165,12 +165,20 @@ button.popup-close {
   width: 55vw;
   padding: 30px;
   left: 50%;
-  top: 14%;
+  top: 10%;
   background-color: #ededed;
   border-radius: 12px;
   transform: translateX(-50%);
-  /* overflow: auto; 
-  height: 500px; */
+  height: 80vh;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.popup-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .popup-content.add__tour{
@@ -368,6 +376,7 @@ transform: scale(1.2);
 .headerLogined_person.add_tour{
   top: 35px;
   right: 140px;
+  cursor: pointer;
 }
 
 .circle_basket{

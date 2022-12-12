@@ -390,6 +390,41 @@
       "list": [],
       "isFetching": true,
       "isAuth": true
+    },
+    {
+      "token": "7b78a167-eaca-4cba-a2b5-5c344a3c62ab",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 29
+    },
+    {
+      "token": "086bfc6e-df4d-4356-8f52-341e467667da",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [
+        1,
+        2,
+        3
+      ],
+      "wishListId": [
+        1,
+        2,
+        3
+      ],
+      "isRegistered": false,
+      "isAuthor": false,
+      "id": 30,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     }
   ],
   "tours": [
