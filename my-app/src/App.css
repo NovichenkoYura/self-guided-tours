@@ -500,6 +500,7 @@ transform: scale(1.2);
   height: 38px;
   padding: 6px 10px;
   margin: 0px 5px;
+  cursor: pointer;
 }
 
 /* .cardTours__btn:disabled{

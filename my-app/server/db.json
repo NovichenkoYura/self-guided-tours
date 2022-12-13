@@ -409,16 +409,8 @@
       "lastName": "Юрій",
       "email": "novichenko.y@gmail.com",
       "password": "9999999999999999",
-      "basketId": [
-        1,
-        2,
-        3
-      ],
-      "wishListId": [
-        1,
-        2,
-        3
-      ],
+      "basketId": [],
+      "wishListId": [],
       "isRegistered": false,
       "isAuthor": false,
       "id": 30,
