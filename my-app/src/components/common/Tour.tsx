@@ -12,7 +12,7 @@ interface TourProps {
 
 export const Tour: React.FC<TourProps> = ({ tour }) => {
   const dispatch = useAppDispatch();
-  const { wishListId } = useAppSelector((state) => state.users);
+  const { wishListId, basketId } = useAppSelector((state) => state.users);
 
   return (
     <li className="tours__item" key={tour.id}>
@@ -48,7 +48,7 @@ export const Tour: React.FC<TourProps> = ({ tour }) => {
         <Button
           typeOfButton="basket"
           title="Add to"
-          callback={() => dispatch(addToBasketThunk(tour.id))}
+          callback={!basketId ? () => dispatch(addToBasketThunk(tour.id)) : null}
           isSvgIcon={true}
         />
         <Button typeOfButton="basket" title="More..." isSvgIcon={false} />

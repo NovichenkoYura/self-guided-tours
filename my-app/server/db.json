@@ -410,7 +410,10 @@
       "email": "novichenko.y@gmail.com",
       "password": "9999999999999999",
       "basketId": [],
-      "wishListId": [],
+      "wishListId": [
+        1,
+        1
+      ],
       "isRegistered": false,
       "isAuthor": false,
       "id": 30,
