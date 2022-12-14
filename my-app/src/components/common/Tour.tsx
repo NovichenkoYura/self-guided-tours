@@ -48,7 +48,9 @@ export const Tour: React.FC<TourProps> = ({ tour }) => {
         <Button
           typeOfButton="basket"
           title="Add to"
-          callback={!basketId ? () => dispatch(addToBasketThunk(tour.id)) : null}
+          callback={() =>
+            basketId.includes(tour.id) === false && dispatch(addToBasketThunk(tour.id))
+          }
           isSvgIcon={true}
         />
         <Button typeOfButton="basket" title="More..." isSvgIcon={false} />

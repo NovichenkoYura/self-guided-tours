@@ -9,11 +9,7 @@ interface ButtonProps {
 }
 
 export const Button: React.FC<ButtonProps> = ({ callback, typeOfButton, title, isSvgIcon }) => {
-  const { basketId } = useAppSelector((state) => state.users);
-
   return (
-    // <button onClick={callback} className="cardTours__btn" >
-
     <button onClick={callback} className="cardTours__btn">
       {title}
       {isSvgIcon && <Basket className="tourCard__svgbasket" width="25" height="25" />}

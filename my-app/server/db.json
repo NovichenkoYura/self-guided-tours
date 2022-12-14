@@ -420,6 +420,25 @@
       "list": [],
       "isFetching": true,
       "isAuth": true
+    },
+    {
+      "token": "dabe21af-e1f2-433b-8e42-b4ae26bb3167",
+      "firstName": "11111111111111",
+      "lastName": "11111111111111111111111",
+      "email": "yurasuperman@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [
+        1,
+        2,
+        3
+      ],
+      "wishListId": [],
+      "isRegistered": false,
+      "isAuthor": false,
+      "id": 31,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
     }
   ],
   "tours": [
