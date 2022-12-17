@@ -410,10 +410,7 @@
       "email": "novichenko.y@gmail.com",
       "password": "9999999999999999",
       "basketId": [],
-      "wishListId": [
-        1,
-        1
-      ],
+      "wishListId": [],
       "isRegistered": false,
       "isAuthor": false,
       "id": 30,
@@ -471,46 +468,7 @@
       "budget": "380",
       "id": 3,
       "cost": 5
-    },
-    {
-      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "description": "For Adding tour:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "duration": "06",
-      "country": "England",
-      "budget": "680",
-      "name": "For Adding tour",
-      "id": "ad91206c-ac29-4e64-8f6d-a7dc0e7f9c8d",
-      "cost": 5
-    },
-    {
-      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "description": "dfgdfgdfg",
-      "duration": "dfgd",
-      "country": "dfgdffg",
-      "budget": "dgdfg",
-      "name": "Новіченко Юрій",
-      "id": "22ce888c-3dab-4a82-8257-a121a0cf12aa",
-      "cost": 5
-    },
-    {
-      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "description": "345435",
-      "duration": "44",
-      "country": "55555555",
-      "budget": "444",
-      "name": "44444444",
-      "id": "402cf2fd-74f6-4c83-805c-ee62c0674940",
-      "cost": 5
-    },
-    {
-      "imgSrc": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg",
-      "description": "eeee",
-      "duration": "ee",
-      "country": "eee",
-      "budget": "ee",
-      "name": "44444444",
-      "id": "c25ccb08-5d7d-425b-a981-15702fa0f58e",
-      "cost": 5
     }
+    
   ]
 }
