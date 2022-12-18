@@ -31,7 +31,7 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
   const validationSchema = useMemo(() => {
     return Yup.object({
       name: Yup.string().min(2).max(20).required('Required'),
-      description: Yup.string().min(2).max(500).required('Required'),
+      description: Yup.string().min(2).max(1000).required('Required'),
       country: Yup.string().min(2).max(40).required('Required'),
       duration: Yup.string().min(1).max(4).required('Required'),
       budget: Yup.string().min(1).max(6).required('Required')

@@ -436,6 +436,96 @@
       "list": [],
       "isFetching": true,
       "isAuth": true
+    },
+    {
+      "token": "d4006e56-775a-43c3-bcbc-05f01a9245c8",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [
+        1,
+        2
+      ],
+      "wishListId": [],
+      "isRegistered": false,
+      "isAuthor": false,
+      "id": 32,
+      "list": [],
+      "isFetching": true,
+      "isAuth": true
+    },
+    {
+      "token": "99093491-240a-4927-80e4-d4fba0faf0d6",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 33
+    },
+    {
+      "token": "edd56cd8-c107-402f-b118-f98b28a36a42",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 34
+    },
+    {
+      "token": "6edae4f3-6c19-460c-98e1-1dd3c58b6c8c",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 35
+    },
+    {
+      "token": "be31f0eb-4003-4fb3-b0a5-88cc9663395b",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 36
+    },
+    {
+      "token": "3bc2b27c-855d-44d7-90f4-d45793f7be9e",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 37
+    },
+    {
+      "token": "d97db76d-f28b-4f95-9b29-c3e645d8426f",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "boardshopua@gmail.com",
+      "password": "9999999999999999",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 38
     }
   ],
   "tours": [
@@ -443,7 +533,7 @@
       "imgSrc1": "https://www.costabravaru.com/sites/default/files/inline/images/2.jamoniber_gallery1.jpg",
       "imgSrc2": "http://www.across-spain.es/files/cover01.jpg",
       "name": "Spain: Gastro tour",
-      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "description": "Spanish cuisine is famous the world over because it is flavoursome, healthy, traditional, creative and varied, and also because of its popular restaurants and fine dining, as demonstrated by the international recognition of its chefs. An example of how healthy it is can be seen in its famed Mediterranean diet.Star ingredients include olive oil, Iberian ham –a source of national pride– and the Spanish wine, the perfect accompaniment for toasting. Rioja produces the most famous Spanish wine, but you will discover other options throughout your journey around Spain \n" ,
       "duration": 5,
       "country": "Spain",
       "budget": "350",
@@ -454,7 +544,7 @@
       "imgSrc1": "https://cdn.travel-in-portugal.com/sites/default/files/beaches/praia-da-rocha-beach.jpg",
       "imgSrc2": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/df/64.jpg",
       "name": "Spain - Portugal: Atlantic coast",
-      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "description": "The Costa de Prata, Portugal’s Silver Coast, stretches about 155 miles from Assenta, an hour north of Lisbon, to the mouth of the Douro at Porto. The few resorts along its length are low-rise and local, and retain their sense of working fishing villages. The stretches close to Lisbon get busy at weekends and holidays, so we hit the less-visited strands around Aveiro. The beaches here all have names, but the coastline is an almost unbroken stretch of wide, white, bracing praia, pounded by the majestic Atlantic. This is not a sea for doggie-paddlers, but is ocean heaven for surfers and walkers, twitchers, idlers and all of us who crave the ionised air and space in which to find ourselves again. ",
       "duration": 6,
       "country": "Spain, Porugal",
       "budget": "450",
@@ -465,11 +555,22 @@
       "imgSrc1": "https://i.pinimg.com/736x/eb/a5/9d/eba59d4bdf9e472b2ba471ae1759c432--germany-europe-hiking-germany.jpg",
       "imgSrc2": "https://cdn.prod.www.spiegel.de/images/b2966462-0001-0004-0000-000000070374_w920_r1.51285930408472_fpx64.74_fpy49.98.jpg",
       "name": "Germany: Alps and cities",
-      "description": "Lorem Lorem ipsum dolor sit, amet consectetur adipisicing elitit. NecessitatibusLorem isicing elitit. NecessitatibusLorem ipsum dolorisicing elitit. NecessitatibusLorem ipsum dolor ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. NecessitatibusLorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus ",
+      "description": "Stretching  west from Germany’s remote southeastern corner to the Allgäu region near Lake Constance, the Bavarian Alps (Bayerische Alpen) form a stunningly beautiful natural divide along the Austrian border. Ranges further south may be higher, but these mountains shoot up from the foothills so abruptly that the impact is all the more dramatic. The region is pocked with quaint frescoed villages, spas and health retreats, and possibilities for skiing, snowboarding, hiking, canoeing and paragliding – much of it year-round. The ski season lasts from about late December until April, while summer activities stretch from late May to November. \n",
       "duration": 4,
       "country": "Germany",
       "budget": "380",
       "id": 3,
+      "cost": 5
+    },
+    {
+      "imgSrc1": "https://www.yourlittleblackbook.me/wp-content/uploads/2014/10/IJshotels-FInland-2-700x525.jpg",
+      "imgSrc2": "https://www.visitfinland.com/.imaging/mte/visit-finland-theme/xlUpW/dam/vf/Northern-Lights/Lapland_Best-times-to-see-the-Northern-Lights-and-the-Nightless-Night/Northern-Lights_mirror-aurora_autumn---Markus-Kiili.jpg/jcr:content/Northern%20Lights_mirror%20aurora_autumn%20-%20Markus%20Kiili.jpg",
+      "description": "Lapland is the northern-most region of Finland and an active outdoor destination that's known for its incredible, year-round light phenomena, vast arctic nature, and Santa Claus. The land of the indigenous Sámi people, known as Sámi homeland or Sápmi, also crosses the northern part of the region. Explore Finnish Lapland, Europe’s last great wilderness!\nMeet Santa. With Father Christmas preparing for the season, we spoke with one of his elves to learn more about Santa Claus, or joulupukki, as he’s called in Finland.Since Santa is a mysterious fellow, you might want to ask him your questions in person. \n",
+      "duration": "7",
+      "country": "Lapland",
+      "budget": "560",
+      "name": "Lapland",
+      "id": "1d7a2bb1-7b87-4747-909c-fe2dce55e805",
       "cost": 5
     }
   ]
