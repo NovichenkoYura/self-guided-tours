@@ -86,8 +86,6 @@ export const addUsersThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'users/loginUsers',
   async ({ email, password }: Pick<User, 'email' | 'password'>, { getState }: any) => {
-    // const store = getState().users;
-
     const response = await instance.get(endpoints.users);
     const data = await response.data;
     const dataUser = {} as User;

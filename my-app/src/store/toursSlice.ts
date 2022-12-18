@@ -23,9 +23,20 @@ export const getToursThunk = createAsyncThunk('tours/getTours', async () => {
 
 export const addToursThunk = createAsyncThunk(
   'tours/addTours',
-  async ({ imgSrc, description, duration, country, budget, name, id, cost }: TourInterface) => {
+  async ({
+    imgSrc1,
+    imgSrc2,
+    description,
+    duration,
+    country,
+    budget,
+    name,
+    id,
+    cost
+  }: TourInterface) => {
     const tour = {
-      imgSrc: imgSrc,
+      imgSrc1: imgSrc1,
+      imgSrc2: imgSrc2,
       description: description,
       duration: duration,
       country: country,
@@ -59,7 +70,6 @@ const toursSlice = createSlice({
 
   reducers: {
     sortTours(state, action) {
-      console.log(action.payload.item.typeOfSort);
       state.titleOfSort = action.payload.item.title;
       switch (action.payload.item.typeOfSort) {
         case 'BLTH':

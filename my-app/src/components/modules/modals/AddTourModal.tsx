@@ -11,7 +11,8 @@ import { addToursThunk } from '../../../store/toursSlice';
 import { ReactComponent as Close } from '../../../img/close-svgrepo-com.svg';
 
 interface formProps {
-  imgSrc: string;
+  imgSrc1: string;
+  imgSrc2: string;
   description: string;
   duration: number;
   country: string;
@@ -39,7 +40,8 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
 
   const formik = useFormik({
     initialValues: {
-      imgSrc: 'https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg',
+      imgSrc1: '',
+      imgSrc2: '',
       description: '',
       duration: '',
       country: '',
@@ -51,7 +53,10 @@ export const AddTourModal: React.FC<formProps> = ({ openAddTourModalCallback }) 
     onSubmit: (values, { resetForm }) => {
       dispatch(
         addToursThunk({
-          imgSrc: 'https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/1f/a0/c3.jpg',
+          imgSrc1:
+            'https://www.yourlittleblackbook.me/wp-content/uploads/2014/10/IJshotels-FInland-2-700x525.jpg',
+          imgSrc2:
+            'https://www.visitfinland.com/.imaging/mte/visit-finland-theme/xlUpW/dam/vf/Northern-Lights/Lapland_Best-times-to-see-the-Northern-Lights-and-the-Nightless-Night/Northern-Lights_mirror-aurora_autumn---Markus-Kiili.jpg/jcr:content/Northern%20Lights_mirror%20aurora_autumn%20-%20Markus%20Kiili.jpg',
           description: values.description,
           duration: values.duration,
           country: values.country,

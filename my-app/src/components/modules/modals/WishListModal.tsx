@@ -33,8 +33,8 @@ const WishListModal: FC<WishListProps> = ({ openWishListCallback }) => {
               </button>
               <div className="wrap">
                 <div className="toursItemImage__container">
-                  <img src={tour.imgSrc} className="toursItem__image" alt="Meal" />
-                  <img src={tour.imgSrc} className="toursItem__image" alt="Pig" />
+                  <img src={tour.imgSrc1} className="toursItem__image" alt="Meal" />
+                  <img src={tour.imgSrc2} className="toursItem__image" alt="Pig" />
                 </div>
 
                 <div className="tour__text-part">

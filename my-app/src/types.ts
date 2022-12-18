@@ -1,6 +1,6 @@
-// rename  on Tour
 export interface TourInterface {
-  imgSrc: string;
+  imgSrc1: string;
+  imgSrc2: string;
   description: string;
   duration: number;
   country: string;
