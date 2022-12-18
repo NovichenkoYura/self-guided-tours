@@ -526,6 +526,85 @@
       "isRegistered": true,
       "isAuthor": true,
       "id": 38
+    },
+    {
+      "token": "aa7b1d0a-c0ab-4e34-a9c3-1cfff8a42a61",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [
+        2,
+        3
+      ],
+      "wishListId": [
+        3,
+        2
+      ],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 39,
+      "list": [
+        {
+          "token": "aa7b1d0a-c0ab-4e34-a9c3-1cfff8a42a61",
+          "firstName": "Новіченко",
+          "lastName": "Юрій",
+          "email": "novichenko.y@gmail.com",
+          "password": "qwerty",
+          "basketId": [],
+          "wishListId": [],
+          "isRegistered": true,
+          "isAuthor": false,
+          "id": 39
+        }
+      ],
+      "isFetching": true,
+      "isAuth": true
+    },
+    {
+      "token": "31a8c91d-a8ed-48a2-a51e-11165ee05c28",
+      "firstName": "Новіченко",
+      "lastName": "Юрій",
+      "email": "novichenko.y@gmail.com",
+      "password": "qwerty",
+      "basketId": [
+        2
+      ],
+      "wishListId": [
+        2,
+        3
+      ],
+      "isRegistered": true,
+      "isAuthor": false,
+      "id": 40,
+      "list": [
+        {
+          "token": "31a8c91d-a8ed-48a2-a51e-11165ee05c28",
+          "firstName": "Новіченко",
+          "lastName": "Юрій",
+          "email": "novichenko.y@gmail.com",
+          "password": "qwerty",
+          "basketId": [],
+          "wishListId": [],
+          "isRegistered": true,
+          "isAuthor": false,
+          "id": 40
+        }
+      ],
+      "isFetching": true,
+      "isAuth": true
+    },
+    {
+      "token": "6e47bb56-e5c4-4553-a032-ab36d13588e6",
+      "firstName": "Yurii",
+      "lastName": "Novichenko",
+      "email": "boardshopua@gmail.com",
+      "password": "111111111111111111111111111111111",
+      "basketId": [],
+      "wishListId": [],
+      "isRegistered": true,
+      "isAuthor": true,
+      "id": 41
     }
   ],
   "tours": [
@@ -533,7 +612,7 @@
       "imgSrc1": "https://www.costabravaru.com/sites/default/files/inline/images/2.jamoniber_gallery1.jpg",
       "imgSrc2": "http://www.across-spain.es/files/cover01.jpg",
       "name": "Spain: Gastro tour",
-      "description": "Spanish cuisine is famous the world over because it is flavoursome, healthy, traditional, creative and varied, and also because of its popular restaurants and fine dining, as demonstrated by the international recognition of its chefs. An example of how healthy it is can be seen in its famed Mediterranean diet.Star ingredients include olive oil, Iberian ham –a source of national pride– and the Spanish wine, the perfect accompaniment for toasting. Rioja produces the most famous Spanish wine, but you will discover other options throughout your journey around Spain \n" ,
+      "description": "Spanish cuisine is famous the world over because it is flavoursome, healthy, traditional, creative and varied, and also because of its popular restaurants and fine dining, as demonstrated by the international recognition of its chefs. An example of how healthy it is can be seen in its famed Mediterranean diet.Star ingredients include olive oil, Iberian ham –a source of national pride– and the Spanish wine, the perfect accompaniment for toasting. Rioja produces the most famous Spanish wine, but you will discover other options throughout your journey around Spain \n",
       "duration": 5,
       "country": "Spain",
       "budget": "350",
@@ -566,11 +645,11 @@
       "imgSrc1": "https://www.yourlittleblackbook.me/wp-content/uploads/2014/10/IJshotels-FInland-2-700x525.jpg",
       "imgSrc2": "https://www.visitfinland.com/.imaging/mte/visit-finland-theme/xlUpW/dam/vf/Northern-Lights/Lapland_Best-times-to-see-the-Northern-Lights-and-the-Nightless-Night/Northern-Lights_mirror-aurora_autumn---Markus-Kiili.jpg/jcr:content/Northern%20Lights_mirror%20aurora_autumn%20-%20Markus%20Kiili.jpg",
       "description": "Lapland is the northern-most region of Finland and an active outdoor destination that's known for its incredible, year-round light phenomena, vast arctic nature, and Santa Claus. The land of the indigenous Sámi people, known as Sámi homeland or Sápmi, also crosses the northern part of the region. Explore Finnish Lapland, Europe’s last great wilderness!\nMeet Santa. With Father Christmas preparing for the season, we spoke with one of his elves to learn more about Santa Claus, or joulupukki, as he’s called in Finland.Since Santa is a mysterious fellow, you might want to ask him your questions in person. \n",
-      "duration": "7",
+      "duration": "6",
       "country": "Lapland",
       "budget": "560",
-      "name": "Lapland",
-      "id": "1d7a2bb1-7b87-4747-909c-fe2dce55e805",
+      "name": "Lapland in winter",
+      "id": "a1a6ad58-431e-48af-976a-ef43aceafedf",
       "cost": 5
     }
   ]
